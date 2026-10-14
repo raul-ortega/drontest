@@ -1,0 +1,197 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+  ADMIN
+  USER
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+enum QuestionStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum ExamStatus {
+  IN_PROGRESS
+  SUBMITTED
+  EXPIRED
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  password      String?
+  role          UserRole  @default(USER)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  attempts ExamAttempt[]
+  favorites Favorite[]
+
+  @@index([email])
+  @@index([role])
+}
+
+model Category {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  topics      Topic[]
+  questions   Question[]
+  examConfigs ExamConfig[]
+
+  @@index([isActive])
+  @@index([order])
+}
+
+model Topic {
+  id          String   @id @default(cuid())
+  name        String
+  description String?
+  categoryId  String
+  category    Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  questions Question[]
+  examConfigs ExamConfig[]
+
+  @@unique([categoryId, name])
+  @@index([categoryId])
+  @@index([isActive])
+}
+
+model Question {
+  id          String          @id @default(cuid())
+  text        String
+  topicId     String
+  categoryId  String
+  difficulty  Difficulty      @default(MEDIUM)
+  explanation String?
+  reference   String?
+  source      String?
+  status      QuestionStatus  @default(DRAFT)
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  topic     Topic          @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  category  Category       @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  options   AnswerOption[]
+  attempts  AttemptAnswer[]
+  favorites Favorite[]
+
+  @@index([topicId])
+  @@index([categoryId])
+  @@index([status])
+  @@index([difficulty])
+}
+
+model AnswerOption {
+  id        String   @id @default(cuid())
+  questionId String
+  question  Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  text      String
+  isCorrect Boolean  @default(false)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([questionId])
+  @@index([isCorrect])
+}
+
+model ExamConfig {
+  id            String   @id @default(cuid())
+  name          String
+  description   String?
+  categoryId    String?
+  category      Category? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  topicId       String?
+  topic         Topic?    @relation(fields: [topicId], references: [id], onDelete: SetNull)
+  questionCount Int      @default(20)
+  duration      Int      @default(90)
+  passingScore  Float    @default(0.5)
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  attempts ExamAttempt[]
+
+  @@index([categoryId])
+  @@index([topicId])
+  @@index([isActive])
+}
+
+model ExamAttempt {
+  id               String      @id @default(cuid())
+  userId           String
+  user             User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  examConfigId     String?
+  examConfig       ExamConfig? @relation(fields: [examConfigId], references: [id], onDelete: SetNull)
+  status           ExamStatus  @default(IN_PROGRESS)
+  startTime        DateTime    @default(now())
+  endTime          DateTime?
+  score            Float?
+  totalQuestions   Int?
+  correctAnswers   Int?
+  incorrectAnswers Int?
+  unanswered       Int?
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  answers AttemptAnswer[]
+
+  @@index([userId])
+  @@index([examConfigId])
+  @@index([status])
+}
+
+model AttemptAnswer {
+  id           String   @id @default(cuid())
+  attemptId    String
+  attempt      ExamAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  questionId   String
+  question     Question   @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  selectedOptionId String?
+  isCorrect    Boolean?
+  answerTime   Int?
+  createdAt    DateTime   @default(now())
+
+  @@index([attemptId])
+  @@index([questionId])
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  questionId String
+  question  Question @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+
+  @@unique([userId, questionId])
+  @@index([userId])
+  @@index([questionId])
+}
