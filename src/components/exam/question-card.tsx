@@ -76,7 +76,7 @@ export function QuestionCard({
 
         {/* Options */}
         <div className="space-y-2">
-          {options.map((option) => {
+          {options.map((option, index) => {
             const isSelected = selectedOption === option.id;
             const isCorrect = correctOptionId === option.id;
             const showCorrect = showResult && isCorrect;
@@ -108,7 +108,7 @@ export function QuestionCard({
                           : "border-border text-muted-foreground"
                   )}
                 >
-                  {showCorrect ? "✓" : showIncorrect ? "✕" : option.id.toUpperCase().charAt(0)}
+                  {showCorrect ? "✓" : showIncorrect ? "✕" : String.fromCharCode(65 + index)}
                 </span>
                 <span className="text-base">{option.text}</span>
               </div>

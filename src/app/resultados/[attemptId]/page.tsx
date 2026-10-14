@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { useSession } from "next-auth/react";
+import { useSession } from "@/lib/session-provider";
 import Link from "next/link";
 import { ExamResults } from "@/components/exam/exam-results";
 import { Button } from "@/components/ui/button";
@@ -30,6 +30,7 @@ interface AttemptData {
   unanswered: number | null;
   totalQuestions: number;
   status: string;
+  passed: boolean;
   createdAt: string;
   endTime: string | null;
   examConfig: { name: string | null; passingScore: number } | null;
@@ -112,7 +113,7 @@ export default function ResultsPage() {
     );
   }
 
-  const passed = (attempt.score ?? 0) >= (attempt.examConfig?.passingScore ?? 0.5);
+  const passed = attempt.passed;
   const timeTaken = attempt.endTime
     ? Math.floor((new Date(attempt.endTime).getTime() - new Date(attempt.createdAt).getTime()) / 1000)
     : 0;
@@ -185,7 +186,7 @@ export default function ResultsPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  {answer.question.options.map((opt) => {
+                  {answer.question.options.map((opt, index) => {
                     const isSelected = opt.id === answer.selectedOptionId;
                     const isCorrectOpt = opt.isCorrect;
 
@@ -204,7 +205,7 @@ export default function ResultsPage() {
                           <span className={`text-base ${
                             isCorrectOpt ? "text-green-400" : isSelected ? "text-red-400" : "text-slate-400"
                           }`}>
-                            {isCorrectOpt ? "✓" : isSelected ? "✕" : opt.id.toUpperCase().charAt(0)}
+                            {isCorrectOpt ? "✓" : isSelected ? "✕" : String.fromCharCode(65 + index)}
                           </span>
                           <span className="text-base text-slate-300">{opt.text}</span>
                         </div>

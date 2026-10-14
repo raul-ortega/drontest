@@ -1,11 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions, CustomUser } from "@/lib/auth";
+import { getSession } from "@/lib/middleware";
 import { prisma } from "@/lib/prisma";
 
 // GET /api/stats/categories - Get category performance
 export async function GET(request: NextRequest) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },
@@ -13,7 +12,7 @@ export async function GET(request: NextRequest) {
     );
   }
 
-  const user = session.user as CustomUser;
+  const user = session.user;
 
   try {
     const attempts = await prisma.examAttempt.findMany({

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
+import { useSession } from "@/lib/session-provider";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -19,6 +19,7 @@ interface StatsData {
     correctAnswers: number | null;
     totalQuestions: number | null;
     passingScore: number | null;
+    passed: boolean;
     createdAt: string;
     examConfig: { name: string | null } | null;
   }>;
@@ -179,7 +180,7 @@ export default function DashboardPage() {
               {stats?.recentAttempts && stats.recentAttempts.length > 0 ? (
                 <div className="space-y-3">
                   {stats.recentAttempts.map((attempt) => {
-                    const passed = (attempt.score ?? 0) >= (attempt.passingScore ?? 50);
+                    const passed = attempt.passed;
                     return (
                       <Link key={attempt.id} href={`/resultados/${attempt.id}`}>
                         <div className="flex items-center justify-between p-3 rounded-lg border border-slate-800 hover:bg-slate-800 transition-colors cursor-pointer">

@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
+import { getSession } from "@/lib/middleware";
 import { prisma } from "@/lib/prisma";
-import { authOptions, type CustomUser } from "@/lib/auth";
 
 // DELETE /api/exams/[id]/attempt/[attemptId] - Cancel exam attempt (user only)
 export async function DELETE(
   _request: NextRequest,
   { params }: { params: Promise<{ id: string; attemptId: string }> }
 ) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },
@@ -16,7 +15,7 @@ export async function DELETE(
     );
   }
 
-  const userId = (session.user as CustomUser).id;
+  const userId = session.user.id;
 
   try {
     const { attemptId } = await params;

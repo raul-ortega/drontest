@@ -129,7 +129,7 @@ function computeProportionalAllocation(
   }));
 
   // Paso 3: repartir el resto por mayor fracción
-  let allocated = raw.reduce((s, r) => s + r.floor, 0);
+  const allocated = raw.reduce((s, r) => s + r.floor, 0);
   let remaining = count - allocated;
 
   const sorted = [...raw].sort((a, b) => b.frac - a.frac);
@@ -214,7 +214,118 @@ export async function calculateScore(attemptId: string): Promise<{
 }
 
 /**
- * Crea un nuevo intento de examen.
+ * Determina si un intento está aprobado.
+ *
+ * Unidades: `score` es un porcentaje (0-100) y `passingScore` es una
+ * fracción (0-1), tal y como se almacenan en la base de datos.
+ */
+export function isAttemptPassed(
+  score: number | null,
+  passingScore: number | null | undefined
+): boolean {
+  return (score ?? 0) >= (passingScore ?? 0.5) * 100;
+}
+
+/**
+ * Detecta violaciones de restricción única de Prisma (P2002).
+ */
+function isUniqueConstraintError(err: unknown): boolean {
+  return (
+    typeof err === "object" &&
+    err !== null &&
+    "code" in err &&
+    (err as { code?: string }).code === "P2002"
+  );
+}
+
+async function findInProgressAttempt(userId: string, examConfigId: string) {
+  return prisma.examAttempt.findFirst({
+    where: { userId, examConfigId, status: "IN_PROGRESS" },
+    include: {
+      answers: {
+        orderBy: { order: "asc" },
+        include: {
+          question: {
+            select: {
+              id: true,
+              text: true,
+              difficulty: true,
+              topicId: true,
+              categoryId: true,
+              options: {
+                select: { id: true, text: true, isCorrect: true, order: true },
+                orderBy: { order: "asc" },
+              },
+            },
+          },
+        },
+      },
+    },
+  });
+}
+
+type InProgressAttempt = NonNullable<
+  Awaited<ReturnType<typeof findInProgressAttempt>>
+>;
+
+/**
+ * Construye la respuesta para reanudar un intento IN_PROGRESS: valida el
+ * tiempo transcurrido y reconstruye las preguntas desde la instantánea.
+ */
+async function resumeAttempt(
+  existing: InProgressAttempt,
+  config: { duration: number; passingScore: number }
+) {
+  const elapsedSeconds = Math.floor(
+    (Date.now() - existing.startTime.getTime()) / 1000
+  );
+  const remaining = config.duration - elapsedSeconds;
+
+  if (remaining <= 0) {
+    // El tiempo se agotó mientras la página estaba cerrada
+    await prisma.examAttempt.update({
+      where: { id: existing.id },
+      data: { status: "EXPIRED", endTime: new Date() },
+    });
+    throw new Error("El tiempo del examen ha expirado");
+  }
+
+  const questions: SelectedQuestion[] = existing.answers.map((a) => ({
+    id: a.question.id,
+    text: a.question.text,
+    difficulty: a.question.difficulty,
+    topicId: a.question.topicId,
+    categoryId: a.question.categoryId,
+    options: a.question.options.map((o) => ({
+      id: o.id,
+      text: o.text,
+      isCorrect: o.isCorrect,
+      order: o.order,
+    })),
+  }));
+
+  return {
+    attemptId: existing.id,
+    questions,
+    duration: remaining,
+    passingScore: config.passingScore,
+  };
+}
+
+/**
+ * Crea un nuevo intento de examen, o recupera el intento IN_PROGRESS
+ * existente del usuario para esa configuración (idempotente).
+ *
+ * Persiste una instantánea de las preguntas presentadas (filas
+ * AttemptAnswer sin opción elegida), de modo que el intento puede
+ * recuperarse tras una recarga y las respuestas enviadas pueden
+ * validarse contra las preguntas reales del intento.
+ *
+ * La idempotencia es atómica: el índice único parcial
+ * (userId, examConfigId) WHERE status = 'IN_PROGRESS' garantiza que dos
+ * peticiones concurrentes (p. ej. el doble efecto de React StrictMode en
+ * desarrollo) nunca crean dos intentos; la petición perdedora recibe el
+ * intento creado por la ganadora.
  */
 export async function createAttempt(
   userId: string,
@@ -228,20 +339,55 @@ export async function createAttempt(
     throw new Error("Configuración de examen no encontrada o inactiva");
   }
 
+  // Fast path: si el usuario ya tiene un intento IN_PROGRESS para esta
+  // configuración, se reanuda en lugar de crear uno nuevo.
+  const existing = await findInProgressAttempt(userId, examConfigId);
+  if (existing) {
+    return resumeAttempt(existing, config);
+  }
+
   const questions = await selectQuestions(
     config.categoryId,
     config.topicId,
     config.questionCount
   );
 
-  const attempt = await prisma.examAttempt.create({
-    data: {
-      userId,
-      examConfigId,
-      status: "IN_PROGRESS",
-      totalQuestions: config.questionCount,
-    },
-  });
+  // Intento + instantánea de preguntas en una transacción.
+  // El índice único parcial (userId, examConfigId) WHERE status = 'IN_PROGRESS'
+  // garantiza que dos peticiones concurrentes no creen dos intentos: la
+  // perdedora de la carrera recibe el intento creado por la ganadora.
+  let attempt: { id: string };
+  try {
+    attempt = await prisma.$transaction(async (tx) => {
+      const created = await tx.examAttempt.create({
+        data: {
+          userId,
+          examConfigId,
+          status: "IN_PROGRESS",
+          totalQuestions: config.questionCount,
+        },
+      });
+
+      await tx.attemptAnswer.createMany({
+        data: questions.map((q, i) => ({
+          attemptId: created.id,
+          questionId: q.id,
+          order: i,
+        })),
+      });
+
+      return created;
+    });
+  } catch (err) {
+    if (isUniqueConstraintError(err)) {
+      // Una petición concurrente creó el intento primero: reanudarla.
+      const winner = await findInProgressAttempt(userId, examConfigId);
+      if (winner) {
+        return resumeAttempt(winner, config);
+      }
+    }
+    throw err;
+  }
 
   return {
     attemptId: attempt.id,

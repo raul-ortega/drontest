@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions, CustomUser } from "@/lib/auth";
+import { getSession } from "@/lib/middleware";
 import { prisma } from "@/lib/prisma";
 
 // DELETE /api/favorites/[id] - Remove favorite
@@ -8,7 +7,7 @@ export async function DELETE(
   _request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },
@@ -16,7 +15,7 @@ export async function DELETE(
     );
   }
 
-  const user = session.user as CustomUser;
+  const user = session.user;
 
   try {
     const { id } = await params;

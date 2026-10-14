@@ -1,5 +1,4 @@
-import { getServerSession } from "next-auth";
-import { authOptions, CustomUser } from "@/lib/auth";
+import { getSession } from "@/lib/middleware";
 import { redirect } from "next/navigation";
 import { Sidebar, type SidebarItem } from "@/components/layout/sidebar";
 import { Header } from "@/components/layout/header";
@@ -7,13 +6,13 @@ import { Header } from "@/components/layout/header";
 export const dynamic = "force-dynamic";
 
 export default async function AdminLayout({ children }: { children: React.ReactNode }) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
 
   if (!session || !session.user) {
     redirect("/login");
   }
 
-  const user = session.user as CustomUser;
+  const user = session.user;
   if (user.role !== "ADMIN") {
     redirect("/dashboard");
   }

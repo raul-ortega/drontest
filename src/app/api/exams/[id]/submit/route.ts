@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions, CustomUser } from "@/lib/auth";
+import { getSession } from "@/lib/middleware";
 import { prisma } from "@/lib/prisma";
 import { ExamSubmissionSchema as examSubmissionSchema } from "@/lib/validations";
 
@@ -9,7 +8,7 @@ export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },
@@ -17,7 +16,7 @@ export async function POST(
     );
   }
 
-  const user = session.user as CustomUser;
+  const user = session.user;
 
   try {
     const { id } = await params;
@@ -36,7 +35,11 @@ export async function POST(
     // Verify attempt belongs to user and is in progress
     const attempt = await prisma.examAttempt.findUnique({
       where: { id: attemptId },
-      include: { examConfig: true },
+      include: {
+        examConfig: true,
+        // Instantánea de preguntas presentadas en este intento
+        answers: { select: { questionId: true } },
+      },
     });
 
     if (!attempt || attempt.userId !== user.id) {
@@ -49,6 +52,21 @@ export async function POST(
     if (attempt.status !== "IN_PROGRESS") {
       return NextResponse.json(
         { success: false, error: "El examen ya ha sido entregado" },
+        { status: 400 }
+      );
+    }
+
+    // Validar que las preguntas enviadas por el cliente son exactamente
+    // las que forman parte de la instantánea del intento (una por una).
+    const snapshotIds = new Set(attempt.answers.map((a) => a.questionId));
+    const submittedIds = new Set(answers.map((a) => a.questionId));
+
+    if (
+      submittedIds.size !== snapshotIds.size ||
+      [...submittedIds].some((qid) => !snapshotIds.has(qid))
+    ) {
+      return NextResponse.json(
+        { success: false, error: "Las preguntas enviadas no corresponden al intento" },
         { status: 400 }
       );
     }

@@ -1,14 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions, CustomUser } from "@/lib/auth";
+import { getSession } from "@/lib/middleware";
 import { prisma } from "@/lib/prisma";
+import { isAttemptPassed } from "@/services/exam-service";
 
 // GET /api/exams/review/attempt/[attemptId] - Get attempt results for review
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ attemptId: string }> }
 ) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },
@@ -16,7 +16,7 @@ export async function GET(
     );
   }
 
-  const user = session.user as CustomUser;
+  const user = session.user;
 
   try {
     const { attemptId } = await params;
@@ -46,7 +46,13 @@ export async function GET(
       );
     }
 
-    return NextResponse.json({ success: true, data: attempt });
+    return NextResponse.json({
+      success: true,
+      data: {
+        ...attempt,
+        passed: isAttemptPassed(attempt.score, attempt.examConfig?.passingScore),
+      },
+    });
   } catch {
     return NextResponse.json(
       { success: false, error: "Error al obtener resultados" },

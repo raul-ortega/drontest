@@ -174,11 +174,13 @@ model AttemptAnswer {
   attempt      ExamAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
   questionId   String
   question     Question   @relation(fields: [questionId], references: [id], onDelete: Cascade)
+  order        Int      @default(0)
   selectedOptionId String?
   isCorrect    Boolean?
   answerTime   Int?
   createdAt    DateTime   @default(now())
 
+  @@unique([attemptId, questionId])
   @@index([attemptId])
   @@index([questionId])
 }

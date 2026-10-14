@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions, CustomUser } from "@/lib/auth";
+import { getSession } from "@/lib/middleware";
 import { createAttempt } from "@/services/exam-service";
 
 // POST /api/exams/[id]/start - Start a new exam attempt
@@ -8,7 +7,7 @@ export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },
@@ -16,7 +15,7 @@ export async function POST(
     );
   }
 
-  const user = session.user as CustomUser;
+  const user = session.user;
 
   try {
     const { id } = await params;
@@ -55,6 +54,8 @@ export async function POST(
       status = 400;
     } else if (message.startsWith("Configuración de examen")) {
       status = 404;
+    } else if (message.startsWith("El tiempo del examen")) {
+      status = 400;
     }
 
     return NextResponse.json({ success: false, error: message }, { status });

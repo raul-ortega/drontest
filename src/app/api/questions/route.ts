@@ -1,13 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import { getSession } from "@/lib/middleware";
 import { prisma } from "@/lib/prisma";
 import { requireAdmin } from "@/lib/middleware";
 import { CreateQuestionSchema as createQuestionSchema } from "@/lib/validations";
 
 // GET /api/questions - List published questions with filters
 export async function GET(request: NextRequest) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },

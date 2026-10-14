@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
+import { useSession } from "@/lib/session-provider";
 import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,6 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import type { CustomUser } from "@/lib/auth";
 
 interface ExamConfig {
   id: string;
@@ -49,7 +48,7 @@ export default function AdminExamsPage() {
       router.push("/login");
       return;
     }
-    if (status !== "authenticated" || (session?.user as CustomUser)?.role !== "ADMIN") {
+    if (status !== "authenticated" || session?.user?.role !== "ADMIN") {
       router.push("/dashboard");
       return;
     }

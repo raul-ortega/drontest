@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
+import { useSession } from "@/lib/session-provider";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -24,6 +24,7 @@ interface AttemptRow {
   unanswered: number | null;
   totalQuestions: number;
   passingScore: number;
+  passed: boolean;
   createdAt: string;
   examConfig: { name: string | null; passingScore?: number } | null;
 }
@@ -86,7 +87,7 @@ export default function HistoryPage() {
               </TableHeader>
               <TableBody>
                 {attempts.map((attempt) => {
-                  const passed = (attempt.score ?? 0) >= (attempt.examConfig?.passingScore ?? 50);
+                  const passed = attempt.passed;
                   return (
                     <TableRow
                       key={attempt.id}

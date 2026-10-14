@@ -1,13 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
+import { getSession } from "@/lib/middleware";
 import { prisma } from "@/lib/prisma";
-import { authOptions } from "@/lib/auth";
 import { requireAdmin } from "@/lib/middleware";
 import { CreateExamConfigSchema as createExamConfigSchema } from "@/lib/validations";
 
 // GET /api/exams - List exam configs
 export async function GET() {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },

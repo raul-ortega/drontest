@@ -199,20 +199,20 @@ async function main() {
 
   await prisma.question.create({
     data: {
-      text: "¿Es obligatorio asegurar un drone frente a responsabilidad civil en España?",
+      text: "¿En qué operaciones con drones es obligatorio contar con un seguro de responsabilidad civil en España?",
       topicId: topicNormativo1.id,
       categoryId: catNormativo.id,
-      difficulty: "EASY",
-      explanation: "Sí. El Reglamento (UE) 2019/947 establece la obligatoriedad de tener un seguro de responsabilidad civil para la operación de cualquier drone, salvo excepciones muy concretas para drones de masa inferior a 250 g que no tengan sensores ni cámara.",
-      reference: "Reglamento (UE) 2019/947, Art. 16",
-      source: "Reglamento (UE) 2019/947",
+      difficulty: "MEDIUM",
+      explanation: "El artículo 8 del Real Decreto 517/2024 (que desarrolla la Ley 48/1960 de Navegación Aérea) obliga a disponer de una póliza de seguro o garantía financiera equivalente para las operaciones en la subcategoría A2, en la categoría específica y en la categoría certificada, y para cualquier UAS con MTOM igual o superior a 20 kg (según el Reglamento (CE) 785/2004). Quedan exentas las operaciones en la subcategoría A1 y, en la subcategoría A3, las realizadas con MTOM inferior a 20 kg.",
+      reference: "RD 517/2024, art. 8; Ley 48/1960, arts. 126-127",
+      source: "Real Decreto 517/2024 (BOE, 05/06/2024)",
       status: "PUBLISHED",
       options: {
         create: [
-          { text: "Sí, siempre es obligatorio", isCorrect: false, order: 1 },
-          { text: "Solo si el drone pesa más de 900 g", isCorrect: false, order: 2 },
-          { text: "Sí, salvo excepciones para drones < 250 g sin cámara/sensores", isCorrect: true, order: 3 },
-          { text: "No, solo en operaciones comerciales", isCorrect: false, order: 4 },
+          { text: "En todas las operaciones, sin excepción", isCorrect: false, order: 1 },
+          { text: "En A2, en la categoría específica y en la certificada; A1 y A3 (con MTOM < 20 kg) quedan exentas", isCorrect: true, order: 2 },
+          { text: "Solo si el drone pesa más de 900 g", isCorrect: false, order: 3 },
+          { text: "Solo en operaciones comerciales", isCorrect: false, order: 4 },
         ],
       },
     },
@@ -242,20 +242,20 @@ async function main() {
 
   await prisma.question.create({
     data: {
-      text: "¿Se puede volar un drone sobre zonas urbanas en la categoría abierta?",
+      text: "¿Puede un piloto de la categoría abierta sobrevolar una aglomeración de personas?",
       topicId: topicNormativo2.id,
       categoryId: catNormativo.id,
       difficulty: "MEDIUM",
-      explanation: "En la subcategoría A1, los vuelos sobre zonas pobladas, aglomeraciones de civiles o áreas industriales/comerciales están prohibidos. En A3, sí se permite sobrevolar zonas no pobladas, pero con restricciones. Las operaciones sobre personas no agrupadas requieren precaución adicional.",
-      reference: "Reglamento de Ejecución (UE) 2019/947, Art. 7 y 9",
-      source: "Reglamento (UE) 2019/947",
+      explanation: "No. El anexo I (parte A) del Reglamento (UE) 2019/947 prohíbe la operación sobre aglomeraciones de personas en toda la categoría abierta. En A1 sí se puede operar sobre personas no agrupadas con drones de clase C0 o C1; en A2, cerca de personas con drones de clase C2; y en A3 se exige una distancia mínima de 50 m a personas y estructuras.",
+      reference: "Reglamento (UE) 2019/947, anexo I, parte A (UAS.OPEN.020, UAS.OPEN.030, UAS.OPEN.040)",
+      source: "Reglamento de Ejecución (UE) 2019/947",
       status: "PUBLISHED",
       options: {
         create: [
-          { text: "Sí, sin restricciones", isCorrect: false, order: 1 },
-          { text: "No, está prohibido en todas las subcategorías", isCorrect: false, order: 2 },
-          { text: "Solo en subcategoría A3 y con precaución, nunca sobre aglomeraciones", isCorrect: true, order: 3 },
-          { text: "Solo con autorización de AENA", isCorrect: false, order: 4 },
+          { text: "Sí, en cualquier subcategoría", isCorrect: false, order: 1 },
+          { text: "Solo en A1, con drones de clase C0 o C1", isCorrect: false, order: 2 },
+          { text: "No, está prohibido sobrevolar aglomeraciones en toda la categoría abierta", isCorrect: true, order: 3 },
+          { text: "Solo en A3, manteniendo 50 m de distancia", isCorrect: false, order: 4 },
         ],
       },
     },

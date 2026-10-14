@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
+import { useSession } from "@/lib/session-provider";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,10 +18,12 @@ interface ExamConfig {
 }
 
 export default function SimulacrosPage() {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
   const router = useRouter();
   const [exams, setExams] = useState<ExamConfig[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [retryKey, setRetryKey] = useState(0);
 
   useEffect(() => {
     if (status === "unauthenticated") {
@@ -30,22 +32,45 @@ export default function SimulacrosPage() {
     }
     if (status !== "authenticated") return;
 
+    let cancelled = false;
+
     async function loadExams() {
+      setError("");
       try {
         const res = await fetch("/api/exams");
+        if (res.status === 401) {
+          // Sesión expirada o inválida: enviar a login
+          router.push("/login");
+          return;
+        }
         if (res.ok) {
           const data = await res.json();
-          if (data.success) setExams(data.data);
+          if (data.success) {
+            setExams(data.data);
+          } else {
+            setError(data.error || "Error al cargar los simulacros");
+          }
+        } else {
+          setError("Error al cargar los simulacros. Inténtalo de nuevo.");
         }
       } catch {
-        // ignore
+        setError("No se pudo conectar con el servidor. Inténtalo de nuevo.");
       } finally {
-        setLoading(false);
+        if (!cancelled) setLoading(false);
       }
     }
 
     loadExams();
-  }, [status, router]);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [status, router, retryKey]);
+
+  function handleRetry() {
+    setLoading(true);
+    setRetryKey((k) => k + 1);
+  }
 
   if (loading) {
     return (
@@ -90,12 +115,29 @@ export default function SimulacrosPage() {
             </Card>
           ))}
         </div>
+      ) : error ? (
+        <Alert variant="destructive">
+          <AlertDescription>{error}</AlertDescription>
+        </Alert>
       ) : (
         <Alert className="bg-slate-800 border-slate-700">
           <AlertDescription className="text-slate-400">
             No hay pruebas disponibles actualmente.
           </AlertDescription>
         </Alert>
+      )}
+
+      {error && (
+        <div className="mt-4">
+          <Button
+            variant="outline"
+            className="w-full border-slate-700 text-slate-300 hover:bg-slate-800"
+            onClick={handleRetry}
+            disabled={loading}
+          >
+            {loading ? "Cargando..." : "Reintentar"}
+          </Button>
+        </div>
       )}
     </div>
   );

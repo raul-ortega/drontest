@@ -1,6 +1,6 @@
 "use client";
 
-import { SessionProvider } from "next-auth/react";
+import { SessionProvider } from "@/lib/session-provider";
 import { ToastContainer } from "@/components/ui/toast";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";

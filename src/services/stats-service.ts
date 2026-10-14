@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { isAttemptPassed } from "@/services/exam-service";
 
 export interface UserStats {
   totalAttempts: number;
@@ -11,6 +12,7 @@ export interface UserStats {
     correctAnswers: number | null;
     totalQuestions: number | null;
     passingScore: number;
+    passed: boolean;
     createdAt: Date;
     examConfig: { name: string | null; passingScore?: number } | null;
   }>;
@@ -51,6 +53,7 @@ export async function getUserStats(userId: string): Promise<UserStats> {
       score: true,
       correctAnswers: true,
       totalQuestions: true,
+      examConfig: { select: { passingScore: true } },
     },
   });
 
@@ -71,11 +74,12 @@ export async function getUserStats(userId: string): Promise<UserStats> {
   const formattedRecent = recentAttempts.map((a) => ({
     ...a,
     passingScore: a.examConfig?.passingScore ?? 0.5,
+    passed: isAttemptPassed(a.score, a.examConfig?.passingScore),
   }));
 
   const totalAttempts = submittedAttempts.length;
-  const passedAttempts = submittedAttempts.filter(
-    (a) => (a.score ?? 0) >= 50
+  const passedAttempts = submittedAttempts.filter((a) =>
+    isAttemptPassed(a.score, a.examConfig?.passingScore)
   ).length;
 
   const avgScore =
@@ -124,10 +128,15 @@ export async function getAdminStats(): Promise<AdminStats> {
 
   const submittedAttempts = await prisma.examAttempt.findMany({
     where: { status: "SUBMITTED" },
-    select: { score: true },
+    select: {
+      score: true,
+      examConfig: { select: { passingScore: true } },
+    },
   });
 
-  const passed = submittedAttempts.filter((a) => (a.score ?? 0) >= 50).length;
+  const passed = submittedAttempts.filter((a) =>
+    isAttemptPassed(a.score, a.examConfig?.passingScore)
+  ).length;
   const approvalRate =
     totalAttempts > 0 ? (passed / totalAttempts) * 100 : 0;
 

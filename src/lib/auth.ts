@@ -1,11 +1,12 @@
-import NextAuth, { NextAuthOptions } from "next-auth";
-import CredentialsProvider from "next-auth/providers/credentials";
+import { Auth, type AuthConfig } from "@auth/core";
 import bcrypt from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
+import type { JWT } from "@auth/core/jwt";
+import type { Session } from "@auth/core/types";
 
 const prisma = new PrismaClient();
 
-export interface CustomUser {
+export interface CustomSessionUser {
   id: string;
   name: string | null;
   email: string | null;
@@ -13,14 +14,19 @@ export interface CustomUser {
   role: string;
 }
 
-export const authOptions: NextAuthOptions = {
-  adapter: undefined, // No usamos adapter, usamos credentials
+export interface CustomSession extends Session {
+  user: CustomSessionUser;
+}
+
+export const authConfig: AuthConfig = {
   providers: [
-    CredentialsProvider({
-      name: "credentials",
+    {
+      id: "credentials",
+      name: "Credentials",
+      type: "credentials",
       credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" },
+        email: { label: "Email" },
+        password: { label: "Password" },
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
@@ -37,7 +43,7 @@ export const authOptions: NextAuthOptions = {
 
         const isPasswordValid = await bcrypt.compare(
           credentials.password as string,
-          user.password
+          user.password,
         );
 
         if (!isPasswordValid) {
@@ -52,7 +58,7 @@ export const authOptions: NextAuthOptions = {
           role: user.role,
         };
       },
-    }),
+    },
   ],
   session: {
     strategy: "jwt",
@@ -65,23 +71,26 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
-        const u = user as CustomUser;
-        token.role = u.role;
-        token.id = u.id;
+        (token as JWT & { id?: string; role?: string }).role = (user as any).role;
+        (token as JWT & { id?: string; role?: string }).id = (user as any).id;
       }
       return token;
     },
     async session({ session, token }) {
       if (session.user) {
-        (session.user as CustomUser).id = token.id as string;
-        (session.user as CustomUser).role = token.role as string;
+        (session.user as unknown as CustomSessionUser).id = (token as JWT & { id?: string }).id as string;
+        (session.user as unknown as CustomSessionUser).role = (token as JWT & { role?: string }).role as string;
       }
       return session;
     },
   },
   secret: process.env.NEXTAUTH_SECRET,
+  trustHost: true,
+  // La ruta del handler está montada en /api/auth/[...nextauth];
+  // por defecto @auth/core usa "/auth" y no lograría parsear las acciones.
+  basePath: "/api/auth",
 };
 
-const handler = NextAuth(authOptions);
-
-export { handler as GET, handler as POST };
+export async function handleAuth(request: Request) {
+  return Auth(request, authConfig);
+}

@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getServerSession } from "next-auth";
-import { authOptions, CustomUser } from "@/lib/auth";
+import { getSession } from "@/lib/middleware";
 import { prisma } from "@/lib/prisma";
 
 // GET /api/exams/[id]/attempt/[attemptId] - Get attempt results
@@ -8,7 +7,7 @@ export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ id: string; attemptId: string }> }
 ) {
-  const session = await getServerSession(authOptions);
+  const session = await getSession();
   if (!session || !session.user) {
     return NextResponse.json(
       { success: false, error: "No autenticado" },
@@ -16,7 +15,7 @@ export async function GET(
     );
   }
 
-  const user = session.user as CustomUser;
+  const user = session.user;
 
   try {
     const { attemptId } = await params;

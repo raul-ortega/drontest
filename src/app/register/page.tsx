@@ -8,9 +8,12 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { authSignUp } from "@/lib/auth-actions";
+import { signIn } from "@/lib/client-auth";
+import { useSession } from "@/lib/session-provider";
 
 export default function RegisterPage() {
   const router = useRouter();
+  const { updateSession } = useSession();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -26,7 +29,22 @@ export default function RegisterPage() {
     const result = await authSignUp({ name, email, password, confirmPassword });
 
     if (result.success) {
-      router.push("/login");
+      // Iniciar sesión automáticamente con las credenciales recién creadas
+      const loginResult = await signIn("credentials", {
+        email,
+        password,
+        redirect: false,
+      });
+
+      if (loginResult?.error) {
+        setError("Cuenta creada, pero no se pudo iniciar sesión automáticamente. Inicia sesión manualmente.");
+      } else {
+        // Recargar la sesión en el contexto antes de navegar, para que el
+        // dashboard no vea el estado "unauthenticated" anterior.
+        await updateSession();
+        router.push("/dashboard");
+        router.refresh();
+      }
     } else {
       setError(result.error || "Error al registrarse");
     }

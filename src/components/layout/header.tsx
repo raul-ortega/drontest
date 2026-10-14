@@ -1,6 +1,7 @@
 "use client";
 
-import { useSession, signOut } from "next-auth/react";
+import { useSession } from "@/lib/session-provider";
+import { signOut } from "@/lib/client-auth";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
@@ -11,12 +12,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import type { CustomUser } from "@/lib/auth";
 import { DroneIcon } from "@/components/icons";
 
 export function Header() {
   const { data: session, status } = useSession();
-  const user = session?.user as CustomUser | undefined;
+  const user = session?.user;
   const isAdmin = user?.role === "ADMIN";
   const isAuthenticated = status === "authenticated";
   const userName = user?.name;

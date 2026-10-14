@@ -1,3 +1,9 @@
-import { GET, POST } from "@/lib/auth";
+import { handleAuth } from "@/lib/auth";
 
-export { GET, POST };
+export async function GET(request: Request) {
+  return handleAuth(request);
+}
+
+export async function POST(request: Request) {
+  return handleAuth(request);
+}

@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  allowedDevOrigins: ['impxdev.ddns.net'],
   cacheComponents: false,
   partialPrefetching: false,
   output: 'standalone',

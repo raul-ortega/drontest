@@ -1,13 +1,11 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
+import { useSession } from "@/lib/session-provider";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import type { CustomUser } from "@/lib/auth";
-
 interface AdminStats {
   totalUsers: number;
   totalQuestions: number;
@@ -28,7 +26,7 @@ export default function AdminDashboardPage() {
       return;
     }
     if (status !== "authenticated") return;
-    if ((session?.user as CustomUser)?.role !== "ADMIN") {
+    if (session?.user?.role !== "ADMIN") {
       router.push("/dashboard");
       return;
     }

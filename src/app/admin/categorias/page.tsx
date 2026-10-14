@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { useSession } from "next-auth/react";
+import { useSession } from "@/lib/session-provider";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -18,7 +18,6 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import type { CustomUser } from "@/lib/auth";
 
 interface Category {
   id: string;
@@ -49,7 +48,7 @@ export default function AdminCategoriesPage() {
       return;
     }
 
-    const user = session?.user as CustomUser | undefined;
+    const user = session?.user;
     if (!user || user.role !== "ADMIN") {
       router.push("/dashboard");
       return;
