@@ -131,7 +131,7 @@ Separación de responsabilidades: interfaz → API routes → servicios de negoc
 ## Pruebas y calidad
 
 - Verificaciones ejecutadas: `tsc --noEmit`, `npm run lint`, `npm run build` y pruebas manuales end-to-end (login → simulacro → entrega → resultados → revisión, flujos admin).
-- **Pendiente:** suite de tests automatizados (Vitest para reglas de negocio —puntuación, aprobado, selección de preguntas— y Playwright para flujos críticos). Ver `IMPLEMENTATION_PLAN.md`.
+- **Pendiente:** suite de tests automatizados (Vitest para reglas de negocio —puntuación, aprobado, selección de preguntas— y Playwright para flujos críticos).
 
 ## Copias de seguridad y restauración
 
@@ -250,6 +250,9 @@ Requisitos mínimos de producción:
 
 ## Documentación adicional
 
-- `AGENTS.md` — reglas de desarrollo del proyecto.
-- `IMPLEMENTATION_PLAN.md` — plan de implementación y estado de las tareas.
 - `docs/categorias/` — documentación por categoría y subcategoría. El banco A1/A3 activo ya **no** está ahí: se genera desde el temario oficial y vive en `prisma/data/`. El antiguo `docs/categorias/abierta/a1a3/banco-preguntas.md` está obsoleto.
+- `docs/temario-a1a3/` — texto del temario oficial y guía del curso.
+
+> Las notas internas de desarrollo (`AGENTS.md`) y el plan de implementación
+> (`IMPLEMENTATION_PLAN.md`) se mantienen solo en el entorno local y están
+> excluidos de Git.
