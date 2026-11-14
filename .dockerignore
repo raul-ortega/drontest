@@ -1,0 +1,19 @@
+# Ignorar todo lo que no hace falta dentro de la imagen
+.git
+.gitignore
+.github
+node_modules
+.next
+out
+coverage
+*.log
+.env
+.env.*
+!.env.example
+docker/schema.sql
+.playwright-mcp
+.DS_Store
+*.md
+!prisma/data/*.json
+docs
+IMPLEMENTATION_PLAN.md

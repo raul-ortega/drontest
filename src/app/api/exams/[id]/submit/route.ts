@@ -71,8 +71,9 @@ export async function POST(
       );
     }
 
-    // Validación del tiempo en el servidor (con margen de 30s por latencia)
-    const durationMs = (attempt.examConfig?.duration ?? 0) * 60 * 1000;
+    // Validación del tiempo en el servidor (con margen de 30s por latencia).
+    // `duration` se almacena en segundos (igual que el temporizador del cliente).
+    const durationMs = (attempt.examConfig?.duration ?? 0) * 1000;
     const deadline = attempt.startTime.getTime() + durationMs + 30 * 1000;
     if (Date.now() > deadline) {
       await prisma.examAttempt.update({

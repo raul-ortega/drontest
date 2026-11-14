@@ -67,7 +67,7 @@ npm run dev
 | Variable | Descripción | Por defecto |
 |---|---|---|
 | `POSTGRES_USER` | Usuario de PostgreSQL | `drontest` |
-| `POSTGRES_PASSWORD` | Contraseña de PostgreSQL | `drontest_dev` |
+| `POSTGRES_PASSWORD` | Contraseña de PostgreSQL | definida en `.env` |
 | `POSTGRES_DB` | Nombre de la base de datos | `drontest` |
 | `POSTGRES_PORT` | Puerto expuesto del contenedor | `5433` |
 | `DATABASE_URL` | String de conexión Prisma | `postgresql://…@localhost:5433/drontest?schema=public` |
@@ -79,19 +79,22 @@ npm run dev
 ## Base de datos
 
 - **Migraciones:** `npm run db:migrate` (desarrollo) o `npx prisma migrate deploy` (producción). Las migraciones están versionadas en `prisma/migrations/`; no dependan de cambios manuales en producción.
-- **Seed:** `npm run db:seed` crea 1 admin (`admin@drontest.es` / `admin123`, solo para desarrollo), 3 categorías, 6 temas, preguntas de demostración y 1 configuración de examen. **Las preguntas del seed son ficticias** y no se mezclan con el banco real de la BD en vivo.
+- **Seed:** `npm run db:seed` crea 1 admin (`admin@drontest.es` / `admin123`, solo para desarrollo) y carga el banco completo del temario oficial AESA A1/A3 desde `prisma/data/*.json` (280 preguntas, 3 categorías, 24 temas y 4 configuraciones de examen). **Es un seed destructivo del contenido didáctico:** elimina preguntas, opciones, intentos, favoritos, simulacros, temas y categorías anteriores, pero conserva los usuarios.
 - **Estudio de datos:** `npm run db:studio`.
 
 ## Fuente de los datos del banco de preguntas
 
-El banco real que hay actualmente en la BD (95 preguntas, categoría **Abierta**) **no** proviene del seed: se redactó y verificó a partir del temario de formación de AESA y está documentado en los subdirectorios de `docs/categorias/`.
+El banco activo de la BD se genera íntegramente desde el temario oficial del curso **UAS-Certificación A1/A3** de AESA y `npm run db:seed` lo carga desde los JSON de `prisma/data/`.
 
-- **Fuente documental:** `docs/_Formacion.temario.completo.Ed12.pdf` (FOR-UAS-P01-DT01, Ed. 09, julio 2024).
-- **Banco verificado:** `docs/categorias/abierta/a1a3/banco-preguntas.md` — 95 preguntas tipo test (A–D), cada una con respuesta correcta, explicación, dificultad y **fuente: cita literal del temario con número de página**.
-  - Distribución por tema: Marco Legal (20), Limitaciones de Vuelo (20), Meteorología Aeronáutica (17), Contaminación Acústica (2), Planificación del Vuelo (20), Operaciones Especiales (15), más 1 pregunta de seguro de responsabilidad civil (RD 517/2024, art. 8).
-- **Inserción en BD:** `prisma/seed-questions-batch.ts` (script incremental: `npx tsx prisma/seed-questions-batch.ts`, con `--group` y `--dry`). Solo inserta preguntas marcadas como verificadas y deja constancia del estado ("Insertada en BD") en el propio `banco-preguntas.md`.
-- **Estructura por categorías:** `docs/categorias/` organiza el banco por categoría y subcategoría (Abierta A1/A3, Abierta A2, Específica STS/General, Radiofonista UAS). Por ahora solo **A1/A3** tiene banco generado; el resto están documentadas (parámetros del examen y requisitos) con el banco **por generar/por definir**.
-- **Naturaleza del contenido:** son preguntas elaboradas a partir de documentación pública de AESA, **no** preguntas oficiales de AESA. La procedencia de cada pregunta se conserva en el campo `source` de la BD y en el documento del banco.
+- **Fuente documental:** `docs/temario-a1a3/` — texto del temario oficial de AESA (ver su `README.md`). Contiene las tres partes del curso:
+  - **Parte 1 — Concepto normativo** (FOR-UAS-P01-DT01, Ed. 09, julio 2024): 55 diapositivas.
+  - **Parte 2 — Conocimientos generales** (lección 2): 85 diapositivas.
+  - **Parte 3 — Procedimientos operacionales** (versión 4, noviembre 2022): 21 diapositivas.
+- **Banco activo:** `prisma/data/preguntas-parte1.json` (91 preguntas), `preguntas-parte2.json` (141) y `preguntas-parte3.json` (48). Total: **280 preguntas** en 3 categorías y 24 temas, cada una con 4 opciones, una sola correcta, explicación y referencia a la diapositiva del temario. Ver `prisma/data/README.md` para el detalle de temas y trazabilidad.
+- **Configuraciones de examen:** 1 simulacro oficial (40 preguntas, 40 minutos, 75 % de aciertos) y 3 prácticas por parte (25, 25 y 20 preguntas).
+- **Naturaleza del contenido:** las preguntas están elaboradas a partir del material público de formación de AESA, **no** son preguntas oficiales del examen de AESA. La referencia a la diapositiva de origen se guarda en los campos `reference` y `source` de la BD.
+- **Documentación histórica:** `docs/categorias/abierta/a1a3/banco-preguntas.md` (antiguo banco de 95 preguntas) queda **obsoleto** y se conserva solo como referencia. El banco operativo es el de `prisma/data/`.
+- **Estructura por categorías:** `docs/categorias/` describe otras categorías y subcategorías (Abierta A2, Específica STS/General, Radiofonista UAS). Por ahora solo **A1/A3** tiene banco cargado; el resto están documentadas (parámetros del examen y requisitos) con el banco **por generar/por definir**.
 
 ## Scripts
 
@@ -109,7 +112,7 @@ El banco real que hay actualmente en la BD (95 preguntas, categoría **Abierta**
 ## Estructura del proyecto
 
 ```
-prisma/            schema.prisma, migraciones, seed
+prisma/            schema.prisma, migraciones, seed y data/ (banco A1/A3 en JSON)
 src/
   app/
     login, register, dashboard, practica, simulacros, resultados,
@@ -120,7 +123,7 @@ src/
   lib/             prisma, auth, session-provider, validaciones (Zod)
   services/        exam-service, stats-service, question-service,
                    category-service, topic-service, exam-config-service
-docs/              material de formación y banco de preguntas documentado
+docs/              temario AESA (temario-a1a3/), material y bancos documentados
 ```
 
 Separación de responsabilidades: interfaz → API routes → servicios de negocio → Prisma. Las reglas de negocio (selección de preguntas, puntuación, aprobado/no aprobado, expiración) viven en los servicios, en el servidor.
@@ -142,6 +145,95 @@ docker exec -i drontest-postgres psql -U drontest -d drontest < backup-YYYYMMDD.
 
 El volumen `postgres_data` de Docker Compose persiste los datos entre reinicios del contenedor.
 
+## Imagen Docker todo en uno
+
+La imagen incluye la aplicación, PostgreSQL 16 y el banco de 280 preguntas, sin
+servicios externos. Solo hay que indicar el email y la contraseña de la cuenta
+administradora:
+
+```bash
+docker run -d --name drontest -p 3000:3000 \
+  -e ADMIN_EMAIL=tu@email.com \
+  -e ADMIN_PASSWORD=una-clave-segura \
+  -v drontest-data:/data \
+  raulya/drontest:latest
+```
+
+Abre `http://localhost:3000`. El primer arranque tarda entre 20 y 60 segundos:
+inicializa PostgreSQL y carga el banco. Se puede seguir con
+`docker logs -f drontest`; cuando `docker ps` muestre `healthy`, está lista.
+
+### Variables de entorno
+
+| Variable | Obligatoria | Descripción |
+|---|---|---|
+| `ADMIN_PASSWORD` | **Sí** | Contraseña de la cuenta administradora. Sin ella el contenedor no arranca. |
+| `ADMIN_EMAIL` | No | Email del administrador. Por defecto: `admin@drontest.local`. |
+| `PORT` | No | Puerto interno de la aplicación. Por defecto: `3000`. |
+| `DATABASE_URL` | No | PostgreSQL externo. Si se define, no se levanta el PostgreSQL embebido. |
+| `NEXTAUTH_URL` | No | URL pública de la aplicación. Por defecto: `http://localhost:3000`. |
+| `NEXTAUTH_SECRET` | No | Secreto de sesión. Si no se indica, se genera y se guarda en `/data`. |
+| `DATA_DIR` | No | Directorio de datos persistentes. Por defecto: `/data`. |
+
+La cuenta de `ADMIN_EMAIL` se crea o actualiza en cada arranque con rol `ADMIN`.
+Sirve también para recuperar el acceso si se olvida la contraseña: basta con
+recrear el contenedor con una `ADMIN_PASSWORD` nueva.
+
+### Persistencia y actualización
+
+El volumen `/data` guarda PostgreSQL y el secreto de sesión:
+
+```bash
+-v drontest-data:/data
+```
+
+Sin volumen, los datos se pierden al eliminar el contenedor. La carga del banco
+es idempotente: solo ocurre si la base de datos está vacía, así que reiniciar o
+actualizar la imagen no borra nada.
+
+```bash
+docker pull raulya/drontest:latest
+docker rm -f drontest
+docker run -d --name drontest -p 3000:3000 \
+  -e ADMIN_EMAIL=tu@email.com \
+  -e ADMIN_PASSWORD=una-clave-segura \
+  -v drontest-data:/data \
+  raulya/drontest:latest
+```
+
+### Copias de seguridad y reinicio de datos
+
+```bash
+# Copia de seguridad
+docker exec drontest pg_dump -h 127.0.0.1 -U drontest drontest > backup.sql
+
+# Restauración
+docker exec -i drontest psql -h 127.0.0.1 -U drontest -d drontest < backup.sql
+
+# Empezar de cero
+docker rm -f drontest
+docker volume rm drontest-data
+```
+
+### Publicación en Docker Hub
+
+Descripción corta de la ficha:
+
+```text
+Simulador de exámenes AESA A1/A3 con 280 preguntas y PostgreSQL incluido.
+```
+
+La descripción completa puede ser este mismo apartado. Para publicar:
+
+```bash
+docker tag drontest-a1a3:latest raulya/drontest:latest
+docker push raulya/drontest:latest
+```
+
+La imagen está construida para `linux/amd64`. En un Mac con Apple Silicon Docker
+la ejecutará por emulación; para soporte nativo ARM habría que reconstruirla con
+`docker buildx` para `linux/amd64,linux/arm64`.
+
 ## Despliegue (producción)
 
 ```bash
@@ -160,4 +252,4 @@ Requisitos mínimos de producción:
 
 - `AGENTS.md` — reglas de desarrollo del proyecto.
 - `IMPLEMENTATION_PLAN.md` — plan de implementación y estado de las tareas.
-- `docs/categorias/` — banco de preguntas organizado por categoría y subcategoría; el banco real de la BD (A1/A3) está en `docs/categorias/abierta/a1a3/banco-preguntas.md`, verificado contra el temario AESA.
+- `docs/categorias/` — documentación por categoría y subcategoría. El banco A1/A3 activo ya **no** está ahí: se genera desde el temario oficial y vive en `prisma/data/`. El antiguo `docs/categorias/abierta/a1a3/banco-preguntas.md` está obsoleto.

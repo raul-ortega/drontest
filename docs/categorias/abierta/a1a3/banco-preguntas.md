@@ -1,7 +1,13 @@
+> ⚠️ **DOCUMENTO OBSOLETO.** Este banco de 95 preguntas ya no es el que usa la aplicación.
+> El banco activo se generó de nuevo desde el temario oficial completo de AESA
+> (`docs/temario-a1a3/`) y vive en `prisma/data/preguntas-parte1.json`,
+> `preguntas-parte2.json` y `preguntas-parte3.json` (280 preguntas), cargado por
+> `prisma/seed.ts`. Se conserva este archivo solo como referencia histórica.
+
 # Banco de Preguntas — Pool Completo de Exámenes (UAS)
 
 > **Objetivo:** Pool de preguntas para generar simulacros de 40 preguntas aleatorias.
-> **Fuente:** `docs/_Formacion.temario.completo.Ed12.pdf` → FOR-UAS-P01-DT01_Ed.09, Versión 9 (Julio 2024)
+> **Fuente:** temario oficial AESA A1/A3, FOR-UAS-P01-DT01_Ed.09, Versión 9 (julio 2024). El PDF original no se distribuye en este repositorio por derechos de autor; el texto extraído está en `docs/temario-a1a3/`.
 > **Estado:** 95 preguntas verificadas e insertadas en BD (4 duplicados eliminados).
 > **Nota:** Contaminación Acústica solo tiene 1 página (pág. 36) con contenido relevante. El resto de temas tienen abundante contenido.
 

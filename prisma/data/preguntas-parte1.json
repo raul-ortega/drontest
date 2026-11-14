@@ -1,0 +1,1226 @@
+{
+  "categoria": "Parte 1 — Concepto normativo",
+  "descripcion": "Conceptos básicos, definiciones, marco normativo, categorías de operación, clases de UAS, edades, registro y responsabilidades.",
+  "fuente": "AESA — Curso UAS A1/A3. Parte 1: Concepto normativo (FOR-UAS-P01-DT01 Ed.09, julio 2024)",
+  "temas": [
+    {
+      "nombre": "Conceptos básicos",
+      "descripcion": "UAS, RPAS, dron, aeromodelo, piloto a distancia, operador de UAS, EASA y AESA.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué engloba el término UAS (sistema de aeronave no tripulada)?",
+          "opciones": [
+            "Solo las aeronaves de ala fija no tripuladas",
+            "Únicamente las aeronaves pilotadas por control remoto",
+            "Los aeromodelos de uso deportivo exclusivamente",
+            "La aeronave no tripulada y el equipo necesario para controlarla de forma remota"
+          ],
+          "correcta": 3,
+          "explicacion": "UAS es el término paraguas que comprende la aeronave no tripulada y el equipo para controlarla de forma remota. Incluye tanto los RPAS como las aeronaves de operación autónoma.",
+          "referencia": "Parte 1, diapositiva 4 — UAS, RPAS, dron o aeromodelo"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué diferencia principal existe entre un UAS y un RPAS?",
+          "opciones": [
+            "El RPAS es el subconjunto de UAS en el que un piloto puede controlar la aeronave a distancia",
+            "No existe ninguna diferencia, son términos idénticos",
+            "El RPAS siempre pesa menos de 250 g",
+            "El UAS solo incluye aeronaves autónomas y el RPAS solo aeromodelos"
+          ],
+          "correcta": 0,
+          "explicacion": "RPAS es el sistema de aeronave pilotada por control remoto. Es un subconjunto del concepto UAS, que también abarca las operaciones autónomas en las que el piloto no interviene durante el vuelo.",
+          "referencia": "Parte 1, diapositiva 4 — UAS, RPAS, dron o aeromodelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué componentes comprende un RPAS?",
+          "opciones": [
+            "La aeronave y el piloto a distancia, sin estación en tierra",
+            "La aeronave, su estación de control, los enlaces de mando y control y cualquier otro componente indicado en el diseño",
+            "Solo la aeronave y las baterías",
+            "Únicamente la aeronave y la carga de pago"
+          ],
+          "correcta": 1,
+          "explicacion": "El RPAS comprende la aeronave, su estación de control, los enlaces requeridos de mando y control y cualquier otro componente indicado en el diseño de la aeronave.",
+          "referencia": "Parte 1, diapositiva 4 — UAS, RPAS, dron o aeromodelo"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "Según el temario, ¿qué es una aeronave no tripulada?",
+          "opciones": [
+            "Solo la aeronave que vuela de forma completamente autónoma",
+            "Un aeromodelo utilizado exclusivamente en competiciones deportivas",
+            "Cualquier aeronave de menos de 25 kg de masa máxima de despegue",
+            "Cualquier aeronave que opere o esté diseñada para operar de forma autónoma o pilotada a distancia sin un piloto a bordo"
+          ],
+          "correcta": 3,
+          "explicacion": "La definición incluye tanto la operación autónoma como la pilotada a distancia sin un piloto a bordo.",
+          "referencia": "Parte 1, diapositiva 5 — Conceptos básicos"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué término se utiliza coloquialmente para referirse en general a todas las aeronaves no tripuladas?",
+          "opciones": [
+            "U-Space",
+            "RPAS",
+            "Aeromodelo",
+            "Dron"
+          ],
+          "correcta": 3,
+          "explicacion": "Dron (drone en inglés) es la palabra de uso coloquial para referirse en general a las aeronaves no tripuladas.",
+          "referencia": "Parte 1, diapositiva 5 — Conceptos básicos"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué caracteriza a un aeromodelo?",
+          "opciones": [
+            "Es una aeronave de tamaño reducido pilotada a distancia para vuelos deportivos o experimentales",
+            "Es una aeronave autónoma de uso comercial",
+            "Es cualquier UAS utilizado en categoría específica",
+            "Es un UAS con marcado de clase C4"
+          ],
+          "correcta": 0,
+          "explicacion": "El aeromodelo es una aeronave de tamaño reducido pilotada a distancia, usada principalmente para vuelos deportivos o experimentales.",
+          "referencia": "Parte 1, diapositiva 5 — Conceptos básicos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Quién es el piloto a distancia según el temario?",
+          "opciones": [
+            "La persona que únicamente observa el espacio aéreo",
+            "La persona física responsable de la conducción segura del vuelo mediante los mandos de vuelo o la supervisión del vuelo automático",
+            "El fabricante del UAS que define sus limitaciones",
+            "El propietario o arrendatario del UAS, aunque no lo maneje"
+          ],
+          "correcta": 1,
+          "explicacion": "El piloto a distancia es la persona física responsable de la conducción segura del vuelo. Puede pilotar manualmente o supervisar un vuelo automático, siendo capaz de intervenir y cambiar los parámetros de vuelo.",
+          "referencia": "Parte 1, diapositiva 6 — Conceptos básicos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Quién es el operador de UAS?",
+          "opciones": [
+            "Solo la persona física que maneja los mandos durante el vuelo",
+            "La autoridad aeronáutica competente del Estado miembro",
+            "Cualquier persona, física o jurídica, que sea propietaria de un UAS o lo alquile",
+            "El fabricante que comercializa el UAS en la Unión Europea"
+          ],
+          "correcta": 2,
+          "explicacion": "El operador de UAS es cualquier persona física o jurídica que sea propietaria de un UAS o lo alquile. Puede coincidir o no con el piloto a distancia.",
+          "referencia": "Parte 1, diapositiva 6 — Conceptos básicos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Es posible ser piloto a distancia sin ser operador de UAS?",
+          "opciones": [
+            "Solo en la categoría certificada",
+            "Sí, por ejemplo cuando el piloto trabaja para una compañía que presta servicios con UAS",
+            "No, el piloto siempre es el propietario del UAS",
+            "Solo si el UAS pesa menos de 250 g"
+          ],
+          "correcta": 1,
+          "explicacion": "Se puede ser piloto a distancia sin ser operador, por ejemplo si el piloto trabaja para una compañía que ofrece servicios con UAS. También se puede ser operador y piloto a la vez.",
+          "referencia": "Parte 1, diapositiva 6 — Conceptos básicos"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Cuál es la función principal de EASA?",
+          "opciones": [
+            "Unificar los estándares comunes de seguridad de la aviación civil en los Estados miembros mediante normas comunes",
+            "Gestionar el registro de aeronaves del Ministerio del Interior",
+            "Autorizar todas las operaciones de UAS en categoría abierta",
+            "Sancionar los incumplimientos de la normativa aérea en España"
+          ],
+          "correcta": 0,
+          "explicacion": "EASA vela por la seguridad de la aviación civil en la Unión Europea unificando estándares mediante normas comunes, como los Reglamentos (UE) 2019/945 y 2019/947.",
+          "referencia": "Parte 1, diapositiva 7 — EASA y AESA"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué organismo tiene potestad sancionadora por incumplimiento de las normas de aviación civil en España?",
+          "opciones": [
+            "AESA",
+            "La Comisión Europea",
+            "ENAIRE",
+            "EASA"
+          ],
+          "correcta": 0,
+          "explicacion": "AESA vela por el cumplimiento de las normas de aviación civil en España y tiene potestad sancionadora en caso de incumplimiento en territorio nacional.",
+          "referencia": "Parte 1, diapositiva 7 — EASA y AESA"
+        }
+      ]
+    },
+    {
+      "nombre": "Definiciones operativas",
+      "descripcion": "Concentraciones de personas, consciencia situacional, VLOS/BVLOS, observadores, geoconsciencia, DRI y zonas geográficas.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es una concentración de personas?",
+          "opciones": [
+            "Una aglomeración de más de 50 personas en un recinto cerrado",
+            "Cualquier grupo de personas en una zona pública, aunque pueda dispersarse",
+            "Una reunión en la que las personas no pueden evitar el impacto de un UAS en caída libre por su densidad y el espacio donde se reúnen",
+            "Un evento deportivo con presencia de medios aéreos"
+          ],
+          "correcta": 2,
+          "explicacion": "La concentración de personas se define por la imposibilidad de evitar el impacto de un UAS en caída libre debido a la densidad de personas y al espacio en que se encuentran reunidas.",
+          "referencia": "Parte 1, diapositiva 13 — Definiciones importantes"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué es la consciencia situacional?",
+          "opciones": [
+            "La capacidad de memorizar la ruta de vuelo programada",
+            "La obligación de registrar todos los vuelos realizados",
+            "La percepción del entorno de vuelo y la capacidad de pronosticar lo que ocurrirá para gestionar los riesgos",
+            "La velocidad máxima a la que puede volar el UAS"
+          ],
+          "correcta": 2,
+          "explicacion": "La consciencia situacional es percibir la aeronave y su entorno dinámico, comprendiendo lo que ocurre y anticipando lo que puede ocurrir para gestionar los riesgos.",
+          "referencia": "Parte 1, diapositiva 13 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué se considera infraestructura crítica?",
+          "opciones": [
+            "Cualquier edificio de más de tres plantas en entorno urbano",
+            "Las zonas geográficas UAS de carácter temporal",
+            "Infraestructuras estratégicas que prestan servicios esenciales y cuya perturbación tendría un grave impacto",
+            "Solo los aeropuertos y helipuertos de uso público"
+          ],
+          "correcta": 2,
+          "explicacion": "Son infraestructuras estratégicas que proporcionan servicios esenciales (salud, electricidad, agua, transporte, etc.) y cuya perturbación o destrucción tendría un impacto grave.",
+          "referencia": "Parte 1, diapositiva 13 — Definiciones importantes"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué es una lista de control o checklist?",
+          "opciones": [
+            "El registro de horas de vuelo de la aeronave",
+            "Un documento con las tareas preparatorias que deben realizarse normalmente antes de iniciar una operación",
+            "El certificado de registro del operador de UAS",
+            "La relación de zonas geográficas prohibidas al vuelo"
+          ],
+          "correcta": 1,
+          "explicacion": "La checklist es un documento que indica las tareas preparatorias que se realizan normalmente antes de iniciar una operación.",
+          "referencia": "Parte 1, diapositiva 13 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué se considera mercancía peligrosa?",
+          "opciones": [
+            "La carga de pago que supera los 2 kg",
+            "Únicamente las baterías de litio del propio UAS",
+            "Solo los explosivos y materiales radiactivos",
+            "Cualquier artículo o sustancia transportada que pueda suponer un peligro para la salud, la seguridad, los bienes o el medio ambiente"
+          ],
+          "correcta": 3,
+          "explicacion": "Mercancía peligrosa es cualquier artículo o sustancia transportada que pueda suponer un peligro para la salud, la seguridad, los bienes o el medio ambiente en caso de incidente o accidente.",
+          "referencia": "Parte 1, diapositiva 14 — Definiciones importantes"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué significa VLOS?",
+          "opciones": [
+            "Vuelo autónomo programado fuera del alcance visual",
+            "Operación dentro del alcance visual del piloto, con contacto visual continuo y sin ayuda de instrumentos",
+            "Vuelo de larga distancia supervisado por instrumentos",
+            "Sistema de visión en primera persona del piloto"
+          ],
+          "correcta": 1,
+          "explicacion": "VLOS (Visual Line of Sight) es la operación en la que el piloto mantiene contacto visual continuo con la aeronave sin ayuda de instrumentos y puede controlar su trayectoria para evitar colisiones.",
+          "referencia": "Parte 1, diapositiva 14 — Definiciones importantes"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué es una operación BVLOS?",
+          "opciones": [
+            "Una operación que no se realiza dentro del alcance visual del piloto a distancia",
+            "Una operación nocturna con luces verdes intermitentes",
+            "Una operación realizada únicamente con observador del espacio aéreo",
+            "Una operación de vuelo a menos de 120 m de altura"
+          ],
+          "correcta": 0,
+          "explicacion": "BVLOS (Beyond Visual Line of Sight) es toda operación con UAS que no se realiza dentro del alcance visual del piloto a distancia.",
+          "referencia": "Parte 1, diapositiva 14 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál es la función del observador de la aeronave no tripulada?",
+          "opciones": [
+            "Sustituir al piloto cuando este pierde el control",
+            "Autorizar el vuelo en zonas geográficas restringidas",
+            "Ampliar el rango de vuelo más allá del alcance visual del piloto",
+            "Ayudar al piloto, mediante observación visual sin instrumentos, a mantener la aeronave en VLOS y efectuar el vuelo con seguridad"
+          ],
+          "correcta": 3,
+          "explicacion": "El observador de la aeronave está situado junto al piloto y le ayuda mediante observación visual sin instrumentos a mantener el VLOS y realizar el vuelo de forma segura. No tiene como objetivo ampliar el rango de vuelo.",
+          "referencia": "Parte 1, diapositiva 14 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué diferencia al observador del espacio aéreo del observador de la aeronave no tripulada?",
+          "opciones": [
+            "El observador del espacio aéreo vigila el espacio aéreo para detectar peligros en el aire, no la aeronave",
+            "El observador del espacio aéreo solo puede actuar de noche",
+            "El observador del espacio aéreo maneja la estación de control",
+            "No existe diferencia, ambos realizan la misma función"
+          ],
+          "correcta": 0,
+          "explicacion": "El observador del espacio aéreo asiste al piloto observando el espacio aéreo para detectar posibles peligros en el aire. El observador de la aeronave centra su observación en la aeronave no tripulada.",
+          "referencia": "Parte 1, diapositiva 14 — Definiciones importantes"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué es una persona no participante?",
+          "opciones": [
+            "Cualquier persona que se encuentre a más de 150 m del piloto",
+            "El propietario del terreno donde se realiza el vuelo",
+            "Una persona que no participa en la operación o no está al corriente de las instrucciones y precauciones de seguridad",
+            "Un miembro del equipo de operación sin funciones de vuelo"
+          ],
+          "correcta": 2,
+          "explicacion": "Persona no participante es quien no participa en la operación del UAS o no está al corriente de las instrucciones y precauciones de seguridad del operador.",
+          "referencia": "Parte 1, diapositiva 15 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué significa el rendimiento (performance) de un UAS?",
+          "opciones": [
+            "La velocidad máxima que alcanza en condiciones de laboratorio",
+            "El número de horas de vuelo antes del mantenimiento",
+            "La autonomía máxima declarada por el fabricante",
+            "El conjunto de capacidades ofrecidas por el UAS de acuerdo con el objetivo principal para el que fue diseñado"
+          ],
+          "correcta": 3,
+          "explicacion": "El rendimiento es el conjunto de capacidades que ofrece el UAS conforme al objetivo principal para el que ha sido diseñado.",
+          "referencia": "Parte 1, diapositiva 15 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál de estas superficies se considera entorno urbano según el temario?",
+          "opciones": [
+            "Un núcleo de población con áreas consolidadas por la edificación",
+            "Una zona forestal sin construcciones",
+            "Un terreno agrícola sin accesos rodados",
+            "Una autopista sin edificaciones próximas"
+          ],
+          "correcta": 0,
+          "explicacion": "Se consideran entornos urbanos los núcleos de población con áreas consolidadas por la edificación, determinadas áreas residenciales, comerciales o industriales y áreas recreativas de acceso público con instalaciones, entre ellas parques, jardines y playas que cumplan los requisitos.",
+          "referencia": "Parte 1, diapositiva 15 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué hace un sistema de geoconsciencia?",
+          "opciones": [
+            "Sustituye al sistema de identificación a distancia directa",
+            "Impide físicamente que el UAS despegue en zonas urbanas",
+            "Registra automáticamente el número de registro del operador",
+            "Detecta una posible violación de las limitaciones del espacio aéreo y alerta al piloto para evitarla"
+          ],
+          "correcta": 3,
+          "explicacion": "El sistema de geoconsciencia, basado en los datos facilitados por los Estados miembros, detecta posibles violaciones de las limitaciones del espacio aéreo y alerta al piloto para que tome medidas inmediatas.",
+          "referencia": "Parte 1, diapositiva 16 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es el sistema de identificación a distancia directa (DRI)?",
+          "opciones": [
+            "Un dispositivo que bloquea las señales de radiofrecuencia",
+            "Un sistema que emite localmente información del UAS en funcionamiento sin necesidad de acceder físicamente a la aeronave",
+            "Un registro administrativo de operadores en la web de AESA",
+            "Un sistema que solo funciona mediante conexión a internet"
+          ],
+          "correcta": 1,
+          "explicacion": "El DRI garantiza la emisión local de información sobre las aeronaves en funcionamiento, incluido su marcado, de modo que pueda obtenerse sin acceder físicamente a ellas.",
+          "referencia": "Parte 1, diapositiva 16 — Definiciones importantes"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es una zona geográfica de UAS?",
+          "opciones": [
+            "Cualquier zona rural alejada de núcleos de población",
+            "Parte del espacio aéreo establecida por la autoridad competente que facilita, restringe o excluye operaciones de UAS",
+            "El volumen de espacio aéreo reservado exclusivamente a la aviación militar",
+            "La zona de estacionamiento de drones de un aeródromo"
+          ],
+          "correcta": 1,
+          "explicacion": "Una zona geográfica de UAS es una parte del espacio aéreo establecida por la autoridad competente para facilitar, restringir o excluir operaciones de UAS y gestionar riesgos de seguridad, privacidad, datos o medio ambiente.",
+          "referencia": "Parte 1, diapositiva 16 — Definiciones importantes"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿En qué consiste el modo sígueme (follow-me)?",
+          "opciones": [
+            "En que el piloto sigue al UAS caminando por el terreno",
+            "En que el UAS regresa automáticamente al punto de despegue",
+            "En que el UAS sigue constantemente al piloto a distancia dentro de un radio predeterminado",
+            "En que el UAS evita automáticamente zonas geográficas restringidas"
+          ],
+          "correcta": 2,
+          "explicacion": "El modo sígueme es el modo de funcionamiento en el que la aeronave sigue constantemente al piloto a distancia dentro de un radio predeterminado.",
+          "referencia": "Parte 1, diapositiva 16 — Definiciones importantes"
+        }
+      ]
+    },
+    {
+      "nombre": "Contexto histórico y marco normativo",
+      "descripcion": "Ley 18/2014, Real Decreto 1036/2017, Reglamentos (UE) 2019/945 y 2019/947, Real Decreto 517/2024 y modificaciones.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué normativa regulaba en España el uso de RPAS antes de 2014?",
+          "opciones": [
+            "El Real Decreto 1036/2017",
+            "El artículo 50 de la Ley 18/2014",
+            "No existía regulación específica; el artículo 50 de la Ley 18/2014 se aprobó ese año",
+            "El Reglamento (UE) 2019/947"
+          ],
+          "correcta": 2,
+          "explicacion": "Hasta 2014 el uso de RPAS en España no estaba regulado. La Ley 18/2014, en su artículo 50, detalló los requisitos para las operaciones con RPAS y para los pilotos remotos.",
+          "referencia": "Parte 1, diapositiva 8 — Contexto histórico"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué relación tiene el Real Decreto 1036/2017 con la Ley 18/2014?",
+          "opciones": [
+            "Sustituye a los Reglamentos europeos de 2019",
+            "Solo afecta a aeromodelos de competición",
+            "Modifica la Ley 18/2014 para permitir vuelos BVLOS",
+            "Deroga el artículo 50 de la Ley 18/2014 y regula el uso civil de RPAS en España"
+          ],
+          "correcta": 3,
+          "explicacion": "El Real Decreto 1036/2017 reguló el uso civil de RPAS en España y derogó el artículo 50 de la Ley 18/2014.",
+          "referencia": "Parte 1, diapositiva 8 — Contexto histórico"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué norma derogó el Real Decreto 1036/2017?",
+          "opciones": [
+            "La Ley 18/2014",
+            "El Real Decreto 517/2024",
+            "El Reglamento Delegado (UE) 2019/945",
+            "El Reglamento de Ejecución (UE) 2020/639"
+          ],
+          "correcta": 1,
+          "explicacion": "El Real Decreto 517/2024, de 25 de junio, desarrolla el régimen jurídico de la utilización civil de UAS y deroga el Real Decreto 1036/2017.",
+          "referencia": "Parte 1, diapositiva 8 — Contexto histórico"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué regula el Reglamento Delegado (UE) 2019/945?",
+          "opciones": [
+            "Las condiciones de utilización de los UAS y la formación de los pilotos",
+            "Los requisitos de diseño y fabricación de UAS, las clases C0 a C4 y la comercialización",
+            "Las zonas geográficas UAS y el espacio aéreo controlado",
+            "El registro de operadores de UAS en cada Estado miembro"
+          ],
+          "correcta": 1,
+          "explicacion": "El Reglamento Delegado (UE) 2019/945 establece los requisitos de diseño y fabricación, define las clases C0 a C4, los UAS sujetos a certificación, las normas de comercialización y las obligaciones de operadores de terceros países.",
+          "referencia": "Parte 1, diapositiva 10 — Marco normativo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué regula el Reglamento de Ejecución (UE) 2019/947?",
+          "opciones": [
+            "Únicamente el registro de aeronaves del Ministerio del Interior",
+            "La comercialización de accesorios de identificación a distancia",
+            "Las disposiciones sobre la utilización de UAS, el personal y las organizaciones que participan en las operaciones",
+            "Los requisitos de diseño y fabricación de los UAS"
+          ],
+          "correcta": 2,
+          "explicacion": "El Reglamento de Ejecución (UE) 2019/947 establece disposiciones detalladas sobre la utilización de UAS y sobre el personal, incluidos los pilotos a distancia, y las organizaciones participantes.",
+          "referencia": "Parte 1, diapositiva 11 — Marco normativo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué valor normativo tienen el Material Guía (GM) y los Medios Aceptables de Cumplimiento (AMC) publicados por EASA?",
+          "opciones": [
+            "Son vinculantes como los Reglamentos",
+            "Solo son vinculantes para los fabricantes de UAS",
+            "No son vinculantes, aunque ayudan a comprender e implementar los Reglamentos",
+            "Sustituyen a los Reglamentos en España"
+          ],
+          "correcta": 2,
+          "explicacion": "Los Reglamentos son vinculantes en su totalidad, mientras que el GM y los AMC no son vinculantes y sirven de ayuda para comprender e implementar los Reglamentos.",
+          "referencia": "Parte 1, diapositiva 9 — Marco normativo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En cuántos Estados europeos son de aplicación directa los Reglamentos (UE) 2019/945 y 2019/947?",
+          "opciones": [
+            "En los 27 Estados miembros de la Unión Europea exclusivamente",
+            "Solo en España y Portugal",
+            "En todos los países del mundo",
+            "En 31 Estados de Europa integrados en EASA"
+          ],
+          "correcta": 3,
+          "explicacion": "Los Reglamentos son de aplicación directa en todos los Estados miembros de EASA, que comprende 31 Estados de Europa.",
+          "referencia": "Parte 1, diapositiva 9 — Marco normativo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué introdujo el Reglamento Delegado (UE) 2020/1058?",
+          "opciones": [
+            "La obligación de luces verdes nocturnas",
+            "La categoría certificada",
+            "Las clases C5 y C6, utilizadas en los escenarios estándar europeos",
+            "El sistema de identificación a distancia directa"
+          ],
+          "correcta": 2,
+          "explicacion": "El Reglamento Delegado (UE) 2020/1058 introdujo las clases C5 y C6, que serán las utilizadas en los escenarios estándar europeos.",
+          "referencia": "Parte 1, diapositiva 10 — Marco normativo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué estableció el Reglamento de Ejecución (UE) 2021/1166?",
+          "opciones": [
+            "La eliminación de la categoría abierta",
+            "El aplazamiento de los escenarios estándar europeos y la obligación de luces verdes nocturnas y del sistema de identificación a distancia",
+            "La obligación de seguro para todos los UAS de menos de 250 g",
+            "La creación del registro de operadores de AESA"
+          ],
+          "correcta": 1,
+          "explicacion": "El Reglamento (UE) 2021/1166 aplazó la aplicación de los escenarios estándar europeos y fijó requisitos obligatorios de luces verdes nocturnas y del sistema de identificación a distancia.",
+          "referencia": "Parte 1, diapositiva 11 — Marco normativo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál de estas medidas corresponde al Real Decreto 517/2024?",
+          "opciones": [
+            "Eliminar la obligación de registro de operadores",
+            "Crear el Registro de aeronaves del Ministerio del Interior",
+            "Regular por primera vez el uso civil de RPAS en España",
+            "Sustituir el Reglamento (UE) 2019/947"
+          ],
+          "correcta": 1,
+          "explicacion": "El RD 517/2024 crea el Registro de aeronaves del Ministerio del Interior, modifica edades mínimas y seguros, establece nuevas zonas geográficas y designa a AESA como autoridad notificante, entre otras medidas.",
+          "referencia": "Parte 1, diapositiva 12 — Marco normativo"
+        }
+      ]
+    },
+    {
+      "nombre": "Categorías de operación y clases de UAS",
+      "descripcion": "Categorías abierta, específica y certificada; subcategorías A1/A2/A3; clases C0-C4 y requisitos operacionales.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Cuántas categorías de operación define el Reglamento de Ejecución (UE) 2019/947?",
+          "opciones": [
+            "Tres: abierta, específica y certificada",
+            "Dos: abierta y cerrada",
+            "Cinco, una por cada clase de UAS",
+            "Cuatro: A1, A2, A3 y A4"
+          ],
+          "correcta": 0,
+          "explicacion": "El Reglamento define tres categorías de operación: abierta (bajo riesgo), específica (mayor riesgo) y certificada (alto riesgo).",
+          "referencia": "Parte 1, diapositiva 17 — Categorías de operación"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué régimen se aplica a las operaciones de la categoría abierta?",
+          "opciones": [
+            "Requieren declaración responsable en todos los casos",
+            "No están sujetas a autorización previa ni a declaración operacional",
+            "Requieren siempre autorización de AESA",
+            "Exigen certificación del UAS y licencia de piloto"
+          ],
+          "correcta": 1,
+          "explicacion": "Las operaciones en categoría abierta no están sujetas a autorización previa ni a declaración operacional del operador.",
+          "referencia": "Parte 1, diapositiva 18 — Categoría abierta"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿En qué subcategorías se divide la categoría abierta?",
+          "opciones": [
+            "B1, B2 y B3",
+            "STS, LUC y autorización",
+            "C0, C1 y C2",
+            "A1, A2 y A3"
+          ],
+          "correcta": 3,
+          "explicacion": "La categoría abierta se divide en tres subcategorías: A1, A2 y A3, con requisitos distintos de UAS, formación y condiciones de vuelo.",
+          "referencia": "Parte 1, diapositiva 18 — Categoría abierta"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En qué caso se permite usar dispositivos de visión en primera persona (FPV) en la categoría abierta?",
+          "opciones": [
+            "Cuando se vuele en modo sígueme o con observador de la aeronave no tripulada",
+            "Siempre que se vuele por debajo de 50 m",
+            "Solo si el UAS dispone de DRI",
+            "Nunca, el FPV está prohibido en categoría abierta"
+          ],
+          "correcta": 0,
+          "explicacion": "Los vuelos deben realizarse en VLOS salvo cuando se vuele en modo sígueme o se utilice un observador de la aeronave no tripulada; en esos casos se pueden usar dispositivos FPV.",
+          "referencia": "Parte 1, diapositiva 18 — Categoría abierta"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Cuál es la altura máxima general de vuelo en la categoría abierta?",
+          "opciones": [
+            "150 m sobre el punto de despegue",
+            "120 m sobre el punto más próximo de la superficie",
+            "50 m sobre el punto más próximo de la superficie",
+            "100 m sobre el nivel del mar"
+          ],
+          "correcta": 1,
+          "explicacion": "En categoría abierta la altura máxima es de 120 m sobre el punto más próximo de la superficie, salvo las excepciones previstas y las limitaciones de las zonas geográficas.",
+          "referencia": "Parte 1, diapositiva 19 — Categoría abierta"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "¿Qué excepción permite superar los 120 m sobre un obstáculo artificial?",
+          "opciones": [
+            "Superar el obstáculo hasta 50 m por encima, sin condiciones",
+            "Volar a cualquier distancia del obstáculo si se mantienen 120 m sobre el terreno",
+            "Volar a menos de 50 m del obstáculo y hasta 15 m por encima de él, si el obstáculo supera 105 m y lo solicita la entidad responsable",
+            "Solo se permite con UAS de clase C4"
+          ],
+          "correcta": 2,
+          "explicacion": "Si el UAS vuela a menos de 50 m horizontalmente de un obstáculo artificial de más de 105 m de altura, se puede volar hasta 15 m por encima del obstáculo a petición de la entidad responsable.",
+          "referencia": "Parte 1, diapositiva 19 — Categoría abierta"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Por qué se fija en 120 m el límite de altura de la categoría abierta?",
+          "opciones": [
+            "Porque a esa altura el viento es siempre constante",
+            "Porque es el límite máximo de las baterías LiPo",
+            "Porque lo exige el sistema DRI",
+            "Porque el límite inferior de la aviación general es 150 m y solo hay unos 30 m de separación"
+          ],
+          "correcta": 3,
+          "explicacion": "El límite inferior de la aviación general es 150 m, por lo que se establece un margen de unos 30 m fijando 120 m como altura máxima general de la categoría abierta.",
+          "referencia": "Parte 1, diapositiva 19 — Categoría abierta"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si el piloto detecta una posible colisión con una aeronave tripulada, ¿qué debe hacer?",
+          "opciones": [
+            "Reducir la altura, realizar maniobras evasivas y aterrizar lo antes posible",
+            "Ascender por encima de la aeronave tripulada",
+            "Mantener la altura y la trayectoria para que la aeronave tripulada maniobre",
+            "Esperar instrucciones de AESA antes de actuar"
+          ],
+          "correcta": 0,
+          "explicacion": "El piloto debe reducir la altura, realizar maniobras evasivas en caso de posible colisión y aterrizar lo antes posible, interrumpiendo el vuelo si continúa el riesgo.",
+          "referencia": "Parte 1, diapositiva 20 — Categoría abierta"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Está permitido sobrevolar concentraciones de personas en la categoría abierta?",
+          "opciones": [
+            "No, está prohibido en toda la categoría abierta",
+            "Sí, con cualquier UAS de clase C0",
+            "Solo con autorización del organizador del evento",
+            "Sí, si se mantienen 120 m de altura"
+          ],
+          "correcta": 0,
+          "explicacion": "El sobrevuelo de concentraciones de personas está prohibido en toda la categoría abierta, con independencia de la subcategoría y la clase de UAS.",
+          "referencia": "Parte 1, diapositiva 21 — Categoría abierta"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿De qué depende la distancia de seguridad a personas no participantes?",
+          "opciones": [
+            "De la subcategoría y, en general, de la masa del UAS: a mayor masa, mayor distancia",
+            "Solo de la autonomía de la batería",
+            "De la marca del fabricante",
+            "Únicamente del color del UAS"
+          ],
+          "correcta": 0,
+          "explicacion": "La distancia segura depende de la subcategoría. Como norma general, cuanto más pesada es la aeronave, más lejos se debe volar de las personas no participantes.",
+          "referencia": "Parte 1, diapositiva 21 — Categoría abierta"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál es el objetivo del observador de la aeronave no tripulada en categoría abierta?",
+          "opciones": [
+            "Ayudar al piloto a mantener la distancia a obstáculos y la consciencia situacional, sin ampliar el rango de vuelo",
+            "Asumir la responsabilidad final de la operación",
+            "Controlar el UAS cuando el piloto usa FPV",
+            "Permitir volar más allá del alcance visual del piloto"
+          ],
+          "correcta": 0,
+          "explicacion": "El observador ayuda al piloto a mantener distancias y consciencia situacional, pero no amplía el alcance visual ni asume la responsabilidad final, que sigue siendo del piloto.",
+          "referencia": "Parte 1, diapositiva 22 — Categoría abierta"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué está prohibido transportar con un UAS en la categoría abierta?",
+          "opciones": [
+            "Baterías de repuesto",
+            "Cualquier carga de pago, aunque no sea peligrosa",
+            "Mercancías peligrosas, y también dejar caer o proyectar cualquier material u objeto",
+            "Solo explosivos y gases"
+          ],
+          "correcta": 2,
+          "explicacion": "Está prohibido transportar mercancías peligrosas y dejar caer o proyectar cualquier material u objeto desde el UAS.",
+          "referencia": "Parte 1, diapositiva 23 — Categoría abierta"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué requisitos debe cumplir un UAS de clase C0?",
+          "opciones": [
+            "MTOM < 900 g y energía de impacto < 80 J",
+            "MTOM < 25 kg y máxima dimensión < 3 m",
+            "MTOM < 250 g, velocidad máxima < 19 m/s y altura máxima limitada a 120 m",
+            "MTOM < 4 kg y modo de baja velocidad < 3 m/s"
+          ],
+          "correcta": 2,
+          "explicacion": "La clase C0 exige, entre otros requisitos, MTOM < 250 g, velocidad máxima < 19 m/s, altura máxima de 120 m, diseño para no dañar a personas y alimentación eléctrica.",
+          "referencia": "Parte 1, diapositiva 27 — Subcategoría A1"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué masa máxima de despegue corresponde a la clase C1?",
+          "opciones": [
+            "900 g",
+            "4 kg",
+            "25 kg",
+            "250 g"
+          ],
+          "correcta": 0,
+          "explicacion": "La clase C1 tiene una MTOM inferior a 900 g, velocidad máxima < 19 m/s y energía de impacto < 80 J, entre otros requisitos.",
+          "referencia": "Parte 1, diapositiva 28 — Subcategoría A1"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué masa máxima de despegue corresponde a la clase C2?",
+          "opciones": [
+            "2 kg",
+            "25 kg",
+            "900 g",
+            "4 kg"
+          ],
+          "correcta": 3,
+          "explicacion": "La clase C2 tiene MTOM < 4 kg y debe disponer de función de modo de baja velocidad con límite < 3 m/s.",
+          "referencia": "Parte 1, diapositiva 31 — Subcategoría A2"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué masa máxima de despegue corresponde a la clase C3?",
+          "opciones": [
+            "12 kg",
+            "150 kg",
+            "4 kg",
+            "25 kg"
+          ],
+          "correcta": 3,
+          "explicacion": "La clase C3 tiene MTOM < 25 kg y máxima dimensión < 3 m, además de DRI, geoconsciencia y enlace de datos protegido, entre otros requisitos.",
+          "referencia": "Parte 1, diapositiva 33 — Subcategoría A3"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué característica distintiva tiene un UAS de clase C4?",
+          "opciones": [
+            "No dispone de modo automático de vuelo, salvo asistencia a la estabilización",
+            "Debe tener DRI y geoconsciencia",
+            "Dispone de modo de baja velocidad obligatorio",
+            "Su MTOM debe ser inferior a 250 g"
+          ],
+          "correcta": 0,
+          "explicacion": "La clase C4 tiene MTOM < 25 kg y no dispone de modo automático de vuelo, excepto la asistencia a la estabilización en caso de pérdida de conexión.",
+          "referencia": "Parte 1, diapositiva 34 — Subcategoría A3"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En la subcategoría A1, ¿con qué UAS se puede volar sobre personas no participantes?",
+          "opciones": [
+            "Con cualquier UAS de menos de 25 kg",
+            "Solo con UAS de clase C2",
+            "Con UAS de clase C0; con clase C1 no se puede sobrevolar personas no participantes",
+            "Con cualquier UAS de clase C0 y también con C1"
+          ],
+          "correcta": 2,
+          "explicacion": "En A1 se permite el vuelo sobre personas no participantes, salvo con UAS de clase C1, con los que no se podrá sobrevolar personas no participantes. La prohibición sobre concentraciones se mantiene.",
+          "referencia": "Parte 1, diapositiva 25 — Subcategoría A1"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué UAS son válidos para volar en la subcategoría A1?",
+          "opciones": [
+            "Solo los UAS con etiqueta de clase C1",
+            "UAS de construcción privada con MTOM < 250 g y velocidad máxima < 19 m/s, y UAS legacy de MTOM < 250 g",
+            "Solo los UAS de clase C0 y C2",
+            "Cualquier UAS de menos de 4 kg"
+          ],
+          "correcta": 1,
+          "explicacion": "En A1 se pueden usar UAS sin etiqueta de clase: de construcción privada con MTOM < 250 g y velocidad máxima < 19 m/s, y UAS legacy de MTOM < 250 g introducidos en el mercado antes del 1 de enero de 2024, además de las clases C0 y C1.",
+          "referencia": "Parte 1, diapositiva 26 — Subcategoría A1"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué distancia horizontal mínima debe mantenerse en la subcategoría A2 respecto a personas no participantes?",
+          "opciones": [
+            "5 m en todos los casos",
+            "50 m, que pueden reducirse a 15 m",
+            "150 m, que pueden reducirse a 30 m",
+            "30 m, que pueden reducirse a 5 m con el modo de baja velocidad"
+          ],
+          "correcta": 3,
+          "explicacion": "En A2 se mantiene una distancia horizontal segura de al menos 30 m, reducible a un mínimo de 5 m cuando se activa el modo de baja velocidad, reduciendo la altura en la misma proporción (regla 1:1).",
+          "referencia": "Parte 1, diapositiva 29 — Subcategoría A2"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "¿Qué formación adicional se exige al piloto para operar en la subcategoría A2?",
+          "opciones": [
+            "El certificado de Radiofonista UAS",
+            "Un curso presencial de 40 horas y un examen práctico con AESA",
+            "Solo la familiarización con el manual del fabricante",
+            "La formación online A1/A3, una autoformación práctica en zona aislada y un examen teórico adicional"
+          ],
+          "correcta": 3,
+          "explicacion": "Para A2 se exige la formación online A1/A3 y su examen, una autoformación práctica en zona aislada con condiciones de A3 y un examen teórico adicional para obtener el certificado de competencia de piloto a distancia para A2.",
+          "referencia": "Parte 1, diapositiva 30 — Subcategoría A2"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué distancia horizontal mínima debe mantenerse en A3 respecto a zonas residenciales, comerciales, industriales y recreativas?",
+          "opciones": [
+            "50 m",
+            "No se exige distancia si se vuela por debajo de 120 m",
+            "150 m",
+            "30 m"
+          ],
+          "correcta": 2,
+          "explicacion": "En A3 se debe volar a una distancia horizontal segura mínima de 150 m de zonas residenciales, comerciales, industriales y recreativas, en zonas donde no se ponga en peligro a personas no participantes.",
+          "referencia": "Parte 1, diapositiva 32 — Subcategoría A3"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué UAS son válidos para volar en la subcategoría A3?",
+          "opciones": [
+            "Solo UAS de clase C3 y C4",
+            "Solo UAS de clase C0 y C1",
+            "UAS de construcción privada con MTOM < 25 kg, UAS legacy < 25 kg y UAS de clase C2, C3 o C4 con DRI y geoconsciencia",
+            "Cualquier UAS de menos de 250 g"
+          ],
+          "correcta": 2,
+          "explicacion": "En A3 se puede volar con UAS de construcción privada o legacy de MTOM < 25 kg, y con UAS de clase C2, C3 o C4 que cumplan sus requisitos, usando sistemas activos y actualizados de DRI y geoconsciencia.",
+          "referencia": "Parte 1, diapositiva 35 — Subcategoría A3"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Desde qué fecha es obligatorio el sistema de identificación a distancia directa (DRI) para los UAS de clase C1, C2 y C3 en categoría abierta?",
+          "opciones": [
+            "Desde el 1 de enero de 2026",
+            "Desde el 1 de enero de 2021",
+            "Desde el 1 de julio de 2022",
+            "Desde el 1 de enero de 2024"
+          ],
+          "correcta": 3,
+          "explicacion": "Desde el 1 de enero de 2024, todos los UAS con marcado de clase C1, C2 y C3 empleados en categoría abierta, y todos los UAS de categoría específica, deben disponer de DRI.",
+          "referencia": "Parte 1, diapositiva 37 — DRI"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "¿Cuál de estos datos debe transmitir como mínimo el sistema DRI?",
+          "opciones": [
+            "El número de registro del operador, el número de serie de la UA, posición, altura, trayectoria, velocidad y posición del piloto",
+            "El modelo de batería y las horas de vuelo acumuladas",
+            "Solo la posición geográfica de la aeronave y su número de serie",
+            "El nombre completo del piloto y su número de teléfono"
+          ],
+          "correcta": 0,
+          "explicacion": "El DRI transmite periódicamente, entre otros datos, el número de registro del operador y código de verificación, número de serie único, sello de tiempo, posición y altura, trayectoria, velocidad, posición del piloto e indicación de emergencia.",
+          "referencia": "Parte 1, diapositiva 38 — DRI"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué clases de UAS deben llevar el DRI equipado de serie?",
+          "opciones": [
+            "Únicamente C4",
+            "C1, C2, C3, C5 y C6",
+            "Solo C0 y C1",
+            "Todas las clases, incluida C0"
+          ],
+          "correcta": 1,
+          "explicacion": "Los UAS con marcado de clase C1, C2, C3, C5 y C6 deben llevar el DRI equipado de serie. En categoría específica, los UAS sin marcado de clase deben ser equipados con DRI por el operador.",
+          "referencia": "Parte 1, diapositiva 38 — DRI"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué UAS deben cumplir los requisitos de ruido de la categoría abierta?",
+          "opciones": [
+            "Solo los UAS de clase C3 y C4",
+            "Todos los UAS con marcado de clase C0 a C4 que no sean de ala fija",
+            "Solo los UAS de ala fija",
+            "Ninguno, el ruido no se regula en la categoría abierta"
+          ],
+          "correcta": 1,
+          "explicacion": "Todos los UAS con marcado de clase desde C0 hasta C4 que no sean de ala fija deben cumplir los requisitos de ruido, con indicación del nivel de sonido ponderado A.",
+          "referencia": "Parte 1, diapositiva 36 — Restricciones de ruido"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es un UAS legacy?",
+          "opciones": [
+            "Un UAS de clase C4 utilizado en A3",
+            "Un UAS introducido en el mercado antes del 1 de enero de 2024 que no es de construcción privada ni dispone de marcado de clase",
+            "Cualquier UAS con más de cinco años de antigüedad",
+            "Un UAS que ya no se comercializa pero tiene marcado C2"
+          ],
+          "correcta": 1,
+          "explicacion": "Los UAS legacy son los introducidos en el mercado antes del 1 de enero de 2024 que no son de construcción privada ni disponen de marcado de clase.",
+          "referencia": "Parte 1, diapositiva 24 — Tabla resumen categoría abierta"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Puede utilizarse un UAS de clase C2 en la subcategoría A3?",
+          "opciones": [
+            "Sí, cumpliendo todos los requisitos definidos para A2",
+            "Solo si se desactiva el modo de baja velocidad",
+            "Solo con autorización de AESA",
+            "No, la clase C2 solo puede volar en A2"
+          ],
+          "correcta": 0,
+          "explicacion": "Los UAS de clase C2 pueden utilizarse en A3 si cumplen todos los requisitos definidos para A2, además de los requisitos de A3.",
+          "referencia": "Parte 1, diapositiva 35 — Subcategoría A3"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué formación se exige para operar un UAS de clase C1 en la categoría abierta?",
+          "opciones": [
+            "La familiarización con el manual y la prueba de superación de la formación en línea",
+            "Solo la familiarización con el manual del fabricante",
+            "El certificado de Radiofonista UAS",
+            "Un examen presencial en AESA"
+          ],
+          "correcta": 0,
+          "explicacion": "Para los UAS de clase C1 se exige estar familiarizado con las instrucciones del fabricante y superar la formación en línea A1/A3 con su examen.",
+          "referencia": "Parte 1, diapositiva 25 — Subcategoría A1"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué velocidad máxima debe respetar un UAS de clase C0?",
+          "opciones": [
+            "Menos de 19 m/s",
+            "No tiene límite de velocidad",
+            "Menos de 50 km/h",
+            "Menos de 3 m/s"
+          ],
+          "correcta": 0,
+          "explicacion": "La clase C0 exige una velocidad máxima inferior a 19 m/s, además de MTOM < 250 g y altura máxima limitada a 120 m.",
+          "referencia": "Parte 1, diapositiva 27 — Subcategoría A1"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "¿Qué requisito de energía de impacto se exige a un UAS de clase C1?",
+          "opciones": [
+            "No se exige energía de impacto",
+            "Menos de 250 J",
+            "Menos de 4 kg",
+            "Menos de 80 J"
+          ],
+          "correcta": 3,
+          "explicacion": "La clase C1 debe tener una energía de impacto inferior a 80 J, además de MTOM < 900 g y un método para finalizar el vuelo de forma segura o recuperar el enlace.",
+          "referencia": "Parte 1, diapositiva 28 — Subcategoría A1"
+        }
+      ]
+    },
+    {
+      "nombre": "Categoría específica y certificada",
+      "descripcion": "STS, autorización operacional, LUC, categoría certificada y formación asociada.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuándo una operación pertenece a la categoría específica?",
+          "opciones": [
+            "Cuando se utiliza un UAS de clase C0",
+            "Solo cuando se transportan personas",
+            "Cuando no se cumplen los requisitos de la categoría abierta ni los de la certificada",
+            "Siempre que se vuele por encima de 120 m"
+          ],
+          "correcta": 2,
+          "explicacion": "La categoría específica comprende las operaciones que no cumplen los requisitos de la categoría abierta y no entran en la categoría certificada.",
+          "referencia": "Parte 1, diapositiva 39 — Categoría específica"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué vías existen para operar en la categoría específica?",
+          "opciones": [
+            "Escenarios estándar (STS), autorización operacional y LUC",
+            "Únicamente la declaración en la web de AESA",
+            "Solo la autorización operacional",
+            "Solo la certificación del UAS y la licencia de piloto"
+          ],
+          "correcta": 0,
+          "explicacion": "Las opciones de la categoría específica son los escenarios estándar (STS), la autorización operacional y el LUC (Certificado de Operador UAS Ligero), además de los clubes y asociaciones de aeromodelos autorizados.",
+          "referencia": "Parte 1, diapositiva 40 — Categoría específica"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si una operación se ajusta a un escenario estándar (STS), ¿qué debe presentar el operador?",
+          "opciones": [
+            "Una licencia de piloto comercial",
+            "Una solicitud de autorización operacional con estudio de seguridad",
+            "Un certificado de aeronavegabilidad del UAS",
+            "Una declaración responsable a través del perfil de operador de UAS en la web de AESA"
+          ],
+          "correcta": 3,
+          "explicacion": "Si la operación se ajusta a un STS, se presenta una declaración responsable a través del perfil de operador de UAS en la web de AESA; el régimen es declarativo y no requiere autorización operacional.",
+          "referencia": "Parte 1, diapositiva 39 — Categoría específica"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es el LUC?",
+          "opciones": [
+            "Una zona geográfica UAS de carácter temporal",
+            "Un sistema de identificación a distancia",
+            "El Certificado de Operador UAS Ligero",
+            "Un tipo de escenario estándar nacional"
+          ],
+          "correcta": 2,
+          "explicacion": "LUC significa Certificado de Operador UAS Ligero. Es una de las vías de la categoría específica en la que el operador autorizado puede autorizar sus propias operaciones.",
+          "referencia": "Parte 1, diapositiva 40 — Categoría específica"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "¿Hasta qué fecha se podían presentar los escenarios estándar nacionales españoles (STS-ES)?",
+          "opciones": [
+            "Hasta el 31 de diciembre de 2025",
+            "Hasta el 1 de enero de 2024, sin prórroga",
+            "Hasta el 30 de agosto de 2025",
+            "Hasta el 30 de agosto de 2024, con validez hasta el 31 de diciembre de 2025"
+          ],
+          "correcta": 3,
+          "explicacion": "Los STS-ES se podían presentar hasta el 30 de agosto de 2024 y tenían validez hasta el 31 de diciembre de 2025. España publicó los STS-ES-01 y STS-ES-02.",
+          "referencia": "Parte 1, diapositiva 42 — Escenarios estándar"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué operaciones se consideran de categoría certificada?",
+          "opciones": [
+            "Las que vuelan sobre concentraciones de personas con UAS de más de 3 m, transportan personas o transportan mercancías peligrosas de alto riesgo",
+            "Todas las operaciones realizadas en entorno urbano",
+            "Solo las operaciones nocturnas",
+            "Las operaciones con UAS de más de 4 kg"
+          ],
+          "correcta": 0,
+          "explicacion": "La categoría certificada incluye, entre otras, operaciones sobre concentraciones de personas con UAS de dimensión mayor a 3 m, transporte de personas y transporte de mercancías peligrosas con alto riesgo para terceros.",
+          "referencia": "Parte 1, diapositiva 43 — Categoría certificada"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué exige la categoría certificada cuando el estudio de seguridad concluye que los riesgos no pueden mitigarse de otro modo?",
+          "opciones": [
+            "Nada adicional, basta con cumplir la categoría abierta",
+            "Únicamente un seguro de responsabilidad civil",
+            "Solo una declaración responsable del operador",
+            "La certificación del UAS y del operador y licencias de piloto"
+          ],
+          "correcta": 3,
+          "explicacion": "También será categoría certificada cualquier operación en la que, según el estudio de seguridad, los riesgos no puedan mitigarse sin la certificación del UAS, del operador y sin licencias de piloto.",
+          "referencia": "Parte 1, diapositiva 43 — Categoría certificada"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "En la vía de autorización operacional de la categoría específica, ¿qué formación se exige además de la formación online A1/A3 y la autoformación práctica A2?",
+          "opciones": [
+            "Únicamente el certificado de Radiofonista UAS",
+            "Ninguna formación adicional",
+            "La formación adicional definida en el Manual de Operaciones del operador",
+            "Un curso de instructor de vuelo"
+          ],
+          "correcta": 2,
+          "explicacion": "En la autorización operacional se exige la formación y examen online A1/A3, la autoformación práctica A2 y la formación adicional definida en el Manual de Operaciones del operador.",
+          "referencia": "Parte 1, diapositiva 41 — Categoría específica"
+        }
+      ]
+    },
+    {
+      "nombre": "Edades, registro y responsabilidades",
+      "descripcion": "Edades mínimas en la UE y España, registro del operador, responsabilidades del operador y del piloto.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Cuál es la edad mínima general para registrarse como operador de UAS y volar en España?",
+          "opciones": [
+            "No se exige edad mínima",
+            "16 años",
+            "14 años",
+            "18 años"
+          ],
+          "correcta": 1,
+          "explicacion": "La edad mínima para darse de alta en el registro como operador de UAS y volar en España es de 16 años.",
+          "referencia": "Parte 1, diapositiva 44 — Edades mínimas"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál es la edad mínima general de los pilotos a distancia en las categorías abierta y específica?",
+          "opciones": [
+            "16 años",
+            "14 años",
+            "12 años",
+            "18 años"
+          ],
+          "correcta": 0,
+          "explicacion": "Con carácter general, la edad mínima de los pilotos a distancia es de 16 años en las categorías abierta y específica, sin perjuicio de las reducciones nacionales y de las excepciones.",
+          "referencia": "Parte 1, diapositiva 44 — Edades mínimas"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En cuál de estos casos no se exige edad mínima al piloto a distancia?",
+          "opciones": [
+            "Al volar en A2 con un UAS de clase C2",
+            "Al volar en A3 con un UAS de clase C3",
+            "Al volar en A1 con un UAS de clase C0 que sea un juguete, con un UAS de construcción privada de menos de 250 g o bajo supervisión directa de un piloto mayor de 16 años",
+            "Al volar en categoría específica con autorización"
+          ],
+          "correcta": 2,
+          "explicacion": "No se exige edad mínima en A1 con UAS de clase C0 que sea un juguete, con UAS de construcción privada de MTOM < 250 g o al volar bajo supervisión directa de un piloto a distancia mayor de 16 años con competencias adecuadas.",
+          "referencia": "Parte 1, diapositiva 44 — Edades mínimas"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuánto pueden reducir los Estados miembros la edad mínima en la categoría abierta?",
+          "opciones": [
+            "Hasta 2 años, quedando en 14 años",
+            "No pueden reducirla",
+            "Hasta 6 años, quedando en 10 años",
+            "Hasta 4 años, quedando en 12 años"
+          ],
+          "correcta": 3,
+          "explicacion": "Los Estados miembros pueden reducir la edad mínima en un máximo de 4 años en categoría abierta (hasta 12 años) y de 2 años en categoría específica (hasta 14 años).",
+          "referencia": "Parte 1, diapositiva 44 — Edades mínimas"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "En España, ¿qué edad mínima se aplica en A1 con un UAS de clase C0 que no sea juguete o un UAS legacy de menos de 250 g?",
+          "opciones": [
+            "12 años",
+            "Sin límite de edad",
+            "14 años",
+            "16 años"
+          ],
+          "correcta": 0,
+          "explicacion": "El artículo 7 del Real Decreto 517/2024 reduce la edad mínima a 12 años en A1 con UAS de clase C0 que no sea juguete o con un UAS legacy de MTOM < 250 g.",
+          "referencia": "Parte 1, diapositiva 45 — Edades mínimas en España"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "En España, ¿qué edad mínima se aplica en A1 con un UAS de clase C1?",
+          "opciones": [
+            "12 años",
+            "18 años",
+            "14 años",
+            "16 años"
+          ],
+          "correcta": 2,
+          "explicacion": "En España se exigen 14 años para volar en A1 con UAS de clase C1, y también en A2 o A3 con UAS de clase C2.",
+          "referencia": "Parte 1, diapositiva 45 — Edades mínimas en España"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En España, ¿qué edad mínima se aplica en A3 con un UAS de clase C3, C4, de construcción privada de menos de 25 kg o legacy de menos de 25 kg?",
+          "opciones": [
+            "16 años",
+            "No se exige edad mínima",
+            "14 años",
+            "12 años"
+          ],
+          "correcta": 2,
+          "explicacion": "Para A3 con UAS de clase C3 o C4, de construcción privada con MTOM < 25 kg o legacy con MTOM < 25 kg, la edad mínima en España es de 14 años.",
+          "referencia": "Parte 1, diapositiva 45 — Edades mínimas en España"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuándo debe registrarse un operador de UAS en categoría abierta?",
+          "opciones": [
+            "Cuando el UAS tenga una MTOM superior a 250 g o esté equipado con un sensor capaz de captar datos personales",
+            "Solo si el UAS pesa más de 25 kg",
+            "Siempre, incluso con UAS de juguete sin cámara",
+            "Solo si realiza operaciones comerciales"
+          ],
+          "correcta": 0,
+          "explicacion": "En categoría abierta el operador debe registrarse si opera con un UAS de MTOM superior a 250 g o equipado con un sensor capaz de captar datos personales, como cámara o micrófono.",
+          "referencia": "Parte 1, diapositiva 47 — Registro del operador"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En qué categoría debe registrarse el operador independientemente del UAS utilizado?",
+          "opciones": [
+            "En ninguna, el registro es voluntario",
+            "Solo en la categoría certificada",
+            "En la categoría específica",
+            "En la categoría abierta, siempre"
+          ],
+          "correcta": 2,
+          "explicacion": "En categoría específica el operador debe registrarse independientemente del UAS utilizado.",
+          "referencia": "Parte 1, diapositiva 47 — Registro del operador"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En cuántos Estados miembros de EASA puede estar registrado un operador de UAS?",
+          "opciones": [
+            "En dos como máximo",
+            "En todos los que opere",
+            "No hay límite",
+            "Solo en uno"
+          ],
+          "correcta": 3,
+          "explicacion": "Un operador de UAS solo puede estar registrado en un Estado miembro de EASA.",
+          "referencia": "Parte 1, diapositiva 48 — Registro del operador"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué debe hacer el operador con el número de registro único que expide AESA?",
+          "opciones": [
+            "Indicarlo en todos los UAS de su propiedad y mantenerlo en privado",
+            "Cambiarlo en cada vuelo",
+            "Publicarlo en la web de la empresa",
+            "Entregarlo únicamente al fabricante del UAS"
+          ],
+          "correcta": 0,
+          "explicacion": "El número de registro único debe estar indicado en todos los UAS propiedad del operador y debe mantenerse en privado.",
+          "referencia": "Parte 1, diapositiva 48 — Registro del operador"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si el operador es una persona jurídica, ¿en qué Estado miembro debe registrarse?",
+          "opciones": [
+            "Donde tenga su centro de actividad principal",
+            "En cualquier Estado miembro, sin criterio",
+            "Donde resida su director general",
+            "En el Estado donde compre el UAS"
+          ],
+          "correcta": 0,
+          "explicacion": "El operador debe registrarse en el Estado miembro donde resida si es persona física, o donde tenga su centro de actividad principal si es persona jurídica.",
+          "referencia": "Parte 1, diapositiva 48 — Registro del operador"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál de estas es una responsabilidad del operador de UAS en categoría abierta?",
+          "opciones": [
+            "Emitir el certificado de registro de otros operadores",
+            "Solicitar autorización a AESA para cada vuelo",
+            "Designar a un piloto para cada operación y garantizar que tiene la formación adecuada",
+            "Pilotar obligatoriamente todos los vuelos"
+          ],
+          "correcta": 2,
+          "explicacion": "El operador debe elaborar medidas de atenuación, designar a un piloto para cada operación, garantizar su formación, actualizar la geoconsciencia cuando proceda y disponer de la declaración de conformidad, entre otras responsabilidades.",
+          "referencia": "Parte 1, diapositiva 49 — Responsabilidades del operador"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál de estas es una responsabilidad del piloto a distancia en categoría abierta?",
+          "opciones": [
+            "Emitir el certificado de registro del operador",
+            "Disponer de la formación necesaria, portar una prueba durante el vuelo y ser responsable de la seguridad aérea",
+            "Contratar el seguro de responsabilidad civil en todos los casos",
+            "Autorizar las zonas geográficas UAS"
+          ],
+          "correcta": 1,
+          "explicacion": "El piloto debe disponer de la formación necesaria y portar una prueba, es totalmente responsable de la seguridad aérea, no debe volar bajo los efectos de alcohol o sustancias psicoactivas, debe respetar la MTOM y las limitaciones de las zonas geográficas.",
+          "referencia": "Parte 1, diapositiva 50 — Responsabilidades del piloto"
+        }
+      ]
+    }
+  ]
+}

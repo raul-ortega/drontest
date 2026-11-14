@@ -1,0 +1,1924 @@
+{
+  "categoria": "Parte 2 — Conocimientos generales",
+  "descripcion": "Principios de vuelo, componentes y mando del UAS, comunicaciones, sensores, espacio aéreo, factores humanos, privacidad, seguridad, seguros y notificación de sucesos.",
+  "fuente": "AESA — Curso UAS A1/A3. Parte 2: Conocimiento general del vuelo con UAS (Lección 2)",
+  "temas": [
+    {
+      "nombre": "Principios de vuelo y aerodinámica",
+      "descripcion": "Fuerzas del vuelo, perfil aerodinámico, Bernoulli, Venturi, ángulo de ataque y sustentación.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Cuáles son las cuatro fuerzas principales que actúan sobre una aeronave?",
+          "opciones": [
+            "Presión, temperatura, humedad y viento",
+            "Sustentación, peso, resistencia y empuje",
+            "Gravedad, inercia, fricción y aceleración",
+            "Alabeo, cabeceo, guiñada y traslación"
+          ],
+          "correcta": 1,
+          "explicacion": "Las cuatro fuerzas principales son sustentación (L), peso (W), resistencia (D) y empuje (T). La sustentación se opone al peso y el empuje a la resistencia.",
+          "referencia": "Parte 2, diapositiva 4 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué fuerza se opone al peso de la aeronave?",
+          "opciones": [
+            "La gravedad",
+            "La resistencia",
+            "El empuje",
+            "La sustentación"
+          ],
+          "correcta": 3,
+          "explicacion": "La sustentación actúa de forma opuesta al peso, mientras que el empuje se opone a la resistencia.",
+          "referencia": "Parte 2, diapositiva 9 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es un perfil aerodinámico?",
+          "opciones": [
+            "La trayectoria que sigue el UAS durante el vuelo",
+            "La resistencia máxima que soporta la estructura",
+            "El conjunto de hélices de un multirrotor",
+            "La forma de la zona transversal de un elemento capaz de generar sustentación"
+          ],
+          "correcta": 3,
+          "explicacion": "El perfil aerodinámico es la forma de la zona transversal de un elemento capaz de generar sustentación alrededor de sí mismo, como el ala de un avión o las palas de un rotor.",
+          "referencia": "Parte 2, diapositiva 4 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Según el principio de Bernoulli, en un fluido en movimiento, si la velocidad aumenta:",
+          "opciones": [
+            "La presión estática disminuye",
+            "La temperatura se duplica",
+            "La presión estática aumenta",
+            "La presión permanece constante"
+          ],
+          "correcta": 0,
+          "explicacion": "El principio de Bernoulli establece que la suma de presión estática y dinámica es constante; al aumentar la velocidad, disminuye la presión estática.",
+          "referencia": "Parte 2, diapositiva 5 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué describe el efecto Venturi?",
+          "opciones": [
+            "Que la resistencia aumenta con el cuadrado de la masa",
+            "Que al pasar por un estrechamiento las partículas del fluido aumentan su velocidad y disminuye la presión",
+            "Que el aire caliente siempre asciende",
+            "Que el empuje es igual al peso en vuelo estacionario"
+          ],
+          "correcta": 1,
+          "explicacion": "En un estrechamiento, las partículas del fluido aumentan su velocidad mientras la presión disminuye. Este efecto contribuye a generar sustentación.",
+          "referencia": "Parte 2, diapositiva 5 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué establece la tercera Ley de Newton aplicada al vuelo?",
+          "opciones": [
+            "Que toda acción tiene una reacción de igual magnitud y sentido opuesto",
+            "Que la resistencia es independiente del ángulo de ataque",
+            "Que la presión y el volumen son inversamente proporcionales",
+            "Que la sustentación siempre es mayor que el peso"
+          ],
+          "correcta": 0,
+          "explicacion": "La tercera Ley de Newton indica que toda acción tiene una reacción de igual magnitud y sentido opuesto; las moléculas de aire chocan contra el perfil produciendo la reacción.",
+          "referencia": "Parte 2, diapositiva 5 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es el ángulo de ataque?",
+          "opciones": [
+            "El ángulo entre el eje vertical y la trayectoria de vuelo",
+            "El ángulo entre la cuerda geométrica del perfil y la dirección del aire incidente",
+            "El ángulo que forma la hélice con el fuselaje",
+            "La inclinación máxima que soporta el tren de aterrizaje"
+          ],
+          "correcta": 1,
+          "explicacion": "El ángulo de ataque es el ángulo que forma la cuerda geométrica de un perfil aerodinámico con la dirección del aire incidente.",
+          "referencia": "Parte 2, diapositiva 5 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cómo se genera la sustentación en un perfil aerodinámico?",
+          "opciones": [
+            "Solo por la diferencia de presiones entre extradós e intradós",
+            "Por la resistencia del aire contra el borde de salida",
+            "Únicamente por el peso de la aeronave",
+            "Por la diferencia de presiones y por la deflexión de la corriente de aire"
+          ],
+          "correcta": 3,
+          "explicacion": "La sustentación es el resultado de la diferencia de presiones entre la parte superior (extradós) e inferior (intradós) del perfil, junto con la deflexión de la corriente de aire.",
+          "referencia": "Parte 2, diapositiva 8 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Al aumentar el ángulo de ataque, en general:",
+          "opciones": [
+            "Aumenta únicamente el peso",
+            "La sustentación no varía",
+            "Aumenta la sustentación generada",
+            "Disminuye siempre la sustentación"
+          ],
+          "correcta": 2,
+          "explicacion": "Al aumentar el ángulo de ataque aumenta la sustentación, y la fuerza opuesta es mayor cuanto mayor es la deflexión del perfil.",
+          "referencia": "Parte 2, diapositiva 8 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué condición debe cumplirse para que un UAS se eleve?",
+          "opciones": [
+            "El peso debe ser mayor que la sustentación",
+            "La resistencia debe ser igual al peso",
+            "El empuje debe ser menor que la resistencia",
+            "La sustentación debe ser mayor que el peso"
+          ],
+          "correcta": 3,
+          "explicacion": "Para que un UAS se eleve, la sustentación debe superar al peso. Para avanzar, el empuje debe superar a la resistencia.",
+          "referencia": "Parte 2, diapositiva 10 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En un multirrotor, ¿cómo se asimilan las fuerzas generadas por los rotores?",
+          "opciones": [
+            "Los rotores generan sustentación sin consumir energía",
+            "El empuje se asimila al peso",
+            "La sustentación se asimila al empuje generado por los rotores",
+            "Los rotores solo generan resistencia"
+          ],
+          "correcta": 2,
+          "explicacion": "En los multirrotores, la acción de los motores se dedica a la rotación de las hélices y la sustentación se asimila al empuje generado.",
+          "referencia": "Parte 2, diapositiva 10 — Principios básicos de vuelo"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué es el borde de ataque de un perfil aerodinámico?",
+          "opciones": [
+            "La parte delantera del perfil, por donde incide el aire",
+            "La parte trasera por donde sale el aire",
+            "El punto de máximo espesor del ala",
+            "La línea que une el extradós y el intradós"
+          ],
+          "correcta": 0,
+          "explicacion": "El borde de ataque es la parte delantera del perfil, donde incide la corriente de aire. El borde de salida es la parte trasera.",
+          "referencia": "Parte 2, diapositiva 7 — Principios básicos de vuelo"
+        }
+      ]
+    },
+    {
+      "nombre": "Factores ambientales y atmósfera",
+      "descripcion": "Troposfera, presión, temperatura, densidad, humedad, viento y Ley de Boyle.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En qué subcapa de la atmósfera tiene lugar el vuelo de los UAS?",
+          "opciones": [
+            "En la troposfera",
+            "En la estratosfera",
+            "En la mesosfera",
+            "En la ionosfera"
+          ],
+          "correcta": 0,
+          "explicacion": "El vuelo de los UAS tiene lugar en la troposfera, la subcapa de la atmósfera más próxima a la superficie.",
+          "referencia": "Parte 2, diapositiva 11 — Factores ambientales y atmósfera"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Cómo varía la presión atmosférica con la altura?",
+          "opciones": [
+            "Permanece constante",
+            "Disminuye al aumentar la altura",
+            "Aumenta al aumentar la altura",
+            "Solo varía de noche"
+          ],
+          "correcta": 1,
+          "explicacion": "La presión se debe al peso del aire sobre un punto; a mayor altura, menor presión.",
+          "referencia": "Parte 2, diapositiva 11 — Factores ambientales y atmósfera"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cómo afecta un aumento de temperatura a la densidad del aire?",
+          "opciones": [
+            "Aumenta la densidad",
+            "Disminuye la densidad porque las moléculas se dispersan",
+            "No afecta a la densidad",
+            "Duplica la densidad"
+          ],
+          "correcta": 1,
+          "explicacion": "Al aumentar la temperatura las moléculas de aire se dispersan y disminuye la densidad; al disminuir la temperatura, la densidad aumenta.",
+          "referencia": "Parte 2, diapositiva 11 — Factores ambientales y atmósfera"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué establece la Ley de Boyle?",
+          "opciones": [
+            "Que la presión siempre aumenta con la temperatura",
+            "Que a temperatura constante el volumen de un gas es inversamente proporcional a la presión",
+            "Que la humedad no influye en la densidad",
+            "Que la sustentación es proporcional al peso"
+          ],
+          "correcta": 1,
+          "explicacion": "La Ley de Boyle establece que, a temperatura constante, los volúmenes ocupados por un gas son inversamente proporcionales a las presiones a las que está sometido.",
+          "referencia": "Parte 2, diapositiva 11 — Factores ambientales y atmósfera"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si aumenta la densidad del aire, ¿qué ocurre con la sustentación y la resistencia?",
+          "opciones": [
+            "No se ven afectadas",
+            "Aumenta la sustentación y disminuye la resistencia",
+            "Ambas aumentan",
+            "Ambas disminuyen"
+          ],
+          "correcta": 2,
+          "explicacion": "La densidad del aire influye en la sustentación, la resistencia, el rendimiento del motor y la eficacia de la hélice. Si aumenta la densidad, aumentan la sustentación y la resistencia.",
+          "referencia": "Parte 2, diapositiva 12 — Efectos ambientales"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cómo afecta una mayor humedad del aire a la sustentación?",
+          "opciones": [
+            "La aumenta, porque el aire húmedo pesa más",
+            "No la afecta",
+            "La reduce solo por encima de 120 m",
+            "La reduce, porque el aire húmedo tiene menor densidad"
+          ],
+          "correcta": 3,
+          "explicacion": "El vapor de agua tiene menor densidad que el aire seco, por lo que el aire húmedo pesa menos. Mayor humedad implica menor densidad y menor sustentación.",
+          "referencia": "Parte 2, diapositiva 13 — Efectos ambientales"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué factores ambientales principales pueden afectar al vuelo de un UAS?",
+          "opciones": [
+            "El color del UAS y el tamaño de las hélices",
+            "Solo la temperatura y la lluvia",
+            "La densidad del aire, la humedad y el viento",
+            "Únicamente la presión atmosférica"
+          ],
+          "correcta": 2,
+          "explicacion": "Los principales factores ambientales que pueden interferir en el rendimiento del UAS son la densidad del aire, la humedad y el viento.",
+          "referencia": "Parte 2, diapositiva 12 — Efectos ambientales"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué efecto puede tener el viento durante la operación?",
+          "opciones": [
+            "Mejora siempre la autonomía",
+            "No tiene ningún efecto si el UAS tiene GPS",
+            "Solo afecta a la calidad de las imágenes",
+            "Puede afectar a la autonomía y a la maniobrabilidad del UAS"
+          ],
+          "correcta": 3,
+          "explicacion": "El viento puede afectar la autonomía y la maniobrabilidad, y el viento en cara o en cola afecta al despegue, ascenso, crucero y aterrizaje.",
+          "referencia": "Parte 2, diapositiva 13 — Efectos ambientales"
+        }
+      ]
+    },
+    {
+      "nombre": "Componentes del UAS",
+      "descripcion": "Estructura, grupo motopropulsor, hélices, baterías, controladora, ESC, gimbal, carga útil y tren de aterrizaje.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál es la función de la placa controladora de vuelo?",
+          "opciones": [
+            "Es el ordenador integrado que comanda las órdenes y recoge los datos de los sensores",
+            "Controla exclusivamente la cámara del UAS",
+            "Sirve únicamente como estructura de la aeronave",
+            "Solo gestiona la carga de las baterías"
+          ],
+          "correcta": 0,
+          "explicacion": "La placa controladora de vuelo es el «cerebro» de la aeronave: comanda órdenes y recoge datos de giróscopos, sensores de altitud, brújula, velocidad, posición, etc.",
+          "referencia": "Parte 2, diapositiva 14 — Componentes del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué tipo de baterías se utilizan habitualmente en los UAS?",
+          "opciones": [
+            "Baterías de níquel-hierro",
+            "Baterías de plomo-ácido",
+            "Baterías de polímero de litio (Li-Po)",
+            "Pilas alcalinas no recargables"
+          ],
+          "correcta": 2,
+          "explicacion": "Los UAS suelen utilizar baterías de polímero de litio (Li-Po), que permiten formas variadas aunque su carga es más lenta que la de Ni-Cd o Ni-MH.",
+          "referencia": "Parte 2, diapositiva 14 — Componentes del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué son los reguladores de velocidad o ESC?",
+          "opciones": [
+            "Sistemas que estabilizan la cámara",
+            "Sensores que miden la altura sobre el terreno",
+            "Componentes que gestionan la velocidad de los motores mediante un circuito eléctrico",
+            "Dispositivos que cargan la batería desde la red"
+          ],
+          "correcta": 2,
+          "explicacion": "Los ESC (Electronic Speed Controller) gestionan la velocidad de los motores mediante un circuito eléctrico.",
+          "referencia": "Parte 2, diapositiva 15 — Componentes del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál es la función de un gimbal o cardán?",
+          "opciones": [
+            "Almacenar la energía sobrante del vuelo",
+            "Estabilizar la carga de pago controlando el giro en los ejes x, y, z",
+            "Proteger las hélices durante el transporte",
+            "Aumentar la velocidad de los rotores"
+          ],
+          "correcta": 1,
+          "explicacion": "El gimbal o cardán estabiliza la carga de pago, controla el giro en los ejes x, y, z y evita movimientos propios y vibraciones.",
+          "referencia": "Parte 2, diapositiva 15 — Componentes del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué se considera carga de pago o carga útil?",
+          "opciones": [
+            "El peso total del UAS al despegue",
+            "Solo el sistema de mando y control",
+            "Únicamente la batería principal",
+            "Los instrumentos, mecanismos, equipos o accesorios instalados que no se utilizan para el manejo o control del UAS"
+          ],
+          "correcta": 3,
+          "explicacion": "La carga de pago o útil son los instrumentos, mecanismos, equipos, componentes o accesorios instalados o fijados que no se utilizan ni están destinados al manejo o control del UAS, como cámaras ópticas o térmicas.",
+          "referencia": "Parte 2, diapositiva 15 — Componentes del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué relación existe entre la longitud de la hélice y el empuje?",
+          "opciones": [
+            "Solo influye el color de la hélice",
+            "A mayor longitud de hélice, mayor empuje",
+            "La longitud de la hélice no influye en el empuje",
+            "A mayor longitud de hélice, menor empuje"
+          ],
+          "correcta": 1,
+          "explicacion": "Las hélices, giradas por la potencia de los motores, elevan la aeronave; una mayor longitud de hélice genera mayor empuje.",
+          "referencia": "Parte 2, diapositiva 14 — Componentes del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué materiales se emplean habitualmente en el chasis o fuselaje de un UAS?",
+          "opciones": [
+            "Madera maciza exclusivamente",
+            "Hormigón y cerámica",
+            "Aleaciones ligeras de aluminio, magnesio y titanio, y compuestos como fibra de carbono o vidrio",
+            "Solo acero inoxidable"
+          ],
+          "correcta": 2,
+          "explicacion": "El chasis-marco-fuselaje se fabrica con aleaciones ligeras de aluminio, magnesio y titanio, y con compuestos como fibra de carbono, fibra de vidrio o plástico.",
+          "referencia": "Parte 2, diapositiva 14 — Componentes del UAS"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Para qué sirve el tren de aterrizaje de un UAS?",
+          "opciones": [
+            "Para tomar tierra y evitar daños a la aeronave",
+            "Para cargar la batería durante el vuelo",
+            "Para aumentar la sustentación en vuelo",
+            "Para transmitir la identificación a distancia"
+          ],
+          "correcta": 0,
+          "explicacion": "El tren de aterrizaje permite tomar tierra y evitar daños. Puede ser retráctil o fijo, con patas, ruedas o patines según el tipo de aeronave.",
+          "referencia": "Parte 2, diapositiva 15 — Componentes del UAS"
+        }
+      ]
+    },
+    {
+      "nombre": "Mando y control",
+      "descripcion": "Estación de control, ejes y movimientos de vuelo, actuadores y controles de multirrotores y ala fija.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué es la estación de control (GCS) de un UAS?",
+          "opciones": [
+            "La emisora o sistema desde el que se manda y controla la aeronave",
+            "La oficina de AESA que autoriza los vuelos",
+            "El servidor que gestiona las zonas geográficas UAS",
+            "El lugar donde se almacenan las baterías"
+          ],
+          "correcta": 0,
+          "explicacion": "La estación de control (GCS, Ground Control System) es la emisora de radio con sticks y botones, o el sistema informático desde el que se realiza el mando y control del UAS.",
+          "referencia": "Parte 2, diapositiva 16 — Sistema de mando y control"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuántos ejes principales de giro tiene una aeronave y dónde se cruzan?",
+          "opciones": [
+            "Cuatro ejes que se cruzan en el centro de la hélice",
+            "Dos ejes paralelos que se cruzan en la cola",
+            "Un solo eje vertical",
+            "Tres ejes perpendiculares que se cruzan en el centro de gravedad"
+          ],
+          "correcta": 3,
+          "explicacion": "Los tres ejes de vuelo son perpendiculares entre sí y su intersección se sitúa en el centro de gravedad de la aeronave.",
+          "referencia": "Parte 2, diapositiva 17 — Controles de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Alrededor de qué eje se produce el movimiento de alabeo?",
+          "opciones": [
+            "Del eje longitudinal",
+            "Del eje transversal",
+            "Del eje de guiñada",
+            "Del eje vertical"
+          ],
+          "correcta": 0,
+          "explicacion": "El alabeo es el movimiento alrededor del eje longitudinal. El cabeceo se produce alrededor del eje transversal y la guiñada alrededor del eje vertical.",
+          "referencia": "Parte 2, diapositiva 17 — Controles de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué movimiento se realiza alrededor del eje vertical?",
+          "opciones": [
+            "Derrape",
+            "Guiñada",
+            "Cabeceo",
+            "Alabeo"
+          ],
+          "correcta": 1,
+          "explicacion": "La guiñada es el movimiento alrededor del eje vertical. El alabeo se produce en el eje longitudinal y el cabeceo en el transversal.",
+          "referencia": "Parte 2, diapositiva 17 — Controles de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En un avión de ala fija, ¿qué superficie de control produce el alabeo?",
+          "opciones": [
+            "El timón de dirección",
+            "El timón de profundidad",
+            "Los alerones",
+            "Los flaps"
+          ],
+          "correcta": 2,
+          "explicacion": "En ala fija, los alerones producen el alabeo (eje longitudinal), el timón de profundidad el cabeceo y el timón de dirección la guiñada.",
+          "referencia": "Parte 2, diapositiva 21 — Controles de vuelo (ala fija)"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En un avión de ala fija, ¿qué superficie de control produce el cabeceo?",
+          "opciones": [
+            "El timón de profundidad",
+            "El timón de dirección",
+            "Los alerones",
+            "El compensador de alabeo"
+          ],
+          "correcta": 0,
+          "explicacion": "El timón de profundidad actúa sobre el cabeceo, que es el movimiento transversal del avión.",
+          "referencia": "Parte 2, diapositiva 21 — Controles de vuelo (ala fija)"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En un multirrotor en configuración X, ¿cómo se consigue el alabeo?",
+          "opciones": [
+            "Aumentando por igual todos los motores",
+            "Variando únicamente la posición del gimbal",
+            "Invirtiendo el giro de todos los rotores",
+            "Aumentando la velocidad de los motores de un lado para inclinar la aeronave hacia el lado contrario"
+          ],
+          "correcta": 3,
+          "explicacion": "Para el alabeo se aumenta la velocidad de los motores de un plano; la aeronave se inclina hacia el lado contrario por la fuerza resultante.",
+          "referencia": "Parte 2, diapositiva 22 — Controles de vuelo (multirrotor)"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En un multirrotor, ¿cómo se consigue el cabeceo hacia adelante?",
+          "opciones": [
+            "Aumentando la velocidad de los motores traseros",
+            "Aumentando solo los motores del lado izquierdo",
+            "Aumentando la velocidad de los motores delanteros",
+            "Apagando un motor"
+          ],
+          "correcta": 0,
+          "explicacion": "Al aumentar la velocidad de los motores traseros, el multirrotor se inclina hacia adelante y genera una fuerza de avance.",
+          "referencia": "Parte 2, diapositiva 23 — Controles de vuelo (multirrotor)"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En un multirrotor, ¿qué provoca la guiñada?",
+          "opciones": [
+            "El aumento simultáneo de todos los motores",
+            "El movimiento del gimbal",
+            "La pérdida de señal GNSS",
+            "El desequilibrio del momento angular al variar la velocidad de los motores que giran en el mismo sentido"
+          ],
+          "correcta": 3,
+          "explicacion": "La guiñada se produce al aumentar la velocidad de los motores que giran en el sentido de las agujas del reloj, creando un desequilibrio del momento angular en torno al eje vertical.",
+          "referencia": "Parte 2, diapositiva 24 — Controles de vuelo (multirrotor)"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es un actuador o superficie de control?",
+          "opciones": [
+            "El sensor que mide la presión atmosférica",
+            "El componente físico que hace moverse la aeronave según cada eje",
+            "El software que planifica la ruta",
+            "La batería que alimenta los motores"
+          ],
+          "correcta": 1,
+          "explicacion": "El actuador o superficie de control es el componente físico que hace moverse la aeronave según cada eje. Las señales de los sticks llegan a la central de control y esta a los actuadores, servos o ESC.",
+          "referencia": "Parte 2, diapositiva 17 — Controles de vuelo"
+        }
+      ]
+    },
+    {
+      "nombre": "Comunicaciones",
+      "descripcion": "Enlaces de subida y bajada, latencia, frecuencias, pérdida de enlace y RTH.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué es el enlace de subida en las comunicaciones de un UAS?",
+          "opciones": [
+            "El enlace entre dos UAS",
+            "El enlace desde la estación de control hacia el UAS",
+            "El enlace desde el UAS hacia la estación de control",
+            "El enlace con los satélites GNSS"
+          ],
+          "correcta": 1,
+          "explicacion": "El enlace de subida va de la estación de control (GCS) al UAS y transporta comandos de control, correcciones GNSS y comandos de la carga de pago.",
+          "referencia": "Parte 2, diapositiva 25 — Comunicaciones"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué información transporta el enlace de bajada?",
+          "opciones": [
+            "Telemetría, estado de la carga de pago y baterías, y vídeo o imágenes",
+            "Las instrucciones de mantenimiento",
+            "Únicamente las correcciones GNSS",
+            "Solo los comandos de control del piloto"
+          ],
+          "correcta": 0,
+          "explicacion": "El enlace de bajada (UAS → GCS) transporta telemetría, estado de la carga de pago y baterías, y vídeo o imágenes tomadas por la carga de pago.",
+          "referencia": "Parte 2, diapositiva 25 — Comunicaciones"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es la latencia en las comunicaciones de un UAS?",
+          "opciones": [
+            "El tiempo necesario para producir, procesar, enviar, recibir, interpretar y ejecutar una orden",
+            "La duración máxima de la batería",
+            "La frecuencia de transmisión del sistema DRI",
+            "La distancia máxima entre el piloto y el UAS"
+          ],
+          "correcta": 0,
+          "explicacion": "La latencia es el tiempo necesario para producir, procesar, enviar, recibir, interpretar y ejecutar una orden de comando.",
+          "referencia": "Parte 2, diapositiva 25 — Comunicaciones"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Cuáles son las frecuencias típicas utilizadas en las comunicaciones de UAS?",
+          "opciones": [
+            "Solo 433 MHz",
+            "2,4 GHz y 5,8 GHz",
+            "12 GHz y 24 GHz",
+            "100 MHz y 200 MHz"
+          ],
+          "correcta": 1,
+          "explicacion": "Las frecuencias típicas en las comunicaciones de UAS son 2,4 GHz y 5,8 GHz.",
+          "referencia": "Parte 2, diapositiva 25 — Comunicaciones"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué suele ocurrir si se pierde el radioenlace y el UAS dispone de RTH?",
+          "opciones": [
+            "El UAS cambia de frecuencia automáticamente sin avisar",
+            "El UAS acelera al máximo",
+            "Se activa automáticamente el regreso al punto de origen",
+            "El UAS se apaga inmediatamente"
+          ],
+          "correcta": 2,
+          "explicacion": "La mayoría de los UAS detectan la pérdida de radioenlace con alarma auditiva y visual; si disponen de RTH (Return To Home), este se activa automáticamente.",
+          "referencia": "Parte 2, diapositiva 25 — Comunicaciones"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué transporta el enlace de subida además de los comandos de control?",
+          "opciones": [
+            "El estado de las baterías",
+            "La telemetría del UAS",
+            "El vídeo grabado por la cámara",
+            "Correcciones GNSS y comandos para la carga de pago"
+          ],
+          "correcta": 3,
+          "explicacion": "El enlace de subida transporta comandos de control, correcciones GNSS y comandos para la carga de pago. La telemetría y el vídeo van por el enlace de bajada.",
+          "referencia": "Parte 2, diapositiva 25 — Comunicaciones"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué permite el sistema FPV en la estación de control?",
+          "opciones": [
+            "Recargar la batería durante el vuelo",
+            "Aumentar el alcance del enlace de control",
+            "Ver en tiempo real las imágenes de la cámara del UAS",
+            "Sustituir al sistema de geoconsciencia"
+          ],
+          "correcta": 2,
+          "explicacion": "El transmisor FPV instalado en la aeronave y el receptor de vídeo de la emisora permiten al piloto ver las imágenes de las cámaras.",
+          "referencia": "Parte 2, diapositiva 16 — Sistema de mando y control"
+        }
+      ]
+    },
+    {
+      "nombre": "Sensores e instrumentos de vuelo",
+      "descripcion": "IMU, GNSS, barómetro, magnetómetro, anticolisión, geofencing, autopiloto y FTS.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué componentes integra una IMU?",
+          "opciones": [
+            "Un GNSS y un altímetro ultrasónico",
+            "Una cámara y un micrófono",
+            "Un magnetómetro y un barómetro",
+            "Un acelerómetro y un giroscopio"
+          ],
+          "correcta": 3,
+          "explicacion": "La IMU (Inertial Measurement Unit) integra un acelerómetro, que mide la aceleración lineal, y un giroscopio, que mide la velocidad angular.",
+          "referencia": "Parte 2, diapositiva 26 — Sensores del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuántos satélites GNSS se necesitan como mínimo para obtener una posición en 3D?",
+          "opciones": [
+            "4 satélites",
+            "10 satélites",
+            "2 satélites",
+            "3 satélites"
+          ],
+          "correcta": 0,
+          "explicacion": "El sensor de localización GNSS necesita al menos 4 satélites para determinar la posición en 3D.",
+          "referencia": "Parte 2, diapositiva 26 — Sensores del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué mide el magnetómetro de un UAS?",
+          "opciones": [
+            "La dirección a la que apunta el morro del UAS, actuando como brújula",
+            "La velocidad vertical",
+            "La presión atmosférica",
+            "La altura sobre el nivel del mar"
+          ],
+          "correcta": 0,
+          "explicacion": "El magnetómetro actúa como brújula e indica la dirección a la que apunta el morro del UAS.",
+          "referencia": "Parte 2, diapositiva 26 — Sensores del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Para qué sirven los sensores anticolisión o Sense and Avoid (SAA)?",
+          "opciones": [
+            "Para cargar la batería de forma inalámbrica",
+            "Para detectar y evitar obstáculos fijos en la trayectoria de vuelo",
+            "Para identificar al operador ante otros usuarios",
+            "Para aumentar la velocidad máxima del UAS"
+          ],
+          "correcta": 1,
+          "explicacion": "Los sensores anticolisión Sense and Avoid (SAA) permiten detectar y evitar obstáculos fijos en la trayectoria de vuelo.",
+          "referencia": "Parte 2, diapositiva 26 — Sensores del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué diferencia hay entre geofencing y geocaching?",
+          "opciones": [
+            "El geocaching es un sistema de identificación a distancia",
+            "El geofencing define un volumen en el que la aeronave no puede entrar; el geocaching define un volumen que no puede abandonar",
+            "Son exactamente lo mismo",
+            "El geofencing solo funciona en interiores"
+          ],
+          "correcta": 1,
+          "explicacion": "El geofencing establece un límite virtual que la aeronave no puede atravesar hacia dentro; el geocaching define un volumen de salida que la aeronave no puede abandonar sin superar los límites configurados.",
+          "referencia": "Parte 2, diapositiva 27 — Geolocalización, geofencing y geocaching"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué hace el autopiloto si se pierde la señal GNSS?",
+          "opciones": [
+            "Se apaga inmediatamente",
+            "Pasa a modo hover y, si no se recupera la señal en un tiempo preestablecido, procede al aterrizaje vertical",
+            "Acelera para recuperar la señal",
+            "Cambia automáticamente a modo BVLOS"
+          ],
+          "correcta": 1,
+          "explicacion": "En pérdida de GNSS el autopiloto pasa a hover y, transcurrido un tiempo preestablecido sin recuperar la señal, procede al aterrizaje vertical.",
+          "referencia": "Parte 2, diapositiva 28 — Instrumentos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es el sistema de terminación de vuelo (FTS)?",
+          "opciones": [
+            "Un sistema que acelera el UAS hasta su velocidad máxima",
+            "Un dispositivo que apaga la cámara en vuelo",
+            "Un sistema de seguridad que actúa ante una emergencia mediante RTH o aterrizaje por agotamiento de batería",
+            "Un registro obligatorio de horas de vuelo"
+          ],
+          "correcta": 2,
+          "explicacion": "El FTS es un sistema de seguridad que actúa antes de una emergencia mediante la terminación del vuelo, con sistemas como el RTH o el aterrizaje frente al agotamiento de batería.",
+          "referencia": "Parte 2, diapositiva 28 — Instrumentos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué sensor permite medir la altura sobre el terreno (AGL)?",
+          "opciones": [
+            "El sistema DRI",
+            "El magnetómetro",
+            "Un altímetro ultrasónico o sonar",
+            "La IMU exclusivamente"
+          ],
+          "correcta": 2,
+          "explicacion": "El posicionamiento relativo puede usar altímetro, sonar o sensor ultrasónico de altura AGL, entre otros, para medir la altura sobre el terreno.",
+          "referencia": "Parte 2, diapositiva 26 — Sensores del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué función cumple la geolocalización en un UAS?",
+          "opciones": [
+            "Sustituye a la batería en vuelos largos",
+            "Mide la presión atmosférica",
+            "Autoriza automáticamente el vuelo en zona urbana",
+            "Permite conocer su posición exacta y realizar operaciones automatizadas"
+          ],
+          "correcta": 3,
+          "explicacion": "La geolocalización permite al UAS conocer su posición exacta, realizar operaciones automatizadas y apoyar al piloto.",
+          "referencia": "Parte 2, diapositiva 27 — Geolocalización, geofencing y geocaching"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué permite el autopiloto además de gestionar los sensores?",
+          "opciones": [
+            "Seguir la ruta planificada compensando el viento y las perturbaciones",
+            "Emitir el certificado de registro del operador",
+            "Autorizar el despegue sin comprobaciones previas",
+            "Sustituir la formación del piloto"
+          ],
+          "correcta": 0,
+          "explicacion": "El autopiloto gestiona los datos de los sensores para dar órdenes a motores y superficies de control, y permite seguir la ruta planificada compensando viento y perturbaciones.",
+          "referencia": "Parte 2, diapositiva 28 — Instrumentos de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué sensor proporciona la altura mediante la presión atmosférica?",
+          "opciones": [
+            "El sensor ultrasónico",
+            "El acelerómetro",
+            "El altímetro barométrico",
+            "El magnetómetro"
+          ],
+          "correcta": 2,
+          "explicacion": "El sensor de presión barométrica se utiliza como altímetro barométrico o indicador de velocidad vertical.",
+          "referencia": "Parte 2, diapositiva 26 — Sensores del UAS"
+        }
+      ]
+    },
+    {
+      "nombre": "Limitaciones, información y mantenimiento",
+      "descripcion": "Limitaciones del fabricante, información imprescindible, procedimientos de fallo e inspección y mantenimiento.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Dónde debe consultar el piloto las limitaciones y características de su UAS?",
+          "opciones": [
+            "En el registro de aeronaves del Ministerio del Interior",
+            "En los foros de usuarios de internet",
+            "Únicamente en la web de EASA",
+            "En las instrucciones facilitadas por el fabricante"
+          ],
+          "correcta": 3,
+          "explicacion": "Antes del primer vuelo el piloto debe conocer los elementos, limitaciones y características del UAS siguiendo las instrucciones del fabricante.",
+          "referencia": "Parte 2, diapositiva 29 — Limitaciones de la aeronave"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál de estas es una limitación meteorológica típica del UAS?",
+          "opciones": [
+            "El número de hélices",
+            "La velocidad máxima de viento, la lluvia, la niebla o la temperatura",
+            "El color de la carcasa",
+            "La marca de la emisora"
+          ],
+          "correcta": 1,
+          "explicacion": "Entre las limitaciones de la aeronave están las meteorológicas (velocidad máxima de viento, lluvia, niebla o temperatura), de altura y distancia, de MTOM y de batería y tiempos de vuelo.",
+          "referencia": "Parte 2, diapositiva 29 — Limitaciones de la aeronave"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Antes de cada vuelo, ¿qué información sobre zonas geográficas debe cargar el piloto?",
+          "opciones": [
+            "Solo la información del año anterior",
+            "Ninguna, el UAS se actualiza solo siempre",
+            "La información más actualizada disponible de la zona donde realizará la operación",
+            "La zona geográfica del lugar de residencia del piloto"
+          ],
+          "correcta": 2,
+          "explicacion": "El piloto debe asegurarse de cargar la información más actualizada disponible de la zona geográfica donde realizará la operación, así como el número de registro del operador cuando corresponda.",
+          "referencia": "Parte 2, diapositiva 32 — Información imprescindible del UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué debe hacer el piloto ante un fallo del UAS?",
+          "opciones": [
+            "Ignorarlo si el UAS sigue volando",
+            "Aumentar la altura para ganar tiempo",
+            "Esperar a que la batería se agote",
+            "Seguir los procedimientos existentes para garantizar la seguridad"
+          ],
+          "correcta": 3,
+          "explicacion": "Deben existir procedimientos para garantizar la seguridad en caso de fallo del UAS, y el piloto debe conocerlos y aplicarlos.",
+          "referencia": "Parte 2, diapositiva 31 — Información 3"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué debe hacerse antes de cada vuelo como parte del mantenimiento preventivo?",
+          "opciones": [
+            "Cambiar obligatoriamente la batería",
+            "Desmontar todos los motores",
+            "Reprogramar el firmware en cada vuelo",
+            "Una inspección exterior del equipo"
+          ],
+          "correcta": 3,
+          "explicacion": "Antes de cada vuelo debe realizarse una inspección exterior del equipo para comprobar que está en condiciones óptimas y detectar defectos.",
+          "referencia": "Parte 2, diapositiva 33 — Mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué elementos deben revisarse en la inspección exterior previa al vuelo?",
+          "opciones": [
+            "Solo la batería",
+            "Solo el número de registro del operador",
+            "Equipo de control, integridad estructural, batería, sistemas anexos y actualización de software",
+            "Únicamente la cámara"
+          ],
+          "correcta": 2,
+          "explicacion": "La inspección incluye el equipo de control y subsistemas, la integridad estructural, la batería, los sistemas anexos, la comprobación dinámica de motores y superficies y la actualización de software o firmware.",
+          "referencia": "Parte 2, diapositiva 33 — Mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué información debe conocer el piloto antes de realizar el primer vuelo?",
+          "opciones": [
+            "Únicamente el precio del UAS",
+            "Solo la marca del fabricante",
+            "La dirección de la sede de EASA",
+            "El funcionamiento, las limitaciones, las características y el mantenimiento del UAS"
+          ],
+          "correcta": 3,
+          "explicacion": "Antes del primer vuelo el piloto debe estar familiarizado con las instrucciones del fabricante y conocer los elementos, limitaciones, características, funcionamiento y mantenimiento del UAS.",
+          "referencia": "Parte 2, diapositiva 78 — Instrucciones del fabricante"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué procedimiento debe seguirse para el control del UAS en todas las fases del vuelo?",
+          "opciones": [
+            "El que indique la aplicación de mensajería del móvil",
+            "El indicado por el fabricante para arranque, despegue, manejo, aterrizaje y parada de motores",
+            "El que decida el piloto improvisadamente",
+            "El que establezca el observador del espacio aéreo"
+          ],
+          "correcta": 1,
+          "explicacion": "El piloto debe seguir las instrucciones del fabricante para el arranque de motores, despegue, manejo con los distintos modos de vuelo, aterrizaje y parada de motores.",
+          "referencia": "Parte 2, diapositiva 31 — Información 3"
+        }
+      ]
+    },
+    {
+      "nombre": "Espacio aéreo",
+      "descripcion": "SES, U-Space, FL, VFR/IFR, espacio controlado y no controlado, CTR, ATZ, FIZ y clases A-G.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué significa SES?",
+          "opciones": [
+            "Cielo Único Europeo (Single European Sky)",
+            "Sistema Europeo de Seguridad",
+            "Servicio de Emergencia y Supervisión",
+            "Sistema de Espacio Segregado"
+          ],
+          "correcta": 0,
+          "explicacion": "SES corresponde a Single European Sky, el Cielo Único Europeo, espacio aéreo compartido por aeronaves tripuladas y no tripuladas.",
+          "referencia": "Parte 2, diapositiva 34 — Introducción al espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es U-Space?",
+          "opciones": [
+            "Un tipo de UAS de clase C4",
+            "Una zona geográfica prohibida al vuelo de drones",
+            "La infraestructura, los servicios y los procedimientos para integrar de forma segura las operaciones con UAS en el espacio aéreo",
+            "Un registro europeo de operadores"
+          ],
+          "correcta": 2,
+          "explicacion": "U-Space comprende la infraestructura, los servicios y los procedimientos para garantizar la seguridad de las operaciones con UAS y apoyar su integración en el espacio aéreo.",
+          "referencia": "Parte 2, diapositiva 34 — Introducción al espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es un nivel de vuelo (FL)?",
+          "opciones": [
+            "La velocidad del viento en nudos",
+            "La distancia horizontal al aeródromo",
+            "Una altitud de la aeronave a la presión atmosférica estándar, expresada en cientos de pies",
+            "La altura sobre el terreno en metros"
+          ],
+          "correcta": 2,
+          "explicacion": "FL (Flight Level) es el nivel de vuelo, la altitud de una aeronave a la presión atmosférica estándar, expresada en cientos de pies.",
+          "referencia": "Parte 2, diapositiva 36 — Definiciones del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué significan VFR e IFR?",
+          "opciones": [
+            "VFR es espacio controlado e IFR espacio no controlado",
+            "VFR es un tipo de UAS e IFR un tipo de aeródromo",
+            "VFR es vuelo de carga e IFR vuelo de pasajeros",
+            "VFR son reglas de vuelo visual e IFR reglas de vuelo por instrumentos"
+          ],
+          "correcta": 3,
+          "explicacion": "VFR (Visual Flight Rules) son las reglas de vuelo visual, e IFR (Instrumental Flight Rules) las reglas de vuelo por instrumentos.",
+          "referencia": "Parte 2, diapositiva 36 — Definiciones del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué caracteriza al espacio aéreo controlado?",
+          "opciones": [
+            "No se presta ningún servicio de tránsito aéreo",
+            "Es siempre espacio aéreo militar",
+            "Se facilita el servicio de control de tránsito aéreo (ATC) a los vuelos IFR y VFR según su clasificación",
+            "Solo pueden volar aeromodelos"
+          ],
+          "correcta": 2,
+          "explicacion": "El espacio aéreo controlado es un espacio de dimensiones definidas donde se facilita el servicio de control de tránsito aéreo a los vuelos IFR y VFR, de acuerdo con su clasificación.",
+          "referencia": "Parte 2, diapositiva 37 — Estructura del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es una CTR (Zona de Control)?",
+          "opciones": [
+            "Una zona prohibida al vuelo de drones",
+            "Una zona de información de vuelo no controlada",
+            "Un área de estacionamiento de aeronaves",
+            "Un volumen de espacio aéreo desde el suelo que protege y controla el movimiento de aeronaves de uno o más aeródromos"
+          ],
+          "correcta": 3,
+          "explicacion": "La CTR es un volumen de espacio aéreo que se extiende desde el suelo hasta una altura determinada y protege y controla el movimiento de aeronaves de uno o más aeródromos, extendiéndose al menos 5 NM del centro del aeropuerto.",
+          "referencia": "Parte 2, diapositiva 38 — Estructura del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es una ATZ (Zona de Tránsito de Aeródromo)?",
+          "opciones": [
+            "El espacio aéreo superior a 18.000 pies",
+            "Un volumen alrededor de un aeródromo para protección y control de su tráfico, especialmente VFR",
+            "Una zona de información de vuelo asociada a un AFIS",
+            "Una zona geográfica UAS de carácter particular"
+          ],
+          "correcta": 1,
+          "explicacion": "La ATZ es un volumen alrededor de un aeródromo para la protección y control de su tráfico, especialmente los vuelos VFR. Si el aeródromo acepta operaciones IFR, existirá un CTR que suele englobar la ATZ.",
+          "referencia": "Parte 2, diapositiva 38 — Estructura del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es una FIZ (Zona de Información de Vuelo)?",
+          "opciones": [
+            "Espacio aéreo no controlado asociado a aeródromos con AFIS que suministran información",
+            "Una zona prohibida de carácter militar",
+            "Espacio aéreo controlado de clase A",
+            "El volumen de espacio aéreo reservado a U-Space"
+          ],
+          "correcta": 0,
+          "explicacion": "La FIZ es un espacio aéreo no controlado desde la superficie hasta un límite superior especificado, asociado a aeródromos con AFIS que suministran información a las aeronaves.",
+          "referencia": "Parte 2, diapositiva 38 — Estructura del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En qué clases se divide el espacio aéreo controlado?",
+          "opciones": [
+            "C0, C1, C2, C3 y C4",
+            "A, B, C, D y E",
+            "A1, A2 y A3",
+            "F y G"
+          ],
+          "correcta": 1,
+          "explicacion": "El espacio aéreo controlado se divide en las clases A, B, C, D y E; el no controlado en F y G.",
+          "referencia": "Parte 2, diapositiva 39 — Clasificación del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué clases corresponden al espacio aéreo no controlado?",
+          "opciones": [
+            "A y B",
+            "C, D y E",
+            "Solo G",
+            "F y G"
+          ],
+          "correcta": 3,
+          "explicacion": "El espacio aéreo no controlado se divide en clases F y G. El controlado comprende A, B, C, D y E.",
+          "referencia": "Parte 2, diapositiva 39 — Clasificación del espacio aéreo"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "¿Qué vuelos se permiten en un espacio aéreo de clase A?",
+          "opciones": [
+            "Solo vuelos VFR",
+            "Únicamente vuelos de UAS",
+            "Solo vuelos IFR",
+            "Vuelos VFR e IFR sin restricción"
+          ],
+          "correcta": 2,
+          "explicacion": "En la clase A solo se permiten vuelos IFR, con separación proporcionada por ATC y autorización bidireccional.",
+          "referencia": "Parte 2, diapositiva 41 — Clasificación del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué servicios se proporcionan en clase G?",
+          "opciones": [
+            "Información de vuelo, sin servicio de separación",
+            "Ningún servicio de información",
+            "Autorización obligatoria para todos los vuelos",
+            "Control de tránsito aéreo con separación continua"
+          ],
+          "correcta": 0,
+          "explicacion": "La clase G es espacio no controlado: no se proporciona servicio de separación y se ofrece servicio de información de vuelo.",
+          "referencia": "Parte 2, diapositiva 41 — Clasificación del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿A cuántos metros equivalen 400 pies (ft) de altura?",
+          "opciones": [
+            "150 m",
+            "100 m",
+            "120 m",
+            "200 m"
+          ],
+          "correcta": 2,
+          "explicacion": "400 ft equivalen aproximadamente a 120 m, que es la altura máxima general de la categoría abierta.",
+          "referencia": "Parte 2, diapositiva 36 — Definiciones del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es una estructura de espacio aéreo?",
+          "opciones": [
+            "La estructura física de un aeródromo",
+            "El conjunto de rutas de UAS no controladas",
+            "Un registro de operadores de UAS",
+            "Un espacio definido en tres dimensiones creado para facilitar los servicios de tránsito aéreo"
+          ],
+          "correcta": 3,
+          "explicacion": "Una estructura de espacio aéreo es un espacio definido en tres dimensiones (volumen) creado con propósitos de facilitar la provisión de los servicios de tránsito aéreo.",
+          "referencia": "Parte 2, diapositiva 38 — Estructura del espacio aéreo"
+        }
+      ]
+    },
+    {
+      "nombre": "Zonas geográficas UAS",
+      "descripcion": "Zonas generales y particulares, restricciones, visor ENAIRE, zonas D/R/P, entornos de aeródromos y helipuertos y espacio controlado/FIZ.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cómo se clasifican las zonas geográficas UAS?",
+          "opciones": [
+            "Urbanas y rurales",
+            "Civiles y militares",
+            "Generales y particulares",
+            "Permanentes y eventuales"
+          ],
+          "correcta": 2,
+          "explicacion": "Se distingue entre zonas geográficas UAS generales y particulares. Las generales están definidas en el Real Decreto 1180/2018 y las particulares son aprobadas por CIDETRA.",
+          "referencia": "Parte 2, diapositiva 43 — Zonas geográficas"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Quién aprueba las zonas geográficas UAS particulares?",
+          "opciones": [
+            "La Comisión Interministerial entre Defensa y Transportes (CIDETRA)",
+            "El fabricante del UAS",
+            "ENAIRE Drones",
+            "La Unión Europea"
+          ],
+          "correcta": 0,
+          "explicacion": "Las zonas geográficas particulares son aprobadas por la Comisión Interministerial entre Defensa y Transportes (CIDETRA) por razones de interés general y carácter permanente, aunque su activación puede ser temporal.",
+          "referencia": "Parte 2, diapositiva 43 — Zonas geográficas"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué riesgos contribuyen a controlar las zonas geográficas UAS?",
+          "opciones": [
+            "El precio del UAS",
+            "Solo el riesgo de colisión con aves",
+            "Seguridad pública, protección de datos personales, privacidad y medio ambiente",
+            "Únicamente el ruido de los motores"
+          ],
+          "correcta": 2,
+          "explicacion": "Las zonas geográficas UAS contribuyen a controlar riesgos de seguridad pública, protección de datos personales, privacidad y medio ambiente.",
+          "referencia": "Parte 2, diapositiva 44 — Restricciones del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué puede hacer un Estado miembro en una zona geográfica UAS?",
+          "opciones": [
+            "Nada, las zonas son competencia exclusiva de EASA",
+            "Solo permitir el vuelo sin condiciones",
+            "Únicamente prohibir el vuelo nocturno",
+            "Prohibir operaciones, exigir condiciones o autorización, limitar clases de UAS o imponer requisitos ambientales"
+          ],
+          "correcta": 3,
+          "explicacion": "Los Estados pueden prohibir algunas o todas las operaciones, requerir condiciones o autorización, permitir solo ciertas clases, someter a normas ambientales o exigir equipamiento y funcionalidades concretas.",
+          "referencia": "Parte 2, diapositiva 44 — Restricciones del espacio aéreo"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Dónde puede consultarse la información de las zonas geográficas UAS en España?",
+          "opciones": [
+            "En la web de cualquier fabricante de UAS",
+            "En el BOE exclusivamente",
+            "En el visor cartográfico ENAIRE Drones",
+            "En la aplicación de mensajería de AESA"
+          ],
+          "correcta": 2,
+          "explicacion": "La información está disponible en el visor cartográfico ENAIRE Drones (drones.enaire.es) y en la información publicada por el Estado miembro.",
+          "referencia": "Parte 2, diapositiva 45 — Coordinación con aeródromos y ATC"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si el UAS dispone de geoconsciencia, ¿quién es responsable de actualizar el mapa cuando sea aplicable?",
+          "opciones": [
+            "El fabricante del UAS",
+            "El operador",
+            "ENAIRE",
+            "La Comisión Europea"
+          ],
+          "correcta": 1,
+          "explicacion": "Cuando el UAS dispone de función de geoconsciencia, la actualización del mapa es responsabilidad del operador según el lugar previsto de la operación.",
+          "referencia": "Parte 2, diapositiva 45 — Coordinación con aeródromos y ATC"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué caracteriza a una zona peligrosa (D)?",
+          "opciones": [
+            "Es un volumen donde puede desarrollarse una actividad que ponga en peligro la circulación aérea y el piloto tiene obligación de informarse",
+            "Solo pueden circular aeronaves autorizadas por el Estado",
+            "Está prohibido el vuelo a cualquier aeronave",
+            "Es una zona reservada exclusivamente a UAS"
+          ],
+          "correcta": 0,
+          "explicacion": "Las zonas peligrosas (Dangerous) son volúmenes donde es probable que se desarrolle alguna actividad que pueda poner en peligro la circulación aérea; el piloto tiene la obligación de informarse.",
+          "referencia": "Parte 2, diapositiva 46 — Restricciones del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué caracteriza a una zona restringida (R)?",
+          "opciones": [
+            "Solo afecta a aeronaves militares",
+            "Solo pueden circular las aeronaves que cumplan los requisitos de acceso indicados, salvo aeronaves del Estado",
+            "Está prohibido el vuelo sin excepción",
+            "Es una zona de información de vuelo"
+          ],
+          "correcta": 1,
+          "explicacion": "En las zonas restringidas solo pueden circular las aeronaves que cumplan los requisitos de acceso indicados, con excepción de las aeronaves del Estado.",
+          "referencia": "Parte 2, diapositiva 46 — Restricciones del espacio aéreo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué caracteriza a una zona prohibida (P)?",
+          "opciones": [
+            "Solo pueden circular aeronaves autorizadas por el Estado español",
+            "Es una zona reservada a aeromodelos",
+            "Es una zona donde el vuelo es libre para UAS",
+            "Solo se prohíbe el vuelo nocturno"
+          ],
+          "correcta": 0,
+          "explicacion": "En las zonas prohibidas solo pueden circular aeronaves autorizadas por el Estado español.",
+          "referencia": "Parte 2, diapositiva 46 — Restricciones del espacio aéreo"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "En el entorno de un aeródromo civil de uso público, hasta 45 m de altura desde el ARP, ¿qué área se considera zona geográfica UAS?",
+          "opciones": [
+            "6 km de longitud desde los extremos de pista y 5 km de anchura a ambos lados",
+            "3,3 km de longitud y 3,3 km de anchura",
+            "10 km de longitud y 7,5 km de anchura",
+            "2,5 km de longitud y 2,5 km de anchura"
+          ],
+          "correcta": 0,
+          "explicacion": "Hasta 45 m desde el ARP, el área es de 6 km de longitud desde los extremos de pista en sentido del eje y 5 km de anchura a ambos lados. Por encima de 45 m y hasta 900 m, el área es de 10 km por 7,5 km.",
+          "referencia": "Parte 2, diapositiva 47 — Condiciones de zonas geográficas UAS"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "En el entorno de un helipuerto civil de uso público, hasta 90 m de altura desde el HRP, ¿qué área se considera zona geográfica UAS?",
+          "opciones": [
+            "2,5 km de longitud desde los extremos de la FATO y 2,5 km de anchura a ambos lados",
+            "10 km de longitud y 7,5 km de anchura",
+            "6 km de longitud y 5 km de anchura",
+            "3,3 km de longitud y 3,3 km de anchura"
+          ],
+          "correcta": 0,
+          "explicacion": "Hasta 90 m desde el HRP, el área es de 2,5 km de longitud desde los extremos de la FATO y 2,5 km de anchura a ambos lados. Por encima de 90 m y hasta 900 m, el área es de 3,3 km por 3,3 km.",
+          "referencia": "Parte 2, diapositiva 48 — Condiciones de zonas geográficas UAS"
+        },
+        {
+          "dificultad": "HARD",
+          "pregunta": "¿Qué condiciones deben cumplirse para operar con UAS en espacio aéreo controlado y FIZ sin coordinación con el ATSP ni plan de vuelo?",
+          "opciones": [
+            "Vuelo BVLOS, altura máxima de 120 m y autorización de AESA",
+            "Cualquier vuelo, siempre que el UAS tenga DRI",
+            "Vuelo VLOS, altura máxima de 120 m y comunicación con AFIS",
+            "Vuelo VLOS, altura máxima de 60 m AGL y fuera de zonas geográficas por seguridad operacional de aeródromos o helipuertos"
+          ],
+          "correcta": 3,
+          "explicacion": "El artículo 42 del RD 517/2024 permite operaciones en espacio aéreo controlado y FIZ si se cumplen vuelo VLOS, altura máxima de 60 m AGL y estar fuera de zonas geográficas por seguridad operacional de aeródromos o helipuertos, quedando exentas de coordinación, plan de vuelo y autorización ATC o comunicación AFIS.",
+          "referencia": "Parte 2, diapositiva 53 — Espacio aéreo controlado y FIZ"
+        }
+      ]
+    },
+    {
+      "nombre": "Notificación de sucesos y U-space",
+      "descripcion": "Sucesos obligatorios y voluntarios, SNS, CIAIAC, U-space (USS/CIS) y Radiofonista UAS.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es un suceso relacionado con la seguridad aérea?",
+          "opciones": [
+            "Solo los accidentes con lesiones mortales",
+            "Cualquier acontecimiento que ponga en peligro, o que si no se corrige pueda poner en peligro, una aeronave, sus ocupantes o cualquier otra persona",
+            "Cualquier vuelo realizado sin autorización",
+            "Únicamente los fallos técnicos del UAS"
+          ],
+          "correcta": 1,
+          "explicacion": "Suceso es cualquier acontecimiento relacionado con la seguridad que ponga en peligro, o que en caso de no ser corregido pueda poner en peligro, una aeronave, sus ocupantes o cualquier otra persona, incluidos accidentes e incidentes graves.",
+          "referencia": "Parte 2, diapositiva 49 — Notificación de sucesos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál es la finalidad de la notificación de sucesos?",
+          "opciones": [
+            "Contribuir a la mejora de la seguridad aérea mediante la recogida, análisis y difusión de información",
+            "Sancionar a los responsables del suceso",
+            "Determinar la culpa del piloto",
+            "Recuperar el coste del UAS accidentado"
+          ],
+          "correcta": 0,
+          "explicacion": "La notificación contribuye a la mejora de la seguridad aérea mediante la recogida, almacenamiento, protección, intercambio, difusión y análisis de la información pertinente, y desempeña un papel esencial en la prevención.",
+          "referencia": "Parte 2, diapositiva 49 — Notificación de sucesos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué tipo de notificación es obligatoria para los operadores de UAS?",
+          "opciones": [
+            "La de cualquier vuelo realizado sin cámara",
+            "Solo la de los vuelos cancelados por lluvia",
+            "Únicamente las que determine el fabricante",
+            "La de sucesos con UAS que requieran certificado de aeronavegabilidad, causen lesiones mortales o graves o impliquen aeronaves tripuladas"
+          ],
+          "correcta": 3,
+          "explicacion": "La notificación obligatoria comprende los sucesos con UAS que requieran certificado de aeronavegabilidad, los que causen lesiones mortales o graves o los que impliquen aeronaves tripuladas. La voluntaria comprende cualquier información sobre sucesos que pongan en peligro la seguridad aérea.",
+          "referencia": "Parte 2, diapositiva 49 — Notificación de sucesos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿A qué sistema deben enviarse las notificaciones de sucesos de AESA?",
+          "opciones": [
+            "Al Sistema de Notificación de Sucesos (SNS) de AESA",
+            "Al registro de aeronaves del Ministerio del Interior",
+            "A la Comisión Europea",
+            "A ENAIRE Drones"
+          ],
+          "correcta": 0,
+          "explicacion": "Las notificaciones se envían al Sistema de Notificación de Sucesos (SNS) de AESA, en sucesos.aesa@seguridadaerea.es.",
+          "referencia": "Parte 2, diapositiva 50 — Notificación de sucesos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué información debe constar como mínimo en una notificación al SNS?",
+          "opciones": [
+            "Solo el nombre del piloto y el modelo del UAS",
+            "Datos del operador, identificación de la UA, tipo de operación, fecha y lugar y narrativa de los hechos",
+            "Únicamente la matrícula del vehículo del operador",
+            "El precio del UAS y la dirección del fabricante"
+          ],
+          "correcta": 1,
+          "explicacion": "La notificación debe incluir al menos datos del operador, identificación de la UA, tipo de operación, fecha y lugar, y narrativa de los hechos.",
+          "referencia": "Parte 2, diapositiva 50 — Notificación de sucesos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué implica la cultura justa que fomenta AESA en el SNS?",
+          "opciones": [
+            "Confidencialidad de la información y no utilización para fines distintos de la mejora de la seguridad aérea",
+            "Uso de las notificaciones para sancionar",
+            "Obligación de denunciar a otros operadores",
+            "Publicación de todos los datos del piloto"
+          ],
+          "correcta": 0,
+          "explicacion": "AESA fomenta la cultura justa: confidencialidad de la información y no utilización para fines distintos a la mejora de la seguridad aérea. La finalidad del SNS no es buscar responsables.",
+          "referencia": "Parte 2, diapositiva 50 — Notificación de sucesos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En qué plazo deben notificarse los accidentes e incidentes graves a la CIAIAC?",
+          "opciones": [
+            "En los 30 días siguientes",
+            "No hay plazo establecido",
+            "En el plazo de una semana",
+            "En las 72 horas siguientes a los hechos"
+          ],
+          "correcta": 3,
+          "explicacion": "Según el Reglamento (UE) n.º 996/2010, los accidentes e incidentes graves deben notificarse a la CIAIAC en las 72 horas siguientes a los hechos.",
+          "referencia": "Parte 2, diapositiva 51 — Notificación de sucesos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué son el USS y el CIS en U-space?",
+          "opciones": [
+            "Dos sistemas de identificación a distancia",
+            "El proveedor de servicios de U-space y el proveedor de información común",
+            "Dos clases de UAS",
+            "Dos tipos de zonas geográficas"
+          ],
+          "correcta": 1,
+          "explicacion": "Dentro de cada espacio U-space existen dos proveedores: USS (U-Space Service), que gestiona el tráfico de aeronaves no tripuladas, y CIS (Common Information Service), que proporciona información común.",
+          "referencia": "Parte 2, diapositiva 52 — Concepto U-space"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué debe hacer un operador de UAS para volar en un espacio U-space?",
+          "opciones": [
+            "No necesita hacer nada si el UAS tiene GPS",
+            "Llamar por teléfono a la torre de control del aeropuerto más cercano",
+            "Solicitar autorización directamente a EASA",
+            "Solicitar la autorización de vuelo a su USSP y solicitar su activación, entre otras obligaciones"
+          ],
+          "correcta": 3,
+          "explicacion": "El operador debe garantizar que el UAS cumple las capacidades y requisitos, usar los servicios necesarios, cumplir las condiciones operativas, presentar la solicitud de autorización de vuelo a su USSP y solicitar su activación, y establecer medidas de contingencia.",
+          "referencia": "Parte 2, diapositiva 52 — Concepto U-space"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuándo se exige el certificado de Radiofonista UAS?",
+          "opciones": [
+            "Únicamente en vuelos nocturnos",
+            "Solo si el UAS pesa más de 25 kg",
+            "Cuando el proveedor ATS requiera un sistema de comunicaciones entre la estación de control y la dependencia de tránsito aéreo",
+            "Siempre que se vuele en categoría abierta"
+          ],
+          "correcta": 2,
+          "explicacion": "El artículo 43.6 del RD 517/2024 establece que los proveedores ATS pueden requerir comunicaciones entre la estación de control y la dependencia de tránsito aéreo; en ese caso los pilotos deben contar con el certificado de Radiofonista UAS.",
+          "referencia": "Parte 2, diapositiva 54 — Radiofonista UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cómo se compone la formación de Radiofonista UAS?",
+          "opciones": [
+            "Solo una formación práctica con el fabricante",
+            "Formación teórica y examen teórico de AESA, y formación práctica con examinadores autorizados por AESA",
+            "Un curso presencial de 200 horas en EASA",
+            "Únicamente un examen online sin formación"
+          ],
+          "correcta": 1,
+          "explicacion": "La formación de Radiofonista UAS consiste en formación teórica impartida por AESA seguida de un examen teórico, y una formación práctica impartida por examinadores autorizados por AESA.",
+          "referencia": "Parte 2, diapositiva 54 — Radiofonista UAS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Dónde se pueden notificar accidentes e incidentes graves además de en España?",
+          "opciones": [
+            "Únicamente en la sede de EASA en Colonia",
+            "No se puede notificar fuera de España",
+            "Solo en el país de fabricación del UAS",
+            "En cualquier país miembro de la Unión Europea a través de aviationreporting.eu"
+          ],
+          "correcta": 3,
+          "explicacion": "Además de reportar en España a la CIAIAC, se puede reportar a cualquier país miembro de la Unión Europea en aviationreporting.eu.",
+          "referencia": "Parte 2, diapositiva 76 — Reporte de accidente/incidente"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué notificaciones adicionales contempla el artículo 12 del Reglamento (UE) 2019/947?",
+          "opciones": [
+            "Las de todas las operaciones en categoría abierta",
+            "Solo las de vuelos nocturnos",
+            "Las de operaciones con UAS de juguete",
+            "Las de operaciones en categoría específica en régimen de autorización, según el riesgo"
+          ],
+          "correcta": 3,
+          "explicacion": "El artículo 12 contempla la notificación de sucesos adicionales para operaciones en categoría específica en régimen de autorización, en función del riesgo. El listado se anexa a la autorización operacional de AESA.",
+          "referencia": "Parte 2, diapositiva 51 — Notificación de sucesos"
+        }
+      ]
+    },
+    {
+      "nombre": "Factores humanos y percepción",
+      "descripcion": "IM SAFE, estrés, alcohol, fatiga, emociones, percepción humana y factores que afectan a la visión VLOS.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué significa la metodología IM SAFE?",
+          "opciones": [
+            "Inspección, mantenimiento, seguridad, altura, fatiga y equipo",
+            "Viento, temperatura, visibilidad, lluvia y humedad",
+            "Identificación, mando, sensores, altitud, frecuencia y enlace",
+            "Enfermedad, medicación, estrés, alcohol, fatiga y emociones"
+          ],
+          "correcta": 3,
+          "explicacion": "IM SAFE agrupa enfermedad (Illness), medicación, estrés, alcohol, fatiga y emociones, factores que pueden influir en la capacidad del piloto.",
+          "referencia": "Parte 2, diapositiva 59 — Factores humanos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Por qué debe evaluar el piloto la medicación antes de volar?",
+          "opciones": [
+            "Porque solo afecta si se toma más de una pastilla",
+            "Porque es obligatorio declararla a EASA",
+            "Porque puede causar deterioro mental o físico que interfiera con la seguridad del vuelo",
+            "Porque aumenta la autonomía del UAS"
+          ],
+          "correcta": 2,
+          "explicacion": "El piloto debe evaluar si la medicación puede causar un deterioro mental o físico que interfiera con la seguridad del vuelo.",
+          "referencia": "Parte 2, diapositiva 60 — Factores humanos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué tipo de estrés se debe a temperaturas, ruido u oxígeno inadecuado?",
+          "opciones": [
+            "Estrés fisiológico",
+            "Estrés psicológico",
+            "Estrés producido por el entorno",
+            "Estrés financiero"
+          ],
+          "correcta": 2,
+          "explicacion": "El estrés producido por el entorno se debe a factores como temperaturas, ruido u oxígeno inadecuado. El fisiológico se relaciona con la fatiga física y el psicológico con ansiedad o fatiga mental.",
+          "referencia": "Parte 2, diapositiva 60 — Factores humanos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cómo afecta el alcohol a la seguridad del vuelo?",
+          "opciones": [
+            "Solo afecta si se supera el límite legal de conducción",
+            "No afecta si el vuelo es automático",
+            "Mejora la reacción en situaciones de estrés",
+            "Afecta al cerebro, la vista, el sistema auditivo, la psicomotricidad y el juicio del piloto"
+          ],
+          "correcta": 3,
+          "explicacion": "El alcohol y las sustancias psicoactivas afectan al cerebro, la vista, el sistema auditivo, la psicomotricidad y el juicio del piloto, por lo que no se debe volar bajo sus efectos.",
+          "referencia": "Parte 2, diapositiva 61 — Factores humanos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Quién es responsable de conocer y no sobrepasar sus límites de fatiga?",
+          "opciones": [
+            "El fabricante del UAS",
+            "El observador del espacio aéreo",
+            "El piloto a distancia",
+            "AESA"
+          ],
+          "correcta": 2,
+          "explicacion": "La fatiga afecta de manera diferente a cada persona y el piloto es responsable de conocer sus limitaciones y no sobrepasarlas antes o durante el vuelo.",
+          "referencia": "Parte 2, diapositiva 61 — Factores humanos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué caracteriza a la percepción humana según el temario?",
+          "opciones": [
+            "Es limitada y puede llegar a ser errónea",
+            "Solo depende de la agudeza visual",
+            "No influye en el vuelo VLOS",
+            "Es ilimitada si el piloto tiene experiencia"
+          ],
+          "correcta": 0,
+          "explicacion": "La percepción es la capacidad de interpretar los estímulos de los sentidos y formar una impresión del entorno; es limitada y puede llegar a ser errónea.",
+          "referencia": "Parte 2, diapositiva 62 — Seguridad física: percepción"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué factor dificulta la visión del UAS cuando su color se asemeja al del entorno?",
+          "opciones": [
+            "La superficie del terreno",
+            "Las ayudas visuales",
+            "El tamaño del UAS",
+            "El contraste"
+          ],
+          "correcta": 3,
+          "explicacion": "El contraste dificulta la visión cuando el color del UAS se asemeja a las tonalidades del entorno, por ejemplo un UAS azul contra el cielo.",
+          "referencia": "Parte 2, diapositiva 63 — Factores que afectan la visión"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué factor puede hacer perder de vista el UAS por desniveles del terreno?",
+          "opciones": [
+            "El tamaño del UAS",
+            "La superficie del terreno",
+            "Las ayudas visuales",
+            "El contraste"
+          ],
+          "correcta": 1,
+          "explicacion": "Los desniveles de la superficie del terreno pueden hacer perder de vista el UAS durante la operación VLOS.",
+          "referencia": "Parte 2, diapositiva 63 — Factores que afectan la visión"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Desde qué fecha es obligatoria al menos una luz verde intermitente en vuelos nocturnos?",
+          "opciones": [
+            "Desde el 1 de enero de 2021",
+            "Desde el 1 de julio de 2025",
+            "Desde el 1 de julio de 2022",
+            "Desde el 1 de enero de 2024"
+          ],
+          "correcta": 2,
+          "explicacion": "Desde el 1 de julio de 2022 es obligatorio que el UAS esté equipado con al menos una luz verde intermitente para volar de noche.",
+          "referencia": "Parte 2, diapositiva 64 — Limitaciones de la percepción"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué limitación de percepción tiene el piloto que opera desde tierra a distancia del UAS?",
+          "opciones": [
+            "No puede oír los motores",
+            "No puede consultar la telemetría",
+            "No puede usar la emisora",
+            "No percibe correctamente la distancia a obstáculos, la velocidad y la altura exacta del UAS"
+          ],
+          "correcta": 3,
+          "explicacion": "El piloto en tierra y a distancia del UAS no tiene una percepción correcta de la distancia entre el UAS y los obstáculos, la velocidad o la altura exacta, especialmente en vuelos nocturnos.",
+          "referencia": "Parte 2, diapositiva 64 — Limitaciones de la percepción"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué factor del entorno puede afectar a la percepción y al vuelo VLOS?",
+          "opciones": [
+            "Las condiciones climáticas adversas y la luminosidad",
+            "El software de edición de vídeo",
+            "El número de serie del UAS",
+            "La marca de la batería"
+          ],
+          "correcta": 0,
+          "explicacion": "Las condiciones climáticas adversas y la luminosidad son factores que afectan al alcance visual de la aeronave y, por tanto, a la percepción del piloto.",
+          "referencia": "Parte 2, diapositiva 62 — Seguridad física: percepción"
+        }
+      ]
+    },
+    {
+      "nombre": "Privacidad y protección de datos",
+      "descripcion": "Derecho a la privacidad, datos personales, RGPD y captación de imágenes o audios con UAS.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué protege el derecho a la privacidad?",
+          "opciones": [
+            "Solo la información económica de las empresas",
+            "Las limitaciones físicas dentro de las cuales opera un individuo: hogar, relaciones personales e información seleccionada",
+            "El número de registro del operador de UAS",
+            "Únicamente las imágenes captadas en espacios públicos"
+          ],
+          "correcta": 1,
+          "explicacion": "En Europa la privacidad es un derecho humano. El derecho básico a la vida privada comprende las limitaciones físicas dentro de las cuales opera un individuo: hogar, relaciones personales e información seleccionada.",
+          "referencia": "Parte 2, diapositiva 65 — Privacidad y protección de datos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué se considera información personal?",
+          "opciones": [
+            "Únicamente los datos bancarios",
+            "Solo el nombre y los apellidos",
+            "La información técnica del UAS",
+            "Cualquier información, incluidas imágenes y audios, sobre una persona física identificada o identificable"
+          ],
+          "correcta": 3,
+          "explicacion": "La información personal es cualquier información, incluyendo imágenes y audios, sobre una persona física identificada o identificable.",
+          "referencia": "Parte 2, diapositiva 65 — Privacidad y protección de datos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué significa que una persona sea identificable?",
+          "opciones": [
+            "Que su nombre figura en el registro de operadores",
+            "Que ha dado su consentimiento por escrito",
+            "Que se puede identificar mediante datos como número de identificación, localización, identificación online o factores físicos, psicológicos, genéticos, mentales, económicos o culturales",
+            "Que aparece de cuerpo entero en una foto"
+          ],
+          "correcta": 2,
+          "explicacion": "Identificable es la persona que puede ser identificada mediante datos como número de identificación, localización, identificación online o factores físicos, psicológicos, genéticos, mentales, económicos o culturales.",
+          "referencia": "Parte 2, diapositiva 65 — Privacidad y protección de datos"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué reglamento europeo regula la protección de las personas físicas en el tratamiento de datos personales?",
+          "opciones": [
+            "El Reglamento (UE) 2019/947",
+            "El Reglamento (UE) 785/2004",
+            "El RGPD",
+            "El Reglamento (UE) 376/2014"
+          ],
+          "correcta": 2,
+          "explicacion": "El RGPD es el Reglamento General de Protección de Datos, relativo a la protección de las personas físicas en el tratamiento de datos personales y la libre circulación de estos datos.",
+          "referencia": "Parte 2, diapositiva 66 — Protección de datos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué capacidades de captación de información personal puede tener un UAS?",
+          "opciones": [
+            "Cámaras y micrófonos",
+            "Solo el altímetro",
+            "Únicamente el sistema GNSS",
+            "Solo cámaras térmicas"
+          ],
+          "correcta": 0,
+          "explicacion": "Las principales capacidades de un UAS relacionadas con la captura de información personal son las cámaras y los micrófonos.",
+          "referencia": "Parte 2, diapositiva 67 — Captura de información personal"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿De qué depende el grado de impacto del uso de un UAS en la privacidad?",
+          "opciones": [
+            "Solo de la masa máxima de despegue",
+            "Solo de si el UAS tiene DRI",
+            "Únicamente de la altura de vuelo",
+            "De las capacidades del UAS, el propósito del piloto, la información capturada, su uso, quién vuela y el contexto"
+          ],
+          "correcta": 3,
+          "explicacion": "El impacto depende no solo de las capacidades de captura, sino también del propósito del piloto, la extensión y tipo de información capturada, cómo se procesa, quién vuela y el contexto y ubicación.",
+          "referencia": "Parte 2, diapositiva 67 — Captura de información personal"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Se puede grabar o fotografiar a una persona en su vida privada con un UAS?",
+          "opciones": [
+            "Sí, si el UAS tiene cámara de baja resolución",
+            "No, salvo permiso expreso del individuo",
+            "Sí, siempre que se vuele por encima de 120 m",
+            "Solo si la grabación dura menos de un minuto"
+          ],
+          "correcta": 1,
+          "explicacion": "Salvo permiso expreso del individuo, no está permitido grabar o fotografiar a personas en su vida privada, ni tomar imágenes de personas identificables sin su permiso.",
+          "referencia": "Parte 2, diapositiva 68 — Grabación y fotografía"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Se puede grabar un vídeo en un lugar público con gente?",
+          "opciones": [
+            "Sí, siempre y cuando se grabe a menos de 120 m",
+            "No, nunca se puede grabar en lugares públicos",
+            "Solo con autorización de la Comisión Europea",
+            "En general sí, si la captura de personas ajenas es breve e inadvertida, pero no si se hace un seguimiento sistemático y permanente de una persona"
+          ],
+          "correcta": 3,
+          "explicacion": "En general se puede grabar en un lugar público si la captura de una persona ajena es breve e inadvertida, pero no se permite el seguimiento sistemático y permanente que convierta a la persona en objetivo.",
+          "referencia": "Parte 2, diapositiva 68 — Grabación y fotografía"
+        }
+      ]
+    },
+    {
+      "nombre": "Seguridad física y baterías",
+      "descripcion": "Interferencia ilícita, robo o secuestro, custodia, FHSS, precauciones con hélices y manejo de baterías.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué se considera interferencia ilícita en operaciones con UAS?",
+          "opciones": [
+            "La actualización del firmware del UAS",
+            "Cualquier pérdida de señal por distancia",
+            "Un aterrizaje de emergencia por viento",
+            "La tentativa o acción destinada a comprometer la seguridad de aeronaves o instalaciones, como el robo o secuestro del UAS"
+          ],
+          "correcta": 3,
+          "explicacion": "La interferencia ilícita es la tentativa o acción destinada a comprometer la seguridad de aeronaves o instalaciones aeroportuarias. En UAS, los ejemplos más comunes son el robo o secuestro de la aeronave.",
+          "referencia": "Parte 2, diapositiva 69 — Interferencia ilícita"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué medidas ayudan a evitar el robo o secuestro del UAS?",
+          "opciones": [
+            "Volar siempre en modo BVLOS",
+            "Control de acceso en una zona vigilada, acotada y restringida, y una persona responsable de su vigilancia",
+            "Dejar el UAS desatendido en el maletero",
+            "Desactivar el encriptado de la señal"
+          ],
+          "correcta": 1,
+          "explicacion": "Para evitar actos de interferencia ilícita debe existir control de acceso en una zona vigilada, acotada y restringida, y una persona responsable de su vigilancia en todo momento.",
+          "referencia": "Parte 2, diapositiva 69 — Interferencia ilícita"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿De quién es responsabilidad la custodia y almacenamiento del UAS y sus equipos, incluidas las baterías?",
+          "opciones": [
+            "Del fabricante",
+            "Del piloto a distancia",
+            "De ENAIRE",
+            "De la autoridad aeronáutica"
+          ],
+          "correcta": 1,
+          "explicacion": "La custodia y almacenamiento del UAS y sus equipos, incluidas las baterías, es responsabilidad del piloto a distancia.",
+          "referencia": "Parte 2, diapositiva 70 — Transporte y custodia"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué medida previene el secuestro del UAS mediante interferencia deliberada de señales?",
+          "opciones": [
+            "Disponer de sistemas de encriptación de la señal",
+            "Desactivar el RTH",
+            "Aumentar la altura de vuelo",
+            "Volar sin observador"
+          ],
+          "correcta": 0,
+          "explicacion": "Para prevenir el secuestro mediante interferencia deliberada se recomienda disponer de medidas como sistemas de encriptación de la señal.",
+          "referencia": "Parte 2, diapositiva 70 — Seguridad y protocolo FHSS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es el protocolo FHSS?",
+          "opciones": [
+            "Un modo de aterrizaje automático",
+            "Una técnica de espectro ensanchado que salta entre radiofrecuencias para evitar interferencias deliberadas",
+            "Un sistema de identificación a distancia",
+            "Un tipo de batería de litio"
+          ],
+          "correcta": 1,
+          "explicacion": "FHSS (Frequency Hopping Spread Spectrum) es una técnica de modulación en espectro ensanchado en la que la señal salta de frecuencia en frecuencia sincronizadamente con el transmisor para evitar interferencias deliberadas.",
+          "referencia": "Parte 2, diapositiva 70 — Seguridad y protocolo FHSS"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué precaución debe tomarse con la carga útil antes de cada vuelo?",
+          "opciones": [
+            "Comprobar que está fijada correctamente y que sus movimientos son los correctos",
+            "Aumentar su peso para ganar estabilidad",
+            "Cambiarla de posición en pleno vuelo",
+            "Desmontarla siempre"
+          ],
+          "correcta": 0,
+          "explicacion": "Antes de iniciar cada vuelo se debe comprobar que la carga de pago está fijada correctamente y que los movimientos son los correctos.",
+          "referencia": "Parte 2, diapositiva 71 — Precauciones"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué precaución debe adoptarse con hélices y rotores?",
+          "opciones": [
+            "Retirarlas antes de cada vuelo",
+            "Aumentar su velocidad al máximo en tierra",
+            "Mantener una distancia de seguridad durante la puesta en marcha y parada de motores",
+            "Tocarlas para comprobar que giran"
+          ],
+          "correcta": 2,
+          "explicacion": "Las hélices y rotores pueden causar graves heridas durante su funcionamiento, por lo que debe mantenerse una distancia de seguridad al poner en marcha y parar los motores.",
+          "referencia": "Parte 2, diapositiva 71 — Precauciones"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué recomendación se da para la carga de baterías?",
+          "opciones": [
+            "Usar cualquier cargador disponible",
+            "Cargar baterías hinchadas para recuperarlas",
+            "Usar solo cargadores específicos, vigilar la batería y no cargar cerca de materiales inflamables",
+            "Cargar siempre al máximo y sin supervisión"
+          ],
+          "correcta": 2,
+          "explicacion": "Durante la carga debe usarse el cargador específico, vigilar la batería, no cargar cerca de materiales inflamables y no cargar baterías hinchadas, estropeadas o dañadas.",
+          "referencia": "Parte 2, diapositiva 72 — Precauciones con baterías"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cómo deben almacenarse las baterías?",
+          "opciones": [
+            "Completamente descargadas y a la intemperie",
+            "Sin ninguna precaución especial",
+            "En recipiente metálico o cerámico o bolsa ignífuga, dentro del rango de temperatura y con carga parcial de aproximadamente el 30 %",
+            "Completamente cargadas y junto a materiales inflamables"
+          ],
+          "correcta": 2,
+          "explicacion": "Las baterías deben almacenarse en un recipiente metálico o cerámico o bolsa ignífuga, dentro del rango de temperaturas indicado y nunca completamente descargadas, siempre con carga parcial de aproximadamente el 30 %.",
+          "referencia": "Parte 2, diapositiva 72 — Precauciones con baterías"
+        }
+      ]
+    },
+    {
+      "nombre": "Seguros, accidentes e incidentes",
+      "descripcion": "Seguro de responsabilidad civil, MTOM, accidente, incidente grave y reporte a la CIAIAC.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué obligación de seguro existe para los UAS con MTOM igual o superior a 20 kg?",
+          "opciones": [
+            "No necesitan seguro",
+            "Deben contratar el seguro del RD 37/2001 exclusivamente",
+            "Solo necesitan seguro si vuelan en zona urbana",
+            "Deben estar asegurados conforme al Reglamento (UE) 785/2004"
+          ],
+          "correcta": 3,
+          "explicacion": "Desde la entrada en vigor del RD 517/2024, los operadores de UAS con MTOM ≥ 20 kg deben estar asegurados conforme al Reglamento (UE) 785/2004.",
+          "referencia": "Parte 2, diapositiva 73 — Seguro de responsabilidad civil"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Para UAS con MTOM inferior a 20 kg, ¿a qué normativa se ajustan los operadores en España?",
+          "opciones": [
+            "Al Real Decreto 37/2001",
+            "Al Reglamento (UE) 996/2010",
+            "No se ajustan a ninguna normativa",
+            "Al Reglamento (UE) 2019/945 exclusivamente"
+          ],
+          "correcta": 0,
+          "explicacion": "Los operadores con UAS de MTOM < 20 kg se ajustan al Real Decreto 37/2001, que actualiza las indemnizaciones por daños previstas en la Ley de Navegación Aérea.",
+          "referencia": "Parte 2, diapositiva 74 — Seguro según MTOM"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿En qué casos no se exige cumplir las obligaciones de aseguramiento según el temario?",
+          "opciones": [
+            "En todas las operaciones de categoría abierta",
+            "En A1 y en A3 cuando se realizan con aeronaves de MTOM inferior a 20 kg",
+            "En A2 con cualquier UAS",
+            "Solo en vuelos nocturnos"
+          ],
+          "correcta": 1,
+          "explicacion": "Quedan exentas las operaciones en categoría abierta en las subcategorías A1 y A3, siempre que se realicen con aeronaves de MTOM inferior a 20 kg.",
+          "referencia": "Parte 2, diapositiva 74 — Seguro según MTOM"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Quién es responsable en caso de accidente o incidente con un UAS?",
+          "opciones": [
+            "El operador o el piloto a distancia",
+            "La autoridad aeronáutica",
+            "Solo el fabricante del UAS",
+            "El propietario del terreno"
+          ],
+          "correcta": 0,
+          "explicacion": "El operador o el piloto a distancia será responsable en caso de accidente o incidente.",
+          "referencia": "Parte 2, diapositiva 75 — Accidente e incidente"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es un accidente en relación con la utilización de una aeronave no tripulada?",
+          "opciones": [
+            "Un vuelo realizado sin seguro",
+            "Un suceso con lesiones mortales o graves como consecuencia de entrar en contacto directo con alguna parte de la aeronave",
+            "Cualquier aterrizaje fuera de la zona prevista",
+            "Toda pérdida de señal de radio"
+          ],
+          "correcta": 1,
+          "explicacion": "Accidente es todo suceso en el que una persona sufre lesiones mortales o graves como consecuencia de entrar en contacto directo con alguna parte de la aeronave, entre el momento en que está lista para moverse y el momento en que se detiene y apagan los motores.",
+          "referencia": "Parte 2, diapositiva 75 — Accidente e incidente"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué se considera una lesión mortal a efectos de accidente?",
+          "opciones": [
+            "Solo la muerte inmediata en el lugar del accidente",
+            "La que provoque la muerte en un plazo de 24 horas",
+            "Cualquier lesión que requiera hospitalización",
+            "La lesión que provoque la muerte en un plazo de 30 días desde la fecha del accidente"
+          ],
+          "correcta": 3,
+          "explicacion": "Lesión mortal es la lesión que provoca la muerte en un plazo de 30 días contados desde la fecha del accidente.",
+          "referencia": "Parte 2, diapositiva 75 — Accidente e incidente"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es un incidente?",
+          "opciones": [
+            "Cualquier suceso relacionado con la utilización de una aeronave, distinto de un accidente, que afecte o pueda afectar a la seguridad",
+            "Cualquier pérdida de la señal GPS",
+            "Un vuelo realizado sin autorización",
+            "Solo un accidente con lesiones graves"
+          ],
+          "correcta": 0,
+          "explicacion": "Incidente es cualquier suceso relacionado con la utilización de una aeronave, distinto de un accidente, que afecte o pueda afectar a la seguridad de su utilización.",
+          "referencia": "Parte 2, diapositiva 75 — Accidente e incidente"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál de estos es un ejemplo de incidente grave?",
+          "opciones": [
+            "Una actualización de firmware",
+            "Un vuelo sin observador",
+            "Una cuasi-colisión que requiera maniobra evasiva",
+            "Un aterrizaje normal en la zona prevista"
+          ],
+          "correcta": 2,
+          "explicacion": "Incidente grave es cualquier incidente con circunstancias que indiquen alta probabilidad de accidente, como una cuasi-colisión que requiera maniobra evasiva, un impacto contra el suelo sin pérdida de control o un incendio o humo en el UAS.",
+          "referencia": "Parte 2, diapositiva 75 — Accidente e incidente"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿A qué organismo debe comunicarse un accidente o incidente grave en España?",
+          "opciones": [
+            "A ENAIRE Drones",
+            "Al Ministerio del Interior exclusivamente",
+            "A la CIAIAC",
+            "A la Comisión Europea"
+          ],
+          "correcta": 2,
+          "explicacion": "Los accidentes o incidentes graves se comunican lo antes posible a la CIAIAC (Comisión de Investigación de Accidentes e Incidentes de Aviación Civil).",
+          "referencia": "Parte 2, diapositiva 76 — Reporte de accidente/incidente"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué es una lesión grave a efectos del temario?",
+          "opciones": [
+            "Cualquier golpe leve sin hospitalización",
+            "Solo la pérdida de conocimiento",
+            "Hospitalización, rotura de hueso, laceraciones, lesión de órganos o quemaduras",
+            "La muerte en un plazo de 30 días"
+          ],
+          "correcta": 2,
+          "explicacion": "Se considera lesión grave la hospitalización, rotura de hueso, laceraciones, lesión de órganos o quemaduras.",
+          "referencia": "Parte 2, diapositiva 75 — Accidente e incidente"
+        }
+      ]
+    }
+  ]
+}

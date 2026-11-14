@@ -32,15 +32,26 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
 
 # prisma
-/prisma/migrations
+# Las migraciones se versionan para poder aplicarlas en producción con
+# `prisma migrate deploy`.
 
 # playwright-mcp
 .playwright-mcp/
+
+# material completo del temario (imágenes, ~470 MB); el texto está en docs/temario-a1a3/
+/docs/Certificacion-A1A3
+
+# Documentación oficial de AESA y material interno no redistribuible
+/docs/_Formacion.temario.completo.Ed12.pdf
+/docs/FOR-UAS-P01-GU01_v5_Guia.inscripcion.cursos.piloto.A1A3.pdf
+/docs/formacion-categoria-abierta.txt
+/docs/metagenerador-de-landing-pages.txt
 
 # typescript
 *.tsbuildinfo

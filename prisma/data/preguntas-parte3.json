@@ -1,0 +1,655 @@
+{
+  "categoria": "Parte 3 — Procedimientos operacionales",
+  "descripcion": "Procedimientos previos, durante y posteriores al vuelo, consciencia situacional, técnica OODA y gestión de contingencias y emergencias.",
+  "fuente": "AESA — Curso UAS A1/A3. Parte 3: Procedimientos operacionales (versión 4, noviembre 2022)",
+  "temas": [
+    {
+      "nombre": "Procedimientos previos al vuelo",
+      "descripcion": "Concepto MEUH, meteorología, entorno, personas e interferencias, inspección del equipo y limitaciones humanas.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué significa el concepto MEUH empleado antes de iniciar un vuelo?",
+          "opciones": [
+            "Meteorología, Entorno, UAS y Limitaciones humanas",
+            "Meteorología, Equipo, Uso y Horario",
+            "Misión, Espacio aéreo, UAS y Humedad",
+            "Mando, Enlace, UAS y Altura"
+          ],
+          "correcta": 0,
+          "explicacion": "Antes de iniciar un vuelo el operador o piloto debe verificar, usando el concepto MEUH, la Meteorología, el Entorno, el UAS y las Limitaciones humanas.",
+          "referencia": "Parte 3, diapositiva 3 — Comprobación previa (MEUH)"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuándo debe verificarse que las condiciones meteorológicas son adecuadas?",
+          "opciones": [
+            "Antes de iniciar la operación y durante todo el tiempo que dure el vuelo",
+            "Solo si el UAS pesa más de 4 kg",
+            "Únicamente al aterrizar",
+            "Solo al planificar la operación, una semana antes"
+          ],
+          "correcta": 0,
+          "explicacion": "El piloto debe verificar que las condiciones ambientales y meteorológicas, antes de iniciar la operación y durante el periodo que dure el vuelo, son adecuadas y compatibles con los límites del UAS.",
+          "referencia": "Parte 3, diapositiva 4 — Meteorología"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué factor meteorológico afecta especialmente a la autonomía y al rendimiento de las baterías?",
+          "opciones": [
+            "La presión del neumático del vehículo",
+            "La dirección del viento únicamente",
+            "El color del cielo",
+            "La temperatura"
+          ],
+          "correcta": 3,
+          "explicacion": "La temperatura puede afectar a la autonomía y al rendimiento de las baterías, por lo que debe comprobarse antes del vuelo.",
+          "referencia": "Parte 3, diapositiva 4 — Meteorología"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cómo afecta la visibilidad a la operación?",
+          "opciones": [
+            "Aumenta la autonomía de la batería",
+            "No afecta si el UAS tiene GPS",
+            "El nivel de luz o la niebla afecta a la capacidad del piloto para mantener el UAS en modo VLOS",
+            "Solo afecta a la calidad de las fotografías"
+          ],
+          "correcta": 2,
+          "explicacion": "El nivel de luz o la niebla afecta a la capacidad del piloto para mantener la aeronave en modo VLOS, lo que es crítico para la seguridad.",
+          "referencia": "Parte 3, diapositiva 4 — Meteorología"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué debe hacer el piloto si durante la operación cambian las condiciones meteorológicas y pueden afectar a la seguridad?",
+          "opciones": [
+            "Continuar si quedan pocos minutos de batería",
+            "Cancelar el vuelo",
+            "Esperar instrucciones del fabricante",
+            "Aumentar la altura para salir de la niebla"
+          ],
+          "correcta": 1,
+          "explicacion": "Si durante la operación el piloto observa un cambio en las condiciones meteorológicas que pueda afectar a la seguridad y al rendimiento de la aeronave, cancelará el vuelo.",
+          "referencia": "Parte 3, diapositiva 4 — Meteorología"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Antes de volar, ¿qué debe verificar el piloto sobre el entorno de la operación?",
+          "opciones": [
+            "Que el terreno sea propiedad del piloto",
+            "Que no haya personas en un radio de 5 km",
+            "Solo que haya cobertura móvil",
+            "Que la operación se ajusta a la normativa y a las limitaciones y restricciones del área"
+          ],
+          "correcta": 3,
+          "explicacion": "El piloto debe evaluar el entorno y verificar que la operación se ajusta a la normativa y cumple las limitaciones y restricciones impuestas en el área de operación.",
+          "referencia": "Parte 3, diapositiva 5 — Entorno de la operación"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué herramienta se utiliza para consultar las restricciones de vuelo en el entorno?",
+          "opciones": [
+            "El catálogo de productos del fabricante",
+            "El registro de aeronaves del Ministerio del Interior",
+            "ENAIRE Drones",
+            "La aplicación de mensajería de AESA"
+          ],
+          "correcta": 2,
+          "explicacion": "La verificación del entorno se realiza consultando la aplicación web ENAIRE Drones (drones.enaire.es) y la guía de zonificación de AESA.",
+          "referencia": "Parte 3, diapositiva 5 — Entorno de la operación"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Con qué finalidad se realiza la exploración visual o a pie del área de operación?",
+          "opciones": [
+            "Comprobar la velocidad del viento en tiempo real",
+            "Medir la masa máxima de despegue",
+            "Detectar obstáculos que puedan impedir mantener el VLOS o interferir con la ruta",
+            "Buscar un lugar donde aparcar el vehículo"
+          ],
+          "correcta": 2,
+          "explicacion": "La exploración del terreno permite detectar obstáculos como edificios, vehículos, vías públicas, montañas, árboles, antenas o líneas de tensión que puedan impedir mantener el VLOS o interferir con la ruta planeada.",
+          "referencia": "Parte 3, diapositiva 6 — Exploración del entorno"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si se detectan personas no participantes en la zona de operación, ¿qué debe hacerse?",
+          "opciones": [
+            "Ignorarlas si no miran al UAS",
+            "Aterrizar sobre ellas",
+            "Darles instrucciones para que se alejen de la zona terrestre controlada",
+            "Volar por encima de ellas"
+          ],
+          "correcta": 2,
+          "explicacion": "Al detectar personas no participantes se les debe proporcionar instrucciones para que se alejen de la zona terrestre controlada antes de volar.",
+          "referencia": "Parte 3, diapositiva 7 — Personas e interferencias"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué puede provocar interferencias electromagnéticas en la señal del UAS?",
+          "opciones": [
+            "La altura sobre el nivel del mar",
+            "Ondas de radio, televisión, móviles y conexiones inalámbricas como Wi-Fi o Bluetooth",
+            "La lluvia ligera exclusivamente",
+            "El color de la carcasa del UAS"
+          ],
+          "correcta": 1,
+          "explicacion": "Las ondas de radio, televisión, móviles y conexiones inalámbricas pueden degradar o provocar la pérdida de señal, especialmente en entornos urbanos. El piloto debe comprobar el estado de la señal antes del vuelo.",
+          "referencia": "Parte 3, diapositiva 7 — Personas e interferencias"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué debe hacer el piloto antes de cualquier vuelo respecto al equipo?",
+          "opciones": [
+            "Cambiar todas las hélices",
+            "Comprobar que la aeronave reúne las condiciones apropiadas y que se ha realizado el mantenimiento necesario",
+            "Actualizar el firmware obligatoriamente en cada vuelo",
+            "Desmontar la controladora de vuelo"
+          ],
+          "correcta": 1,
+          "explicacion": "Antes de cualquier vuelo el piloto debe comprobar que la aeronave reúne las condiciones apropiadas y que se ha realizado el mantenimiento necesario, mediante una inspección exterior.",
+          "referencia": "Parte 3, diapositiva 8 — Inspección del equipo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué herramienta se recomienda para asegurar que se comprueban todos los puntos de la inspección previa?",
+          "opciones": [
+            "El manual de la emisora",
+            "El registro de aeronaves",
+            "Las listas de control o checklists",
+            "La memoria del piloto exclusivamente"
+          ],
+          "correcta": 2,
+          "explicacion": "Es recomendable el uso de listas de control (checklists) para asegurar que todos los puntos necesarios han sido comprobados durante la inspección previa.",
+          "referencia": "Parte 3, diapositiva 8 — Inspección del equipo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué metodología debe usar el piloto para comprobar sus limitaciones humanas antes de volar?",
+          "opciones": [
+            "MEUH",
+            "OODA",
+            "IM SAFE",
+            "FHSS"
+          ],
+          "correcta": 2,
+          "explicacion": "Antes de iniciar una operación el piloto debe verificar que se encuentra en condiciones óptimas usando la metodología IM SAFE: enfermedad, medicación, estrés, alcohol, fatiga y emociones.",
+          "referencia": "Parte 3, diapositiva 9 — Limitaciones humanas"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuándo deben estar escritos los procedimientos operacionales?",
+          "opciones": [
+            "Cuando el operador y el piloto a distancia no sean la misma persona",
+            "Solo en la categoría certificada",
+            "Siempre, incluso si operador y piloto son la misma persona",
+            "Nunca, basta con el manual del fabricante"
+          ],
+          "correcta": 0,
+          "explicacion": "Los procedimientos operacionales deben estar escritos cuando el operador y el piloto a distancia no sean la misma persona. En otro caso se pueden seguir los procedimientos de las instrucciones del fabricante.",
+          "referencia": "Parte 3, diapositiva 18 — Resumen 1"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué factor del UAS debe comprobarse antes de volar según el concepto MEUH?",
+          "opciones": [
+            "Sus limitaciones y condiciones, incluyendo batería, hélices y firmware",
+            "Solo el color de la carcasa",
+            "El número de registro del fabricante",
+            "El precio de compra"
+          ],
+          "correcta": 0,
+          "explicacion": "Dentro del concepto MEUH, la U corresponde al UAS: deben comprobarse sus condiciones, limitaciones, batería, estructura, hélices, sensores y firmware antes del vuelo.",
+          "referencia": "Parte 3, diapositiva 3 — Comprobación previa (MEUH)"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué debe consultarse para saber si se puede operar con lluvia o nieve?",
+          "opciones": [
+            "La web de EASA exclusivamente",
+            "El parte meteorológico de la televisión",
+            "Las instrucciones facilitadas por el fabricante del UAS",
+            "El registro de aeronaves del Ministerio del Interior"
+          ],
+          "correcta": 2,
+          "explicacion": "Ante lluvia o nieve debe consultarse las instrucciones del fabricante para saber si se puede operar con seguridad en esas condiciones.",
+          "referencia": "Parte 3, diapositiva 4 — Meteorología"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál es el orden correcto del concepto MEUH?",
+          "opciones": [
+            "Entorno, UAS, Meteorología, Limitaciones humanas",
+            "UAS, Meteorología, Limitaciones humanas, Entorno",
+            "Meteorología, Entorno, UAS, Limitaciones humanas",
+            "Limitaciones humanas, Entorno, Meteorología, UAS"
+          ],
+          "correcta": 2,
+          "explicacion": "MEUH corresponde a Meteorología, Entorno, UAS y Limitaciones humanas, en ese orden.",
+          "referencia": "Parte 3, diapositiva 3 — Comprobación previa (MEUH)"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué debe hacer el piloto si detecta una posible interferencia electromagnética antes del vuelo?",
+          "opciones": [
+            "Aumentar la altura para evitar la interferencia",
+            "Volar más rápido para salir de la zona",
+            "Comprobar que el estado de la señal es adecuado antes de volar",
+            "Desactivar el sistema de geoconsciencia"
+          ],
+          "correcta": 2,
+          "explicacion": "El piloto debe comprobar, previo al vuelo, que el estado de la señal es adecuado, especialmente en entornos urbanos donde las interferencias son mayores.",
+          "referencia": "Parte 3, diapositiva 7 — Personas e interferencias"
+        }
+      ]
+    },
+    {
+      "nombre": "Procedimientos durante el vuelo",
+      "descripcion": "Operación normal, parámetros de vuelo, consciencia situacional y técnica OODA.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué se considera una operación normal?",
+          "opciones": [
+            "Cualquier operación realizada por la mañana",
+            "Una operación con viento fuerte pero controlado",
+            "Una operación en la que se activa el RTH",
+            "Una operación rutinaria en la que no se prevé una circunstancia que ponga en riesgo la seguridad"
+          ],
+          "correcta": 3,
+          "explicacion": "Operación normal es aquella de carácter rutinario en la que no se prevé que vaya a ocurrir ninguna circunstancia que ponga en riesgo la seguridad del piloto, el UAS, el entorno o las personas.",
+          "referencia": "Parte 3, diapositiva 10 — Procedimiento normal de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Durante el vuelo, ¿en qué debe estar concentrado el piloto?",
+          "opciones": [
+            "En grabar vídeos para redes sociales",
+            "En comprobar el precio del UAS",
+            "En el pilotaje de su aeronave, evitando distracciones que afecten a la seguridad",
+            "En responder mensajes del móvil"
+          ],
+          "correcta": 2,
+          "explicacion": "El piloto debe estar concentrado en el pilotaje de su aeronave, garantizando un vuelo seguro en todo momento y evitando distracciones.",
+          "referencia": "Parte 3, diapositiva 10 — Procedimiento normal de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál de estos parámetros debe vigilar el piloto durante el vuelo?",
+          "opciones": [
+            "La gestión de la batería, las condiciones meteorológicas, la altitud y la telemetría",
+            "Solo la marca de los motores",
+            "Únicamente la carga de la tarjeta de memoria",
+            "Solo la velocidad del viento en tierra"
+          ],
+          "correcta": 0,
+          "explicacion": "Durante el vuelo el piloto debe estar al tanto de la coordinación y comunicación, la gestión del combustible o batería, la evolución meteorológica, las altitudes mínimas y los datos de telemetría y alertas.",
+          "referencia": "Parte 3, diapositiva 10 — Procedimiento normal de vuelo"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuáles son los tres componentes principales de la consciencia situacional?",
+          "opciones": [
+            "Percepción, comprensión y proyección",
+            "Alabeo, cabeceo y guiñada",
+            "Meteorología, entorno y UAS",
+            "Observar, decidir y actuar"
+          ],
+          "correcta": 0,
+          "explicacion": "Los tres componentes de la consciencia situacional son percepción (reconocer elementos), comprensión (interpretarlos) y proyección (anticipar eventos).",
+          "referencia": "Parte 3, diapositiva 11 — Consciencia situacional"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué significa la técnica OODA?",
+          "opciones": [
+            "Operar, Optimizar, Depurar y Ajustar",
+            "Ordenar, Organizar, Dirigir y Aterrizar",
+            "Observar, Orientar, Despegar y Aterrizar",
+            "Observar, Ver Opciones, Decidir y Actuar"
+          ],
+          "correcta": 3,
+          "explicacion": "La técnica OODA consiste en Observar, Ver Opciones, Decidir y Actuar, llevando a la práctica los componentes de la consciencia situacional.",
+          "referencia": "Parte 3, diapositiva 12 — Técnica OODA"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué componente de la consciencia situacional permite anticipar mentalmente posibles eventos?",
+          "opciones": [
+            "La comprensión",
+            "La observación",
+            "La proyección",
+            "La percepción"
+          ],
+          "correcta": 2,
+          "explicacion": "La proyección es la capacidad de anticipar mentalmente y prevenir posibles eventos a partir de la comprensión de la situación.",
+          "referencia": "Parte 3, diapositiva 11 — Consciencia situacional"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué debe hacer el piloto si percibe un riesgo potencial durante el vuelo?",
+          "opciones": [
+            "Aumentar la velocidad para alejarse",
+            "Ignorarlo hasta que se convierta en accidente",
+            "Apagar la emisora",
+            "Comprender las circunstancias y activar los procedimientos de contingencia o emergencia oportunos"
+          ],
+          "correcta": 3,
+          "explicacion": "Los procedimientos de contingencia o emergencia se realizan cuando el piloto percibe un riesgo potencial, comprende las circunstancias derivadas y lleva a cabo las acciones oportunas para evitarlo.",
+          "referencia": "Parte 3, diapositiva 13 — Contingencia o emergencia"
+        },
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué debe hacer el piloto respecto a las distracciones durante el vuelo?",
+          "opciones": [
+            "Evitarlas, manteniéndose concentrado en el pilotaje",
+            "Dejar el UAS en modo automático y ausentarse",
+            "Atenderlas siempre que sean importantes",
+            "Usar el móvil solo si el UAS está en hover"
+          ],
+          "correcta": 0,
+          "explicacion": "El piloto debe evitar todo tipo de distracciones que puedan afectar a la seguridad de la operación y mantenerse concentrado en el pilotaje.",
+          "referencia": "Parte 3, diapositiva 10 — Procedimiento normal de vuelo"
+        }
+      ]
+    },
+    {
+      "nombre": "Contingencias y emergencias",
+      "descripcion": "Situaciones anómalas, pérdida de GNSS, personas en la zona, salida del área, aeronaves tripuladas, otros UAS, condiciones externas y pérdida del enlace C2.",
+      "preguntas": [
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuándo se activan los procedimientos de contingencia o emergencia?",
+          "opciones": [
+            "Únicamente después de un accidente",
+            "Solo cuando se agota la batería",
+            "Cuando el piloto percibe un riesgo potencial y evalúa que puede comprometer la seguridad",
+            "Cuando el UAS está en mantenimiento"
+          ],
+          "correcta": 2,
+          "explicacion": "El piloto debe evaluar la situación de vuelo y, si se presentan situaciones que puedan comprometer la seguridad, activar los procedimientos de contingencia y/o emergencia.",
+          "referencia": "Parte 3, diapositiva 13 — Contingencia o emergencia"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿De qué depende la medida concreta a tomar ante una situación anómala?",
+          "opciones": [
+            "Solo de la hora del día",
+            "De la comunidad autónoma donde se vuele",
+            "Del color del UAS",
+            "Del tipo de aeronave y del procedimiento indicado por el fabricante"
+          ],
+          "correcta": 3,
+          "explicacion": "Las medidas para cada situación anómala varían según el tipo de aeronave; el piloto debe verificar el procedimiento de actuación según las indicaciones del fabricante.",
+          "referencia": "Parte 3, diapositiva 14 — Medidas de contingencia"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Ante una situación anómala, ¿qué debe hacer el piloto en primer lugar?",
+          "opciones": [
+            "Esperar a que el UAS regrese solo",
+            "Aumentar la altura para tener más tiempo",
+            "Apagar la emisora para reiniciarla",
+            "Asegurar el control de la aeronave o aterrizar si no es posible"
+          ],
+          "correcta": 3,
+          "explicacion": "En caso de situación anómala, el piloto debe asegurar el control de la aeronave o aterrizar si lo anterior no es posible.",
+          "referencia": "Parte 3, diapositiva 15 — Fallos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué debe hacer el piloto ante una pérdida o degradación de la señal GNSS?",
+          "opciones": [
+            "Continuar el vuelo en modo automático",
+            "Cambiar de batería en vuelo",
+            "Activar el modo manual y aterrizar, verificando el sistema en tierra",
+            "Aumentar la altura para recuperar la señal"
+          ],
+          "correcta": 2,
+          "explicacion": "En caso de pérdida o degradación de la señal GNSS, el piloto debe activar el modo manual y aterrizar; en tierra se verifica el funcionamiento del sistema y se repara si es necesario.",
+          "referencia": "Parte 3, diapositiva 15 — Fallos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si una persona entra en el área de operación, ¿qué debe hacer el piloto?",
+          "opciones": [
+            "Alejar la aeronave de la persona y aterrizar manualmente, evitando sobrevolarla",
+            "Aterrizar encima de la persona",
+            "Aumentar la velocidad para asustarla",
+            "Seguir volando por encima de ella"
+          ],
+          "correcta": 0,
+          "explicacion": "El piloto debe alejar la aeronave de la persona en la medida de lo posible y aterrizar de forma manual, evitando en todo momento el sobrevuelo de esa persona.",
+          "referencia": "Parte 3, diapositiva 15 — Fallos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si la aeronave sale de la zona de operación, ¿qué debe intentar el piloto?",
+          "opciones": [
+            "Retornarla al interior mediante control manual o RTH y, si no es posible, aterrizar lo antes posible",
+            "Aumentar la altura para ampliar la zona",
+            "Apagar el UAS desde la emisora",
+            "Dejarla volar hasta que se agote la batería"
+          ],
+          "correcta": 0,
+          "explicacion": "El piloto debe hacer lo posible para retornar la aeronave al interior de la zona mediante control manual o RTH; si no es posible, debe aterrizar lo antes posible para evitar que se aleje más.",
+          "referencia": "Parte 3, diapositiva 15 — Fallos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si se observa una aeronave tripulada volando cerca del área de operación, ¿qué debe hacerse?",
+          "opciones": [
+            "Ascender para dejarla pasar",
+            "Continuar el vuelo si se mantiene a 120 m",
+            "Encender las luces y seguir volando",
+            "Aterrizar el UAS con la mayor brevedad posible"
+          ],
+          "correcta": 3,
+          "explicacion": "Si se observa una aeronave tripulada volando cerca del área de operación, el UAS debe aterrizarse con la mayor brevedad posible.",
+          "referencia": "Parte 3, diapositiva 16 — Enlace C2 y otras aeronaves"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si aparece otro UAS en el área de operación, ¿qué debe hacer el piloto?",
+          "opciones": [
+            "Alejar su aeronave de dicho UAS y aterrizar lo antes posible",
+            "Ascender por encima de él",
+            "Perseguirlo para avisarle",
+            "Acercarse para identificarlo"
+          ],
+          "correcta": 0,
+          "explicacion": "Si la aeronave que aparece es otro UAS, el piloto debe alejar la suya en la medida de lo posible y aterrizar lo antes posible, evitando el conflicto entre ambas.",
+          "referencia": "Parte 3, diapositiva 16 — Enlace C2 y otras aeronaves"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si condiciones externas como la meteorología alteran la altitud o el control de posición del UAS, ¿qué procede?",
+          "opciones": [
+            "Aumentar la altura para estabilizarla",
+            "Cambiar a modo BVLOS",
+            "Esperar a que pase la racha",
+            "Aterrizar la aeronave inmediatamente"
+          ],
+          "correcta": 3,
+          "explicacion": "Si condiciones externas alteran la altitud o el control de la posición, se debe aterrizar la aeronave inmediatamente debido a la brusca disminución de la seguridad y el aumento de la dificultad de control.",
+          "referencia": "Parte 3, diapositiva 16 — Enlace C2 y otras aeronaves"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "En caso de pérdida del enlace C2, ¿qué debe hacer el piloto?",
+          "opciones": [
+            "Aumentar la altura para recuperar la señal",
+            "Activar el modo de baja velocidad",
+            "Acercarse con la unidad de mando a la aeronave para recuperar el control y aterrizar",
+            "Apagar la emisora y esperar"
+          ],
+          "correcta": 2,
+          "explicacion": "Ante la pérdida o degradación del enlace C2, el piloto debe acercarse con la unidad de mando a la aeronave para tratar de recuperar el control y aterrizar. Es recomendable tener preprogramado el RTH.",
+          "referencia": "Parte 3, diapositiva 16 — Enlace C2 y otras aeronaves"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué medida preventiva se recomienda para la pérdida del enlace C2?",
+          "opciones": [
+            "Volar siempre por encima de 120 m",
+            "Desactivar el geofencing",
+            "Tener preprogramado el RTH",
+            "Apagar el DRI"
+          ],
+          "correcta": 2,
+          "explicacion": "En caso de pérdida del enlace C2 es recomendable tener preprogramado el RTH en caso de pérdida del enlace.",
+          "referencia": "Parte 3, diapositiva 16 — Enlace C2 y otras aeronaves"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Cuál de estas es una circunstancia que puede degradar la seguridad del vuelo y activar una contingencia?",
+          "opciones": [
+            "La pérdida del enlace C2",
+            "Que el piloto lleve la documentación",
+            "Que el cielo esté despejado",
+            "Que el UAS tenga el firmware actualizado"
+          ],
+          "correcta": 0,
+          "explicacion": "Entre las circunstancias que pueden degradar la seguridad están la gestión anormal de la ruta, el daño al sistema de posicionamiento, la incidencia de personas, la salida del área, la proximidad de aeronaves tripuladas u otros UAS, la pérdida de altitud o control por fenómenos externos y la pérdida del enlace C2.",
+          "referencia": "Parte 3, diapositiva 13 — Contingencia o emergencia"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Ante una pérdida de control de la aeronave que no se puede recuperar, ¿qué debe hacer el piloto?",
+          "opciones": [
+            "Aumentar la altura para evitar personas",
+            "Continuar el vuelo para no perder la aeronave",
+            "Apagar la emisora inmediatamente",
+            "Aterrizar si es posible, siguiendo las indicaciones del fabricante"
+          ],
+          "correcta": 3,
+          "explicacion": "En una situación anómala el piloto debe asegurar el control de la aeronave o aterrizar si no es posible, siguiendo el procedimiento del fabricante.",
+          "referencia": "Parte 3, diapositiva 15 — Fallos"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si el UAS sufre una pérdida de altitud por un fenómeno externo, ¿qué debe priorizar el piloto?",
+          "opciones": [
+            "Grabar el incidente con la cámara",
+            "Esperar a que el autopiloto lo resuelva",
+            "Mantener la ruta prevista sin cambios",
+            "Recuperar el control o aterrizar de forma segura"
+          ],
+          "correcta": 3,
+          "explicacion": "El piloto debe evaluar la situación y asegurar el control o aterrizar de forma segura, aplicando el procedimiento de contingencia correspondiente.",
+          "referencia": "Parte 3, diapositiva 15 — Fallos"
+        }
+      ]
+    },
+    {
+      "nombre": "Procedimientos posteriores al vuelo",
+      "descripcion": "Registro de vuelos, revisión exterior, mantenimiento y anotación de incidencias.",
+      "preguntas": [
+        {
+          "dificultad": "EASY",
+          "pregunta": "¿Qué procedimientos deben realizarse una vez concluido el vuelo?",
+          "opciones": [
+            "Nada, el trabajo termina al aterrizar",
+            "Los registros de la operación y el mantenimiento del UAS",
+            "Únicamente cargar la batería",
+            "Solo apagar la emisora"
+          ],
+          "correcta": 1,
+          "explicacion": "Los procedimientos posteriores al vuelo incluyen los registros de la operación y el mantenimiento del UAS.",
+          "referencia": "Parte 3, diapositiva 17 — Registros y mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué información debe anotarse en el registro de vuelos?",
+          "opciones": [
+            "Únicamente el lugar de despegue",
+            "Solo el nombre del piloto",
+            "Toda la información relevante del vuelo, especialmente las horas de vuelo",
+            "El precio del combustible"
+          ],
+          "correcta": 2,
+          "explicacion": "El piloto debe anotar en el registro de vuelos toda la información relevante, especialmente las horas de vuelo, para controlar el estado global de la aeronave y las horas totales.",
+          "referencia": "Parte 3, diapositiva 17 — Registros y mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Para qué sirve llevar un control de las horas totales de vuelo?",
+          "opciones": [
+            "Para planificar el mantenimiento necesario de la aeronave",
+            "Para solicitar el registro de operador",
+            "Para obtener el certificado de Radiofonista",
+            "Para calcular el precio de venta del UAS"
+          ],
+          "correcta": 0,
+          "explicacion": "El registro de horas de vuelo permite tener un control sobre el estado global de la aeronave y las horas totales, de cara a realizar el mantenimiento necesario.",
+          "referencia": "Parte 3, diapositiva 17 — Registros y mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué revisión debe hacerse tras el vuelo?",
+          "opciones": [
+            "Solo una revisión del firmware",
+            "Únicamente una revisión de la tarjeta de memoria",
+            "Ninguna, basta con la revisión previa",
+            "Una revisión exterior del equipo para detectar daños o deterioros producidos durante el vuelo"
+          ],
+          "correcta": 3,
+          "explicacion": "Tras el vuelo el piloto debe realizar una revisión exterior del equipo para detectar posibles daños o deterioros producidos durante el vuelo, preferiblemente con listas de verificación.",
+          "referencia": "Parte 3, diapositiva 17 — Registros y mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si durante el vuelo se produjo un error en algún sistema del UAS, ¿qué debe hacerse?",
+          "opciones": [
+            "Ignorarlo si el UAS vuelve a arrancar",
+            "Volar de nuevo para comprobar si se repite",
+            "Cambiar el número de registro del operador",
+            "Realizar el mantenimiento oportuno y anotar la incidencia en el registro"
+          ],
+          "correcta": 3,
+          "explicacion": "Si se produjo un error en algún sistema, debe realizarse el mantenimiento oportuno y anotar la incidencia en el registro de vuelos.",
+          "referencia": "Parte 3, diapositiva 17 — Registros y mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Quién debe realizar periódicamente el mantenimiento según las instrucciones del fabricante?",
+          "opciones": [
+            "Solo el piloto a distancia, aunque no sea el operador",
+            "El observador del espacio aéreo",
+            "Únicamente AESA",
+            "El operador, teniendo en cuenta los registros de vuelo"
+          ],
+          "correcta": 3,
+          "explicacion": "El operador, teniendo en cuenta los registros de vuelo, debe realizar periódicamente el mantenimiento necesario según las instrucciones del fabricante del UAS.",
+          "referencia": "Parte 3, diapositiva 17 — Registros y mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "¿Qué se recomienda usar para la revisión exterior posterior al vuelo?",
+          "opciones": [
+            "Un informe de la CIAIAC",
+            "Listas de verificación (checklists)",
+            "El manual de la emisora exclusivamente",
+            "Solo la memoria del piloto"
+          ],
+          "correcta": 1,
+          "explicacion": "Se recomienda el uso de listas de verificación para la revisión exterior del equipo tras el vuelo.",
+          "referencia": "Parte 3, diapositiva 17 — Registros y mantenimiento"
+        },
+        {
+          "dificultad": "MEDIUM",
+          "pregunta": "Si el mantenimiento necesario es complejo, ¿qué puede hacer el operador?",
+          "opciones": [
+            "Repararlo sin seguir las instrucciones del fabricante",
+            "Llevar el UAS a un centro de mantenimiento",
+            "Cambiar el número de serie del UAS",
+            "Volar hasta que se averíe definitivamente"
+          ],
+          "correcta": 1,
+          "explicacion": "Si el piloto lo considera oportuno o detecta una incidencia, debe realizar el mantenimiento siguiendo las instrucciones del fabricante o, si es necesario, llevar el UAS a un centro de mantenimiento.",
+          "referencia": "Parte 3, diapositiva 20 — Resumen 3"
+        }
+      ]
+    }
+  ]
+}
